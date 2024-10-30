@@ -80,7 +80,7 @@ th {
 
 /* Change table row color on hover */
 #dataTable tbody tr:hover {
-    background-color: #168771; /* Light gray color for hover effect */
+    background-color: #bde2df; /* Light gray color for hover effect */
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
@@ -550,7 +550,7 @@ th {
             height: 100%;
             overflow: auto;
             background-color: white; /* Black background with opacity */
-            opacity: 0.9;
+            opacity: 0.1;
         }
 
         /* Modal Content */
@@ -608,6 +608,32 @@ th {
             overflow: hidden;
         }
         
+
+
+
+        /* Media Query for Mobile */
+@media (max-width: 767px) {
+    .image-wrapper-ma, .mask-container {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ensure images retain aspect ratio on mobile */
+    .image-wrapper-ma img, 
+    .mask-container img, 
+    .slider-home .slick-slide img, 
+    .slider-sp .slick-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* or use `cover` based on your preference */
+    }
+
+    /* Mobile-specific slider image */
+    .slider-home .slick-slide img {
+        height: 300px; /* Set to desired height without stretching */
+    }
+}
+
 
 
 
@@ -825,6 +851,51 @@ th {
         
 
 
+/* General styling for all images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive settings for specific components */
+@media (max-width: 768px) {
+    /* Floorplan tab images */
+    .floorplans-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures aspect ratio is maintained without stretching */
+    }
+
+    /* Images in .mask-container and .wrapper-buil */
+    .mask-container img, 
+    .wrapper-buil img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Spacer adjustments to avoid text overlap */
+    .nav-spacer {
+        margin-bottom: 20px;
+    }
+
+    /* Responsive container adjustments */
+    .container, .row {
+        padding: 0 15px;
+    }
+
+    /* Adjust image wrapper padding on mobile */
+    .wrapper-buil {
+        padding: 15px;
+    }
+}
+
+/* Adjustments for specific elements on larger screens */
+@media (min-width: 1024px) {
+    .wrapper-buil {
+        margin-top: 50px; /* Add top margin to prevent text overlap */
+    }
+}
 
         
 
@@ -1066,7 +1137,7 @@ th {
                     <a class="nav-link floorplan-tab" id="level-B1-tab" data-toggle="tab" href="#level-B1" role="tab" aria-controls="level-B1" aria-selected="false">B1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="level-LG-tab" data-toggle="tab" href="#level-LG" role="tab" aria-controls="level-LG" aria-selected="false">LG</a>
+                    <a class="nav-link floorplan-tab" id="level-LG-tab" data-toggle="tab" href="#level-LG" role="tab" aria-controls="level-LG" aria-selected="false">LG</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link floorplan-tab" id="level-G-tab" data-toggle="tab" href="#level-G" role="tab" aria-controls="level-G" aria-selected="false">G</a>

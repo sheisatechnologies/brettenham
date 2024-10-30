@@ -381,6 +381,62 @@ height: auto;
 
 
 
+/* General styling for the wrapper and image */
+.wrapper-buil {
+    display: block;
+    margin-top: 40px; /* Add spacing to push text content below */
+    width: 100%;
+    height: auto;
+    padding: 20px; /* Optional padding to create more space around the image */
+}
+
+.wrapper-buil img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block; /* Ensures it behaves as a block element */
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 1024px) {
+    .wrapper-buil {
+        margin-top: 80px; /* Increase spacing as screen size increases */
+    }
+}
+
+
+
+/* Additional adjustments for mobile */
+@media (max-width: 768px) {
+
+
+    .wrapper-buil {
+        width: 100%;
+        height: auto;
+        padding: 10px; /* Optional: Add padding to avoid overlapping with text */
+    }
+
+    .wrapper-buil img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+        /* Adjust .wrapper-buil img for mobile responsiveness */
+.wrapper-buil img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Prevents stretching */
+    display: block;
+}
+
+    /* Ensure the text doesn't overlap with the image */
+    .mask-container {
+        margin-top: 20px; /* Adjust as needed to avoid overlap */
+    }
+}
+
+
 </style>
   
 
