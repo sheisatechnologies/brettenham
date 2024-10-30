@@ -75,7 +75,7 @@
 /* Slider-Home Dots: Light gray initially, red when active, centered at the bottom */
 .slider-home .slick-dots {
     position: absolute;
-    bottom: 10px;          /* Adjust the vertical position of the dots */
+    bottom: 19px;          /* Adjust the vertical position of the dots */
     width: 100%;           /* Full width to center-align the dots */
     display: flex;         /* Use flexbox for centering */
     justify-content: center; /* Center-align the dots */
@@ -307,11 +307,13 @@ height: auto;
     .slider-sp .slick-slide img {
         width: 100%;
         height: 212px;
+        object-fit: cover;
     }
 
     .slider-home .slick-slide img {
         width: 100%;
         height: 500px;
+        object-fit: cover;
     }
 
 
@@ -378,13 +380,7 @@ height: auto;
 }
 
 
-@media (min-width: 991px) {
-    .slider-home .slick-prev img, .slider-home .slick-next img {
-    width: 100% !important;
-    height: auto !important;
-    display: none !important;
-}
-}
+
 </style>
   
 
@@ -717,9 +713,10 @@ height: auto;
 
             <!-- Slide 3 -->
             <div class="slide">
-                
+                <div class="row">
+                </div>
                 <div class="row slide-content">
-                    <div class="col-md-4 text-content order-2 order-lg-1 ptm2">
+                    <div class="col-md-4 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
                            <h3>active travel</h3>
                             <div>
@@ -738,17 +735,14 @@ height: auto;
             <!-- Slide 4 -->
             <div class="slide">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h3>showers and changing rooms</h3>
-                    </div>
                 </div>
                 <div class="row slide-content">
-                    <div class="col-md-4 text-content order-2 order-lg-1 ptm2">
+                    <div class="col-md-4 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
-                            <img src="assets/images/contact-logo-helical.svg" alt="Helical" width="195" class="pbd2 pbm2">
+                           <h3>showers and changing rooms</h3>
                             <div>
                                 <p>High quality showers and changing rooms are located at lower ground level, providing 24 showers, evenly split across two changing rooms, ample lockers, drying rooms, shoe cleaning stations, hairdryers, straighteners, irons and complementary towels and toiletries.</p>
-                               
+                                
                             </div>
                         </div>
                     </div>

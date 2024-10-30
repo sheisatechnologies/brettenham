@@ -38,6 +38,8 @@
 <style>
 
 
+
+
 .location-tab .nav-link {
             border: none;
             color: #555;
@@ -259,13 +261,11 @@ height: auto;
     font-size: 13px; /* Adjust the size of the slide indicator text */
     
     color: #333; /* Adjust the color as needed */
-    margin-top: -110px !important;
+    margin-top: -89px !important;
     margin-left: 35px !important;
 }
 
-a.nav-link.active{
-    color: #000 !important;
-}
+
 
 
 
@@ -354,6 +354,10 @@ a.nav-link.active{
    display: none !important;
 }
 
+.map-loc{
+    padding-top: 60px;
+}
+
 
 
    
@@ -436,6 +440,24 @@ a.nav-link.active{
         justify-content: center;
         align-items: center;
     }
+    .custom-navigation {
+    margin-top: 78px !important;
+}
+
+.arrowb .build-next {
+    margin-left: 54px;
+    left: unset;
+}
+
+.arrowb .build-prev {
+    margin-left: 15px;
+    left: unset;
+}
+}
+
+
+a.loc-tab.active {
+    color: #000 !important;
 }
 
 </style>
@@ -474,7 +496,6 @@ a.nav-link.active{
             </div>
         </div>
     </nav>
-
     <div class="nav-spacer"></div>
 
     <div class="container">
@@ -616,7 +637,7 @@ a.nav-link.active{
 
  
 
-    <div class="container-fluid mt-5 slider-localarea">
+    <div class="container mt-5 slider-localarea">
        <div class="row">
         <div class="col-lg-3 ptd3 ptm2">
             <h3>connectivity</h3>
@@ -625,13 +646,13 @@ a.nav-link.active{
         <!-- Tabs -->
         <ul class="nav  location-tab justify-content-center" id="logoTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#tab1" role="tab">Walk</a>
+                <a class="nav-link loc-tab  active" data-bs-toggle="tab" href="#tab1" role="tab">WALK</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab2" role="tab">Cycle</a>
+                <a class="nav-link loc-tab" data-bs-toggle="tab" href="#tab2" role="tab">CYCLE</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab3" role="tab">Tabe</a>
+                <a class="nav-link loc-tab" data-bs-toggle="tab" href="#tab3" role="tab">TUBE</a>
             </li>
         </ul>
     
@@ -669,7 +690,7 @@ a.nav-link.active{
                 <img src="assets/images/location-map.jpg" alt="Map" class="img-fluid" />
             </div>
 
-            <div class="col-lg-2 order-lg-0">
+            <div class="col-lg-2 order-lg-0 map-loc">
 
                 <table class="map-key">
                     <tr>

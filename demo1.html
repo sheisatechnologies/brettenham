@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Scroll Animation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            height: 300vh; /* Increased height for more scrolling */
+            overflow-x: hidden; /* Hide horizontal overflow */
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            position: fixed;
+            top: 0;
+            width: 50vw; /* Use viewport width for responsiveness */
+            height: 100%;
+            background-color: white; /* Change color as needed */
+            z-index: 10;
+        }
+
+        .left {
+            left: 0;
+            transform: translateX(0); /* Start at the left side */
+        }
+
+        .right {
+            right: 0;
+            transform: translateX(0); /* Start at the right side */
+        }
+
+        .image {
+            display: block;
+            margin: 0 auto;
+            position: absolute; /* Centering the image */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center using transform */
+            max-width: 90%; /* Make image responsive */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 5;
+            opacity: 1; /* Fully visible from the start */
+        }
+
+        /* Spacer for scrolling */
+        .spacer {
+            height: 100vh; /* Spacer to make scrolling easier */
+        }
+
+        /* Content styles */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(240, 240, 240, 0.9); /* Slightly transparent background for content */
+            margin-top: 50px; /* Space above content */
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0; /* Reduced margin */
+        }
+
+        p {
+            max-width: 800px; /* Limit paragraph width */
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                margin-top: 20px; /* Reduced margin for mobile devices */
+            }
+
+            h1 {
+                font-size: 1.5em; /* Adjust heading size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper left"></div>
+    <div class="wrapper right"></div>
+    
+    <img src="assets/images/ci-buil2.jpg" alt="Your Image" class="image">
+    <div class="spacer"></div> <!-- Spacer for scrolling -->
+
+    <div class="container content">
+        <h1>Scroll Down to Reveal the Image</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod nisl sit amet libero volutpat, in suscipit ligula blandit. Sed eu bibendum leo. Cras a lacus nec nisi dictum gravida. Suspendisse potenti. Donec venenatis, erat sed maximus luctus, justo erat bibendum libero, in gravida ligula justo at purus.</p>
+
+        <p>Curabitur nec sem ut odio varius vulputate. Vivamus sit amet lacus id urna tempor dignissim. Etiam lacinia libero vel nulla aliquam, et facilisis sapien faucibus. Praesent eu orci in purus consequat tincidunt ac sit amet purus.</p>
+
+        <p>Donec ultrices justo at tortor elementum, a varius metus interdum. Aenean hendrerit felis et nunc venenatis, vitae consequat ex finibus. Vivamus in dolor non magna congue tincidunt. Duis varius, magna vitae sollicitudin sollicitudin, sapien ligula feugiat est, vel scelerisque libero lectus vitae lorem.</p>
+
+        <p>Fusce id felis vel ante congue varius non ut quam. Morbi sit amet arcu risus. Aliquam erat volutpat. Ut quis leo et erat finibus tempor nec et nunc. Proin sed orci tellus.</p>
+
+        <p>Suspendisse potenti. Ut vitae dolor vitae leo dapibus varius ac id odio. Suspendisse non eros eu lacus tristique condimentum.</p>
+
+        <p>Praesent tristique nulla eget ligula dignissim, non scelerisque purus varius. Phasellus sed turpis vitae arcu congue dictum.</p>
+
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis dictum massa ut feugiat facilisis. Etiam vel augue vel ligula bibendum auctor.</p>
+
+        <p>Nam ac risus non massa consequat vehicula. Sed vitae turpis nec nisl vulputate viverra a ac erat. Suspendisse at velit ante. Nunc egestas convallis orci, non tincidunt arcu fringilla nec.</p>
+
+        <p>In at vestibulum turpis. Ut non felis at ipsum dictum tempor non eu sem. Nulla aliquam vestibulum dolor, vitae fermentum elit volutpat sed. Quisque ut interdum sapien.</p>
+
+        <p>Curabitur lacinia odio ut urna tempor dignissim. Aenean condimentum sit amet nunc vel accumsan. Sed consequat, lacus vel fermentum tempor, dui nisl congue lacus, sed scelerisque metus dolor non nulla.</p>
+
+        <p>Nam aliquet elit sit amet risus suscipit, ut consectetur magna tristique. Aenean tempor tincidunt nulla, ac vestibulum sem pellentesque ac.</p>
+
+        <p>Morbi auctor nisi sit amet bibendum vehicula. Donec condimentum lacus nisi, ut finibus libero sodales ac. Phasellus ut tincidunt dolor.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        // Register the ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        const leftWrapper = document.querySelector('.left');
+        const rightWrapper = document.querySelector('.right');
+        const image = document.querySelector('.image');
+
+        // Create a ScrollTrigger to slide the wrappers and reveal the image
+        gsap.to(leftWrapper, {
+            x: '-100%', // Move the left wrapper to the left
+            duration: 0.5, // Shortened duration
+            ease: 'power2.inOut',
+            scrollTrigger: {
+                trigger: '.spacer', // Use spacer as the trigger
+                start: 'top top', // When the spacer hits the top of the viewport
+                end: 'bottom top', // When the spacer leaves the top of the viewport
+                scrub: true, // Smoothly scrub through the animation
+            }
+        });
+
+        gsap.to(rightWrapper, {
+            x: '100%', // Move the right wrapper to the right
+            duration: 0.5, // Shortened duration
+            ease: 'power2.inOut',
+            scrollTrigger: {
+                trigger: '.spacer', // Use spacer as the trigger
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true,
+            }
+        });
+    </script>
+</body>
+</html>
