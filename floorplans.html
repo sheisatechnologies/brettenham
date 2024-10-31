@@ -1655,38 +1655,39 @@ ul .nav-link {
   
 
   <script>
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
-    const leftWrapper = document.querySelector('.left');
-    const rightWrapper = document.querySelector('.right');
-    const image = document.querySelector('.image');
+const leftWrapper = document.querySelector('.left');
+const rightWrapper = document.querySelector('.right');
+const image = document.querySelector('.image');
 
-    // Create a ScrollTrigger to slide the wrappers and reveal the image
-    gsap.to(leftWrapper, {
-        x: '-100%', // Move the left wrapper to the left
-        duration: 0.5, // Shortened duration
-        ease: 'power2.inOut',
-        scrollTrigger: {
-            trigger: '.spacer', // Use spacer as the trigger
-            start: 'top bottom', // When the spacer hits the top of the viewport
-            end: 'bottom top', // When the spacer leaves the top of the viewport
-            scrub: true, // Smoothly scrub through the animation
-            marker:true
-        }
-    });
+// Create a ScrollTrigger to slide the wrappers and reveal the image
+gsap.to(leftWrapper, {
+    x: '-100%', // Move the left wrapper to the left
+    duration: 0.5, // Shortened duration
+    ease: 'power2.inOut',
+    scrollTrigger: {
+        trigger: '.spacer', // Use spacer as the trigger
+        start: 'top bottom', // Start when the top of the spacer hits the top of the viewport
+        end: 'bottom bottom', // When the spacer leaves the top of the viewport
+        scrub: true, // Smoothly scrub through the animation
+        // markers: true // Show markers for debugging
+    }
+});
 
-    gsap.to(rightWrapper, {
-        x: '100%', // Move the right wrapper to the right
-        duration: 0.5, // Shortened duration
-        ease: 'power2.inOut',
-        scrollTrigger: {
-            trigger: '.spacer', // Use spacer as the trigger
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-        }
-    });
+gsap.to(rightWrapper, {
+    x: '100%', // Move the right wrapper to the right
+    duration: 0.5, // Shortened duration
+    ease: 'power2.inOut',
+    scrollTrigger: {
+        trigger: '.spacer', // Use spacer as the trigger
+        start: 'top bottom', // Start when the top of the spacer hits the top of the viewport
+        end: 'bottom bottom', // When the spacer leaves the top of the viewport
+        scrub: true, // Smoothly scrub through the animation
+        // markers: true // Show markers for debugging
+    }
+});
 </script>
 
 
