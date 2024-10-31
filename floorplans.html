@@ -248,7 +248,14 @@ th {
 
 
 
-
+ul .nav-link {
+    border: none;
+    color:#A5A5A5;
+    font-weight: 700; 
+    padding: 10px 20px;
+    transition: color 0.3s;
+    font-family: 'Altform-Bold', Helvetica, Arial, sans-serif; /* Use the custom font */
+}
 
 @media (max-width: 768px) {
     .mask-container, .wrapper-buil {
@@ -813,6 +820,21 @@ th {
 }
 
         
+.level-column a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    font-weight: 700; /* Make text bold */
+    /* padding: 10px 20px; */
+    display: inline-block; /* Fill the cell space */
+}
+
+.level-column a:hover, 
+.level-column a:visited, 
+.level-column a:focus, 
+.level-column a:active {
+    color: inherit; /* Ensure color remains the same */
+    text-decoration: none; /* Ensure no underline on interaction */
+}
 
 
 
@@ -913,7 +935,7 @@ th {
             <tbody>
                 <!-- Add rows similar to the image with clickable cells for sum calculation -->
                 <tr>
-<td class="level-column" onclick="activateTab('level-9')">9</td>
+<td class="level-column"  onclick="activateTab('level-9')"><a href="#table-tab">9</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">3,283</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
@@ -921,7 +943,7 @@ th {
                     <td class="level-column data" onclick="toggleValue(this)">3,305</td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-8')">8</td>
+<td class="level-column" onclick="activateTab('level-8')"><a href="#table-tab">8</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">7,858</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
@@ -945,7 +967,7 @@ th {
                     <td class="level-column"></td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-5')">5</td>
+<td class="level-column" onclick="activateTab('level-5')"><a href="#table-tab">5</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">12,271</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
@@ -953,7 +975,7 @@ th {
                     <td class="level-column data" onclick="toggleValue(this)">893</td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-4')">4</td>
+<td class="level-column" onclick="activateTab('level-4')"><a href="#table-tab">4</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">12,669</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
@@ -961,7 +983,7 @@ th {
                     <td class="level-column data" onclick="toggleValue(this)">883</td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-3')">3</td>
+<td class="level-column" onclick="activateTab('level-3')"><a href="#table-tab">3</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">13,778</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
@@ -969,7 +991,7 @@ th {
                     <td class="level-column"></td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-2')">2</td>
+<td class="level-column" onclick="activateTab('level-2')"><a href="#table-tab">2</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">13,993</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
@@ -977,7 +999,7 @@ th {
                     <td class="level-column"></td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-1')">1</td>
+<td class="level-column" onclick="activateTab('level-1')"><a href="#table-tab">1</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">13,552</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
@@ -985,7 +1007,7 @@ th {
                     <td class="level-column"></td>
                 </tr>
                 <tr>
-                    <td class="level-column">DU</td>
+                    <td class="level-column"><a href="#table-tab">DU</a></td>
                     <td class="level-column"></td>
                     <td class="level-column data" onclick="toggleValue(this)">1,905</td>
                     <td class="level-column"></td>
@@ -993,7 +1015,7 @@ th {
                     <td class="level-column"></td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-G')">G</td>
+<td class="level-column" onclick="activateTab('level-G')"><a href="#table-tab">G</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">3,068</td>
                     <td class="level-column data" onclick="toggleValue(this)">1,432</td>
                     <td class="level-column"></td>
@@ -1001,7 +1023,7 @@ th {
                     <td class="level-column"></td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-LG')">LG</td>
+<td class="level-column" onclick="activateTab('level-LG')"><a href="#table-tab">LG</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">5,769*</td>
                     <td class="level-column"></td>
                     <td class="level-column data" onclick="toggleValue(this)">5,769</td>
@@ -1009,7 +1031,7 @@ th {
                     <td class="level-column data" onclick="toggleValue(this)">323</td>
                 </tr>
                 <tr>
-<td class="level-column" onclick="activateTab('level-B1')">B1</td>
+<td class="level-column" onclick="activateTab('level-B1')"><a href="#table-tab">B1</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">4,015*</td>
                     <td class="level-column"></td>
                     <td class="level-column data" onclick="toggleValue(this)">4,015</td>
@@ -1018,7 +1040,7 @@ th {
                 </tr>
 
                 <tr>
-<td class="level-column" onclick="activateTab('level-B2')">B2</td>
+<td class="level-column" onclick="activateTab('level-B2')"><a href="#table-tab">B2</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">3,778*</td>
                     <td class="level-column"></td>
                     <td class="level-column data" onclick="toggleValue(this)">3,778</td>
@@ -1045,7 +1067,7 @@ th {
 
     
   
-   <div class="container">
+   <div class="container" id="table-tab">
     <div class="row">
         <div class="col-12">
              <ul class="nav nav-tabs mt-15 justify-content-center" id="floorplanTabs" role="tablist">
@@ -1624,8 +1646,8 @@ th {
             maxWidth: "100%", // Grow container to full width of viewport
             scrollTrigger: {
                 trigger: ".floorplan",
-                start: "top 80%", // Start animation earlier
-                end: "top 20%",   // End animation to make the full image visible
+                start: "top 200%",  // Start animation much earlier (element is 200% below viewport)
+                end: "top 100%",     // Control when the animation completes
                 scrub: true,      // Smooth scroll effect
             }
         });
