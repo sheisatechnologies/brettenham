@@ -655,6 +655,7 @@ ul .nav-link {
 
 
 
+
 /* tab responsive code  */
 
 
@@ -935,14 +936,15 @@ ul .nav-link {
             <tbody>
                 <!-- Add rows similar to the image with clickable cells for sum calculation -->
                 <tr>
-<td class="level-column"  onclick="activateTab('level-9')"><a href="#table-tab">9</a></td>
+                    <td class="level-column" onclick="activateTab('level-9')"><a href="#level-9">9</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">3,283</td>
-                    <td class="level-column"></td>
-                    <td class="level-column"></td>
-                    <td class="level-column"></td>
-                    <td class="level-column data" onclick="toggleValue(this)">3,305</td>
+                    <td class="level-column"><a href="#level-9"></a></td>
+                    <td class="level-column"><a href="#level-9"></a></td>
+                    <td class="level-column"><a href="#level-9"></a></td>
+                    <td class="level-column data" onclick="toggleValue(this)"><a href="#level-9">3,305</a></td>
                 </tr>
-                <tr>
+
+                
 <td class="level-column" onclick="activateTab('level-8')"><a href="#table-tab">8</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">7,858</td>
                     <td class="level-column"></td>
@@ -1184,7 +1186,7 @@ ul .nav-link {
                 </div>
                 <div class="tab-pane fade" id="level-G" role="tabpanel" aria-labelledby="level-G-tab">
                     <h2>LEVEL G</h2>
-                    <p>Office: 3,608 sq ft</p>
+                    <p>Office: 3,068 sq ft</p>
 
                     <div>
                         <span style="color: #8ec5c1;">■</span> Office <br>
@@ -1652,7 +1654,6 @@ ul .nav-link {
             }
         });
     </script>
-  
 
   <script>
 // Register the ScrollTrigger plugin
@@ -1672,7 +1673,7 @@ gsap.to(leftWrapper, {
         start: 'top bottom', // Start when the top of the spacer hits the top of the viewport
         end: 'bottom bottom', // When the spacer leaves the top of the viewport
         scrub: true, // Smoothly scrub through the animation
-        // markers: true // Show markers for debugging
+        markers: true // Show markers for debugging
     }
 });
 
@@ -1685,9 +1686,10 @@ gsap.to(rightWrapper, {
         start: 'top bottom', // Start when the top of the spacer hits the top of the viewport
         end: 'bottom bottom', // When the spacer leaves the top of the viewport
         scrub: true, // Smoothly scrub through the animation
-        // markers: true // Show markers for debugging
+        markers: true // Show markers for debugging
     }
 });
+
 </script>
 
 
