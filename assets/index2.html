@@ -281,40 +281,6 @@
         }
 
 
-        @media (max-width: 768px) {
-    .scroll-wrapper {
-        width: 100%;
-        min-height: 300px; /* Set a minimum height */
-        padding-bottom: 20px;
-        height: auto;
-        overflow: hidden; /* Ensure content doesn't overflow */
-    }
-
-    .image-container, .image-reveal-mask {
-        height: auto; /* Ensures inner elements fit within the wrapper */
-        transform: none; /* Stop any unwanted animations that affect height */
-    }
-
-
-    .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-}
-
-
-@media (max-width: 768px) {
-    .scroll-wrapper, .image-container, .image-reveal-mask {
-        position: relative;
-        transform: none;
-    }
-}
-
-
-
-
-
 
 @media (max-width: 767px) {
     /* Make the navbar items stack and adjust spacing */
@@ -680,7 +646,7 @@
 const t2 = gsap.timeline({
     scrollTrigger: {
         trigger: ".scroll-wrapper",  // The new element that triggers the animation
-        start: "top 92%",           // Start when the top of the container hits 80% of the viewport height
+        start: "top 115%",           // Start when the top of the container hits 80% of the viewport height
         end: "bottom 40%",          // Optional: Animation can end when the bottom hits 20% of viewport
         scrub: true,                // Smooth scroll-based animation
         markers: false               // Optional: Enable markers for debugging

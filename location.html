@@ -429,11 +429,21 @@ height: auto;
 }
 
 
+
+@media (max-width: 991px) {
+    .mask-container, .wrapper-buil {
+        position: relative;
+        margin-bottom: 20px; /* Add margin to push content down */
+        z-index: 1; /* Ensure it stays above lower layers if needed */
+    }
+}
+
+
 @media (max-width: 991px) {
     .mask-container {
         position: relative;
         width: 100%;
-        height: 75vh;
+        height: auto;
         overflow: hidden;
         background-color: transparent;
         display: flex;
@@ -456,9 +466,42 @@ height: auto;
 }
 
 
+
+
 a.loc-tab.active {
     color: #000 !important;
 }
+
+
+/* Additional adjustments for mobile */
+@media (max-width: 768px) {
+
+
+.wrapper-buil {
+    width: 100%;
+    height: auto;
+    padding: 10px; /* Optional: Add padding to avoid overlapping with text */
+}
+
+
+
+    /* Adjust .wrapper-buil img for mobile responsiveness */
+.wrapper-buil img {
+width: 100%;
+height: auto;
+object-fit: contain; /* Prevents stretching */
+display: block;
+}
+
+/* Ensure the text doesn't overlap with the image */
+.mask-container {
+    margin-top: 20px; /* Adjust as needed to avoid overlap */
+}
+}
+
+
+</style>
+
 
 </style>
 </head>

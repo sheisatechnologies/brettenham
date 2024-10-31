@@ -379,45 +379,6 @@ height: auto;
 
 }
 
-@media (max-width: 768px) {
-    .mask-container, .wrapper-buil {
-        position: relative;
-        margin-bottom: 20px; /* Add margin to push content down */
-        z-index: 1; /* Ensure it stays above lower layers if needed */
-    }
-}
-
-
-
-/* Additional adjustments for mobile */
-@media (max-width: 768px) {
-
-
-    .wrapper-buil {
-        width: 100%;
-        height: auto;
-        padding: 10px; /* Optional: Add padding to avoid overlapping with text */
-    }
-
-    .wrapper-buil img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-        /* Adjust .wrapper-buil img for mobile responsiveness */
-.wrapper-buil img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* Prevents stretching */
-    display: block;
-}
-
-    /* Ensure the text doesn't overlap with the image */
-    .mask-container {
-        margin-top: 20px; /* Adjust as needed to avoid overlap */
-    }
-}
 
 
 
@@ -590,7 +551,7 @@ height: auto;
     .mask-container {
         position: relative;
         width: 100%;
-        height: auto;
+        height: 75vh;
         overflow: hidden;
         background-color: transparent;
         display: flex;
