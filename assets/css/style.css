@@ -142,7 +142,7 @@ body {
        .mask-container {
         position: relative;
         width: 100%; /* Set a larger width for the mask container */
-        height: 700px; /* Set a larger height for the mask container */
+        height: auto; /* Set a larger height for the mask container */
         overflow: hidden; /* Ensure that the wrapper content stays hidden initially */
         background-color: transparent; /* Transparent background */
         display: flex;
@@ -155,7 +155,7 @@ body {
         width: 100%; /* Width of the image container */
         height: auto; /* Height of the image container */
         background-color: red;
-        position: absolute;
+        position: relative;
         padding: 40px; /* Add padding around the image */
         box-sizing: border-box; /* Include padding in width and height calculations */
         transform-origin: left; /* Set the origin to the left for the scaling effect */
