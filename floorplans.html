@@ -606,6 +606,7 @@ ul .nav-link {
         padding-left: 15px !important;
         padding-right: 15px !important;
         margin: 0 !important;
+        padding-bottom: 20px;
     }
 
     .navbar {
@@ -840,6 +841,32 @@ ul .nav-link {
 }
 
 
+@media (max-width: 768px) {
+            .nav-tabs {
+                display: none; /* Hide tabs on mobile */
+            }
+
+
+            /* Custom styling for mobile dropdown */
+        #floorplanDropdown {
+            border: none; /* Remove border */
+            font-size: 1rem; /* Increase font size */
+            padding: 10px 20px 10px 10px; /* Add padding */
+            color: #333; /* Dark text color */
+            appearance: none; /* Remove default styling */
+            border-radius: 8px; /* Rounded corners */
+            background-image: url(./assets/images/arrow/dropdown-arrow.png); /* Custom arrow */
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 16px;
+        }
+
+        /* Adjust placeholder color */
+        #floorplanDropdown option[disabled] {
+            color: #aaa; /* Lighter color for placeholder */
+        }
+        }
+
 
         
 
@@ -920,8 +947,8 @@ ul .nav-link {
 
 
 
-    <section class="bg-light-grey">
-        <div class="container py-5">
+    <section class="bg-light-grey py-5">
+        <div class="container py-lg-5">
             <p class="text-left" style="margin-left: 140px;">Select different office floors to calculate total SQ FT</p>
         
         <table id="dataTable">
@@ -1020,7 +1047,7 @@ ul .nav-link {
                 </tr>
 
 
-               <tr class="clickable-row" onclick="location.href='#level-1';">
+               <tr class="clickable-row" onclick="location.href='#table-tab';">
 <td class="level-column" onclick="activateTab('level-1')"><a href="#table-tab">1</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">13,552</td>
                     <td class="level-column"></td>
@@ -1077,9 +1104,9 @@ ul .nav-link {
 
                 <tr class="clickable-row" onclick="location.href='#level-B2';">
 <td class="level-column" onclick="activateTab('level-B2')"><a href="#table-tab">B2</a></td>
-                    <td class="level-column">3,778*</td>
+                    <td class="level-column data" onclick="toggleValue(this)">3,778*</td>
                     <td class="level-column"></td>
-                    <td class="level-column">3,778</td>
+                    <td class="level-column data">3,778</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
                 </tr>
@@ -1117,7 +1144,7 @@ ul .nav-link {
    <div class="container" id="table-tab">
     <div class="row">
         <div class="col-12">
-             <ul class="nav nav-tabs mt-15 justify-content-center" id="floorplanTabs" role="tablist">
+             <ul class="nav nav-tabs mt-15 justify-content-center  d-none d-md-flex" id="floorplanTabs" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link floorplan-tab active" id="level-B2-tab" data-toggle="tab" href="#level-B2" role="tab" aria-controls="level-B2" aria-selected="false">B2</a>
                 </li>
@@ -1159,6 +1186,26 @@ ul .nav-link {
                 </li>
              
             </ul>
+
+            <div class="d-md-none mt-3">
+                <select id="floorplanDropdown" class="form-select">
+                    <option value="" disabled selected>SELECT FLOOR</option>
+                    <option value="#level-B2">B2</option>
+                    <option value="#level-B1">B1</option>
+                    <option value="#level-LG">LG</option>
+                    <option value="#level-G">G</option>
+                    <option value="#level-1">1</option>
+                    <option value="#level-2">2</option>
+                    <option value="#level-3">3</option>
+                    <option value="#level-4">4</option>
+                    <option value="#level-5">5</option>
+                    <option value="#level-6">6</option>
+                    <option value="#level-7">7</option>
+                    <option value="#level-8">8</option>
+                    <option value="#level-9">9</option>
+                  
+                </select>
+            </div>
 
             <div class="tab-content mt-15" id="floorplanTabsContent">
                 <div class="tab-pane fade show active" id="level-B2" role="tabpanel" aria-labelledby="level-B2-tab">
@@ -1924,5 +1971,22 @@ function activateTab(levelId) {
     }
 }
 </script>
+
+
+<script>
+    document.getElementById("floorplanDropdown").addEventListener("change", function () {
+        const selectedTabId = this.value;
+        const tabContent = document.querySelector(selectedTabId);
+
+        // Deactivate all tabs and tab contents
+        document.querySelectorAll('.tab-pane').forEach(tab => tab.classList.remove('active', 'show'));
+        document.querySelectorAll('.floorplan-tab').forEach(tab => tab.classList.remove('active'));
+
+        // Activate the selected tab and content
+        tabContent.classList.add('active', 'show');
+        document.querySelector(`a[href="${selectedTabId}"]`).classList.add('active');
+    });
+</script>
+
 </body>
 </html>
