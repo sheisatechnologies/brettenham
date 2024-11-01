@@ -1029,11 +1029,20 @@ ul .nav-link {
                     <td class="level-column"></td>
                 </tr>
 
-              <tr class="clickable-row" onclick="location.href='#table-tab';">
+              <!-- <tr class="clickable-row" onclick="location.href='#table-tab';">
                     <td class="level-column"><a href="#table-tab">DU</a></td>
                     <td class="level-column"></td>
                     <td class="level-column data" onclick="toggleValue(this)">1,905</td>
                     <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr> -->
+
+                <tr class="clickable-row" onclick="location.href='#level-B1';">
+                 <td class="level-column"><a href="#table-tab">DU</a></td>
+                    <td class="level-column data" onclick="toggleValue(this)">1,905</td>
+                    <td class="level-column"></td>
+                    <td class="level-column data"></td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
                 </tr>
@@ -1066,11 +1075,11 @@ ul .nav-link {
                     <td class="level-column"></td>
                 </tr>
 
-                <tr class="clickable-row" onclick="location.href='#level-B2';">
+                <tr class="clickable-row" onclick="location.href='#level-B1';">
 <td class="level-column" onclick="activateTab('level-B2')"><a href="#table-tab">B2</a></td>
                     <td class="level-column data" onclick="toggleValue(this)">3,778*</td>
                     <td class="level-column"></td>
-                    <td class="level-column">3,778</td>
+                    <td class="level-column data">3,778</td>
                     <td class="level-column"></td>
                     <td class="level-column"></td>
                 </tr>
@@ -1732,22 +1741,33 @@ gsap.to(rightWrapper, {
 
 
  <script>
-    // Function to expand the entire tab content in a modal
-function expandTabContent(tabId) {
-    // Get the entire content of the tab
-    const tabContent = document.querySelector(tabId).innerHTML;
+       
+        function expandTabContent(tabId) {
+            // Get the entire content of the selected tab
+            const tabContent = document.querySelector(tabId).innerHTML;
+            
+            // Insert tab content into modalContent
+            document.getElementById("modalContent").innerHTML = tabContent;
 
-    // Set the modal content to be the same as the tab content
-    document.getElementById("modalContent").innerHTML = tabContent;
+            // Hide "Expand" and "Download" buttons within the modal
+            const modalContent = document.getElementById("modalContent");
+            const buttons = modalContent.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                if (button.textContent.includes("Expand") || button.textContent.includes("Download")) {
+                    button.style.display = 'none';
+                }
+            });
 
-    // Show the modal
-    document.getElementById("myModal").style.display = "block";
-}
+            // Show the modal
+            document.getElementById("myModal").style.display = "block";
+        }
 
-// Function to close the modal
-function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-}
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+
 
  </script>
     <script>
