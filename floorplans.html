@@ -54,6 +54,10 @@
     transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
+.table-head{
+    font-weight: 700;
+    font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+}
 .total-column {
     border-bottom: none;
 }
@@ -867,7 +871,6 @@ ul .nav-link {
         }
         }
 
-
         
 
 </style>
@@ -954,12 +957,12 @@ ul .nav-link {
         <table id="dataTable">
             <thead>
                 <tr>
-                    <th class="level-head">LEVEL</th>
-                    <th class="level-head">OFFICE (SQ FT)</th>
-                    <th class="level-head">DUCHY</th>
-                    <th class="level-head">9 SAVOY STREET (SQ FT)</th>
-                    <th class="level-head">RETAIL (SQ FT)</th>
-                    <th class="level-head">TERRACE (SQ FT)</th>
+                    <th class="level-head table-head">LEVEL</th>
+                    <th class="level-head table-head">OFFICE (SQ FT)</th>
+                    <th class="level-head table-head">DUCHY</th>
+                    <th class="level-head table-head">9 SAVOY STREET (SQ FT)</th>
+                    <th class="level-head table-head">RETAIL (SQ FT)</th>
+                    <th class="level-head table-head">TERRACE (SQ FT)</th>
                 </tr>
             </thead>
             <tbody>
@@ -1125,12 +1128,12 @@ ul .nav-link {
             </tbody>
             <tfoot>
                 <tr class="sum-row">
-                    <td class="level-column total-column" colspan="1" style="text-align: right"> <strong>TOTAL :</strong></td>
-                    <td class="level-column total-column" colspan="1" id="sumCell" style="background-color: #BDE2DF; border: 3px solid black;"></td>
-                    <td class="level-column total-column" colspan="1" id="sumCell">3,337</td>
-                    <td class="level-column total-column" colspan="1" id="sumCell">13,563</td>
-                    <td class="level-column total-column" colspan="1" id="sumCell">5,662</td>
-                    <td class="level-column total-column" colspan="1" id="sumCell">5,942</td>
+                    <td class="level-column total-column table-head" colspan="1" style="text-align: right"> <strong>TOTAL :</strong></td>
+                    <td class="level-column total-column table-head" colspan="1" id="sumCell" style="background-color: #BDE2DF; border: 3px solid black;"></td>
+                    <td class="level-column total-column table-head" colspan="1" id="sumCell">3,337</td>
+                    <td class="level-column total-column table-head" colspan="1" id="sumCell">13,563</td>
+                    <td class="level-column total-column table-head" colspan="1" id="sumCell">5,662</td>
+                    <td class="level-column total-column table-head" colspan="1" id="sumCell">5,942</td>
                     
                 </tr>
             </tfoot>
