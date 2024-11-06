@@ -86,9 +86,27 @@ body {
 #fixedLogo{
     display: none;
 }
+.floor-bclick{
 
+    width: 100%;
+    height: 100%;
+
+}
 /* universal header code */
+.floor-button{
 
+    width: 10%;
+    height: 100%;
+    /* background-color: red; */
+
+}
+
+.floor-button:hover{
+
+    
+    background-color: #BDE2DF;
+
+}
 
 /* index  custom slide slick */
 /* .slick-dots {
