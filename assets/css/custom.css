@@ -769,6 +769,10 @@ footer a:hover {
 
 @media (min-width: 992px){
 
+    .mtd-15{
+        margin-top: 10rem !important;
+    }
+
     .mtd-10n{
 
         margin-top: -6rem !important;
