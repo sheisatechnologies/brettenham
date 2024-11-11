@@ -512,8 +512,8 @@ display: block;
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/brettenham-house-logo-black.svg" alt="Normal Logo" class="fixed-top-image normal-image" id="normalLogo">
-        <img src="assets/images/brettenham-house-symbol-black.svg" alt="Fixed Logo" class="fixed-top-image fixed-image" id="fixedLogo">
+                <img src="assets/images/brettenham-house-symbol-black.svg" alt="Normal Logo" class="fixed-top-image normal-image" id="normalLogo">
+                <img src="assets/images/brettenham-house-symbol-black.svg" alt="Fixed Logo" class="fixed-top-image fixed-image" id="fixedLogo">
             </a>
             <!-- <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="toggler-icon top-bar"></span>
@@ -1105,15 +1105,15 @@ display: block;
 
          // This code use for hide and show the top header //
 
-$(window).on('scroll', function() {
-    if ($(this).scrollTop() > 50) {
-        $('#normalLogo').hide();
-        $('#fixedLogo').show();
-    } else {
-        $('#normalLogo').show();
-        $('#fixedLogo').hide();
-    }
-});
+// $(window).on('scroll', function() {
+//     if ($(this).scrollTop() > 50) {
+//         $('#normalLogo').hide();
+//         $('#fixedLogo').show();
+//     } else {
+//         $('#normalLogo').show();
+//         $('#fixedLogo').hide();
+//     }
+// });
 
  // This code use for hide and show the top header //
 
@@ -1126,7 +1126,8 @@ $(window).on('scroll', function() {
                 infinite: true,
                 speed: 300,
                 autoplay: true,
-                arrows: true,
+                prevArrow: '<button type="button" class=" custom-prev-arrow"><img src="assets/images/btn-arrow-left.svg" alt="Left Arrow"></button>',
+                nextArrow: '<button type="button" class=" custom-next-arrow"><img src="assets/images/btn-arrow-right.svg" alt="Right Arrow"></button>',
                 slidesToShow: 4,
                 slidesToScroll: 4,
                 responsive: [

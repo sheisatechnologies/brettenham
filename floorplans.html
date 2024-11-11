@@ -880,7 +880,7 @@ ul .nav-link {
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/brettenham-house-logo-black.svg" alt="Normal Logo" class="fixed-top-image normal-image" id="normalLogo">
+                <img src="assets/images/brettenham-house-symbol-black.svg" alt="Normal Logo" class="fixed-top-image normal-image" id="normalLogo">
         <img src="assets/images/brettenham-house-symbol-black.svg" alt="Fixed Logo" class="fixed-top-image fixed-image" id="fixedLogo">
             </a>
             <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -1132,7 +1132,7 @@ ul .nav-link {
 
 
                 <tr class="clickable-row" onclick="location.href='#level-B2';">
-                    <td class="level-column floor-button" onclick="activateTab('level-B2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">B2</a></td>
+                    <td class="level-column floor-button" onclick="activateTab('level-B2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">B2*</a></td>
                     <td class="level-column data" onclick="toggleValue(this); event.stopPropagation();">3,778</td>
                     <td class="level-column" onclick="event.stopPropagation();"></td>
                     <td class="level-column" onclick="event.stopPropagation();">3,778</td>
@@ -1906,15 +1906,15 @@ gsap.to(rightWrapper, {
 
     // This code use for hide and show the top header //
 
-$(window).on('scroll', function() {
-if ($(this).scrollTop() > 50) {
-   $('#normalLogo').hide();
-   $('#fixedLogo').show();
-} else {
-   $('#normalLogo').show();
-   $('#fixedLogo').hide();
-}
-});
+// $(window).on('scroll', function() {
+// if ($(this).scrollTop() > 50) {
+//    $('#normalLogo').hide();
+//    $('#fixedLogo').show();
+// } else {
+//    $('#normalLogo').show();
+//    $('#fixedLogo').hide();
+// }
+// });
 
 // This code use for hide and show the top header //
 
