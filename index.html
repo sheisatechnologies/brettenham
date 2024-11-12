@@ -301,11 +301,38 @@
     height: auto;
     display: block;
 }
+
+.scroll-wrapper-loc {
+        width: 100%;
+        min-height: 300px; /* Set a minimum height */
+        padding-bottom: 20px;
+        height: auto;
+        overflow: hidden; /* Ensure content doesn't overflow */
+    }
+
+    .image-container-loc, .image-reveal-mask-loc {
+        height: auto; /* Ensures inner elements fit within the wrapper */
+        transform: none; /* Stop any unwanted animations that affect height */
+    }
+
+
+    .image-container-loc img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 }
 
 
 @media (max-width: 768px) {
     .scroll-wrapper, .image-container, .image-reveal-mask {
+        position: relative;
+        transform: none;
+
+        
+    }
+
+    .scroll-wrapper-loc, .image-container-loc, .image-reveal-mask-loc {
         position: relative;
         transform: none;
     }
@@ -464,7 +491,7 @@
             <!-- Updated reveal div class name -->
             <div class="image-reveal-mask"></div>
             <img src="assets/images/ci-home-2.jpg" alt="Hero Image" class="d-none d-lg-block">
-            <img src="assets/images/building-image-mobile-1.jpg" alt="Hero Image" class="d-lg-none p-0">
+            <img src="assets/images/buil-home-mob.jpg" alt="Hero Image" class="d-lg-none p-0">
         </div>
     </div>
                 
@@ -506,13 +533,13 @@
   
 
 
-  <div class="container mtd-15">
+  <!-- <div class="container mtd-15">
     <div class="row ptd2 ptm2 pbd4 pbm4">
         <div class="col-lg-8 offset-lg-1 order-lg-1 pbm4">
-            <!-- <div class="image-wrapper-ma-h2">
+            <div class="image-wrapper-ma-h2">
                 <div class="image-reveal-ma-h2"></div>
                 <img src="assets/images/ci-building-1.jpg" alt="Image Reveal">
-            </div> -->
+            </div>
             <img src="assets/images/home-image-desktop-3.jpg" alt="Photograph of Brettenham House" class="img-fluid d-none d-lg-block">
             <img src="assets/images/home-image-mobile-3.jpg" alt="Photograph of Brettenham House" class="img-fluid d-lg-none">
         </div>
@@ -522,6 +549,35 @@
                 <p>Brettenham House’s location embodies the spirit of the building, a seamless blend of fascinating heritage with the very best in modern culture and offering a space where great things can be&nbsp;achieved.</p>
             </div>
             <a href="location.html" class="btn btn-primary">Find out more</a>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="container">
+    <div class="row ptm2 pbd4 pbm4">
+        <div class="col-lg-8 offset-lg-1 order-lg-1 pbm4">
+             <!-- Mask Container that contains the Wrapper -->
+
+            <!-- Updated container class name -->
+  <div class="scroll-wrapper-loc">
+    <!-- Updated wrapper class names -->
+    <div class="image-container-loc p-0 p-lg-5">
+        <!-- Updated reveal div class name -->
+        <div class="image-reveal-mask-loc"></div>
+        <img src="assets/images/location_home.jpg" alt="Hero Image" class="d-none d-lg-block">
+        <img src="assets/images/loc-home-mob.jpg" alt="Hero Image" class="d-lg-none p-0">
+    </div>
+</div>
+            
+        </div>
+        <div class="col-lg-3 order-lg-0 ptd3 ptm2">
+            <h3>location</h3>
+            <div class="pbd1 pbm2">
+                <p>Brettenham House’s location embodies the spirit of the building, a seamless blend of fascinating heritage with the very best in modern culture and offering a space where great things can be&nbsp;achieved.</p>
+            </div>
+            <a href="building.html" class="btn btn-primary">Find out more</a>
         </div>
     </div>
 </div>
@@ -703,6 +759,39 @@ t2.to(".image-container", {
     scaleX: 0,             // Scale the red reveal div horizontally to 0 to reveal the image
     transformOrigin: "left",
     ease: "power2.out"
+});
+</script>
+
+
+
+<script>
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+// GSAP Timeline Animation for the wrapper reveal with updated class names
+const t3 = gsap.timeline({
+ scrollTrigger: {
+     trigger: ".scroll-wrapper-loc",  // The new element that triggers the animation
+     start: "top 92%",           // Start when the top of the container hits 80% of the viewport height
+     end: "bottom 40%",          // Optional: Animation can end when the bottom hits 20% of viewport
+     scrub: true,                // Smooth scroll-based animation
+     markers: false               // Optional: Enable markers for debugging
+ }
+});
+
+// 1. Animate the updated container from a specific point using scaling
+t3.to(".image-container-loc", {
+ duration: 0.5,
+ scaleX: 1,             // Expand the container horizontally from 0 to full width
+ ease: "power3.out",    // Ease animation to make it smooth
+})
+
+// 2. Reveal the image by animating the updated reveal div
+.to(".image-reveal-mask-loc", {
+ duration: 1.3,
+ scaleX: 0,             // Scale the red reveal div horizontally to 0 to reveal the image
+ transformOrigin: "left",
+ ease: "power2.out"
 });
 </script>
 

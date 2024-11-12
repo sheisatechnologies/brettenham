@@ -15,7 +15,7 @@ tl.to(".wrapper-buil", {
     scaleX: 0,             // Scale the red reveal div horizontally to 0 to reveal the image
     transformOrigin: "left",
     ease: "power2.out"
-});
+});0
 
 
 
