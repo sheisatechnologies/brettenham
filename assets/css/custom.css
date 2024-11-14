@@ -880,7 +880,10 @@ footer a:hover {
 }
 @media (max-width: 991px){
 
-   
+    .pmx-2 {
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+    }
     .ptm6 {
         padding-top: 60px;
     }
