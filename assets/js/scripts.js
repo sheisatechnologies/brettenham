@@ -38,6 +38,105 @@ gsap.to(textWrapper, {
 
 
 
+// Function to start the animation
+function animateKeyFacts() {
+    // Ensure initial width is 0 to prevent flicker
+    revealWrapperkey.style.width = "0";
+  
+    // Animate width of the reveal-wrapper-key for a smooth effect
+    gsap.to(revealWrapperkey, {
+             
+      width: "auto",         // Target width to reveal text
+ 
+    });
+  
+    // Animate the text itself
+    gsap.to(textWrapperkey, {
+      duration: 1.5,         // Animation duration for text
+      opacity: 1,            // Fade in
+      y: 0,                  // Slide into view
+      ease: 'power2.out',    // Smooth easing
+      delay: 0.5             // Delay to allow width expansion first
+    });
+  }
+  
+  // Check if elements exist before observing
+  const revealWrapperkey = document.querySelector('.reveal-wrapper-key');
+  const textWrapperkey = document.querySelector('.text-wrapper-key');
+  
+  if (revealWrapperkey && textWrapperkey) {
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start the animation when the section is visible
+          animateKeyFacts();
+          observer.unobserve(entry.target);  // Stop observing once the animation starts
+        }
+      });
+    }, {
+      threshold: 0.1  // Adjusted threshold for earlier detection
+    });
+  
+    // Start observing the element
+    observer.observe(revealWrapperkey);
+  } else {
+    console.error("Animation elements not found in DOM.");
+  }
+
+
+
+
+  // Function to start the animation
+function animateSustainability() {
+    // Ensure initial width is 0 to prevent flicker
+    revealWrappersus.style.width = "0";
+  
+    // Animate width of the reveal-wrapper-key for a smooth effect
+    gsap.to(revealWrappersus, {
+      width: "auto",         // Target width to reveal text
+    });
+  
+    // Animate the text itself
+    gsap.to(textWrappersus, {
+      duration: 1.5,         // Animation duration for text
+      opacity: 1,            // Fade in
+      y: 0,                  // Slide into view
+      ease: 'power2.out',    // Smooth easing
+      delay: 0.5             // Delay to allow width expansion first
+    });
+  }
+  
+  // Check if elements exist before observing
+  const revealWrappersus = document.querySelector('.reveal-wrapper-sus');
+  const textWrappersus = document.querySelector('.text-wrapper-sus');
+  
+  if (revealWrappersus && textWrappersus) {
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start the animation when the section is visible
+          animateSustainability();
+          observer.unobserve(entry.target);  // Stop observing once the animation starts
+        }
+      });
+    }, {
+      threshold: 0.1  // Adjusted threshold for earlier detection
+    });
+  
+    // Start observing the element
+    observer.observe(revealWrappersus);
+  } else {
+    console.error("Animation elements not found in DOM.");
+  }
+  
+
+
+
+
+
+
 
 
 

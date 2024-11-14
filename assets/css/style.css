@@ -604,12 +604,57 @@ body {
   }
 
   .text-revel{
-      font-size: 65px;
+  font-size: 65px;
   line-height: 70px;
   color: var(--black);
   font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   }
+
+
+  .reveal-wrapper-key {
+    overflow: hidden;       /* Hide text overflow */
+    width: 0;               /* Initially hide the text */
+    display: inline-block;
+    white-space: nowrap;
+    transition: width 1s ease;  /* Reveal effect on width */
+  }
+  .text-wrapper-key {
+    font-weight: bold;
+    opacity: 0;               /* Start invisible */
+    transform: translateY(100px);  /* Start off-screen to the bottom*/
+  }
+
+  .text-revel-key{
+  color: var(--black);
+  font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  }
+
+
+
+
+  .reveal-wrapper-sus {
+    overflow: hidden;       /* Hide text overflow */
+    width: 0;               /* Initially hide the text */
+    display: inline-block;
+    white-space: nowrap;
+    transition: width 1s ease;  /* Reveal effect on width */
+  }
+  .text-wrapper-sus {
+    font-weight: bold;
+    opacity: 0;               /* Start invisible */
+    transform: translateY(100px);  /* Start off-screen to the bottom */
+  }
+
+  .text-revel-sus{
+  color: var(--black);
+  font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  }
+
+
+
 
   /* .text-revel-mob{
     font-size: 40px;
