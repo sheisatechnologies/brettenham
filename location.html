@@ -208,6 +208,12 @@ height: auto;
   content: ''; /* Remove the default black dot */
 }
 
+/* Remove the default black dot behind the button */
+.slick-slider-contact .slick-dots li button:before {
+  content: ''; /* Remove the default black dot */
+}
+
+
 /* Active dot is fully red */
 .slider-sp .slick-dots li.slick-active button {
   background-color: #FF4602; /* Active dot color */
@@ -776,157 +782,237 @@ display: block;
 
 
 
-    <div class="container">
-        <div class="row ptd4 ptm4 pbd4 pbm4">
 
-            <div class="col-lg-10 order-lg-1 pbm3 p-0">
-                <img src="assets/images/location-map.jpg" alt="Map" class="img-fluid" />
+
+    <div class="container mt-5 mb-5 contact">
+
+       
+
+        <div class="slick-slider-contact">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <div class="row slide-content">
+                    <div class="col-md-3 text-content order-2 ptd5 order-lg-1  ptm2">
+                        <div class="mb-auto">
+                            <!-- <table class="map-key">
+                                <tr>
+                                    <td class="map-key-square text-mustard">&#9632;</td>
+                                    <td class="map-category-title">food & drinik</td>
+                                </tr>
+                            </table> -->
+                            
+                            <div>
+                                <table class="map-key">
+                                    <tr>
+                                        <td class="map-key-square text-mustard">&#9632;</td>
+                                        <td class="map-category-title">food & drinik</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">1</td>
+                                        <td class="map-category-text">La Goccia</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">2</td>
+                                        <td class="map-category-text">Cafe Murano</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">3</td>
+                                        <td class="map-category-text">Ikoyi</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">4</td>
+                                        <td class="map-category-text">Balthazar</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">5</td>
+                                        <td class="map-category-text">180 House</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">6</td>
+                                        <td class="map-category-text">Bancone</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">7</td>
+                                        <td class="map-category-text">Blacklock</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-category-number">8</td>
+                                        <td class="map-category-text">Barrafina</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-md-9 image-content order-1 order-lg-2 p-md-5">
+                        <img src="assets/images/building/map_slider.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
+                        <img src="assets/images/building/map_mobile.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
+                    
+                    </div>
+
+                   
+                </div>
+            </div>
+    
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="row">
+                </div>
+                <div class="row slide-content">
+                    <div class="col-md-2 text-content order-2 ptd5 order-lg-1 ptm2">
+                        <div class="mb-auto">
+                            <table class="map-key">
+                                <tr>
+                                    <td class="map-key-square text-blue">&#9632;</td>
+                                    <td class="map-category-title">Hotels</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">9</td>
+                                    <td class="map-category-text">The Savoy</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">10</td>
+                                    <td class="map-category-text">ME London</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">11</td>
+                                    <td class="map-category-text">One Aldwych</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">12</td>
+                                    <td class="map-category-text">The Walforf</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">13</td>
+                                    <td class="map-category-text">Nomad London</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">14</td>
+                                    <td class="map-category-text">Henrietta Hotel</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-10 image-content order-1 order-lg-2 p-5">
+                        <img src="assets/images/building/map_slider.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
+                        <img src="assets/images/building/map_mobile.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
+                    
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-2 order-lg-0 map-loc">
-
-                <table class="map-key">
-                    <tr>
-                        <td class="map-key-square text-mustard">&#9632;</td>
-                        <td class="map-category-title">Bars, Restaurants and&nbsp;Cafes</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">1</td>
-                        <td class="map-category-text">La Goccia</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">2</td>
-                        <td class="map-category-text">Cafe Murano</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">3</td>
-                        <td class="map-category-text">Ikoyi</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">4</td>
-                        <td class="map-category-text">Balthazar</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">5</td>
-                        <td class="map-category-text">180 House</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">6</td>
-                        <td class="map-category-text">Bancone</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">7</td>
-                        <td class="map-category-text">Blacklock</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">8</td>
-                        <td class="map-category-text">Barrafina</td>
-                    </tr>
-                </table>
-
-                <div class="ptd1 ptm2"></div>
-
-                <table class="map-key">
-                    <tr>
-                        <td class="map-key-square text-blue">&#9632;</td>
-                        <td class="map-category-title">Hotels</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">9</td>
-                        <td class="map-category-text">The Savoy</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">10</td>
-                        <td class="map-category-text">ME London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">11</td>
-                        <td class="map-category-text">One Aldwych</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">12</td>
-                        <td class="map-category-text">The Walforf</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">13</td>
-                        <td class="map-category-text">Nomad London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">14</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr>
-                </table>
-
-                <div class="ptd1 ptm2"></div>
-
-                <table class="map-key">
-                    <tr>
-                        <td class="map-key-square text-teal">&#9632;</td>
-                        <td class="map-category-title">Green spaces and wellness</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">15</td>
-                        <td class="map-category-text">The River (running path)</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Lincoln’s Inn Fields</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">17</td>
-                        <td class="map-category-text">The Southbank</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">18</td>
-                        <td class="map-category-text">Victoria Embankment Gardens</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr>
-                </table>
-
-                <div class="ptd1 ptm2"></div>
-
-                <table class="map-key">
-                    <tr>
-                        <td class="map-key-square text-orange">&#9632;</td>
-                        <td class="map-category-title">Local occupiers</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">21</td>
-                        <td class="map-category-text">Google</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">22</td>
-                        <td class="map-category-text">Conde Nast</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">23</td>
-                        <td class="map-category-text">Goldman Sachs</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">24</td>
-                        <td class="map-category-text">McKinsey &amp; Company</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">25</td>
-                        <td class="map-category-text">Coutts</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">26</td>
-                        <td class="map-category-text">Mishcon De Reya</td>
-                    </tr>
-                </table>
-
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="row">
+                </div>
+                <div class="row slide-content">
+                    <div class="col-md-2 text-content order-2 ptd5 order-lg-1 ptm2">
+                        <div class="mb-auto">
+                            <table class="map-key">
+                                <tr>
+                                    <td class="map-key-square text-teal">&#9632;</td>
+                                    <td class="map-category-title">Green spaces and wellness</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">15</td>
+                                    <td class="map-category-text">The River (running path)</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">16</td>
+                                    <td class="map-category-text">Lincoln’s Inn Fields</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">17</td>
+                                    <td class="map-category-text">The Southbank</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">18</td>
+                                    <td class="map-category-text">Victoria Embankment Gardens</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">19</td>
+                                    <td class="map-category-text">St James’s Park</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">20</td>
+                                    <td class="map-category-text">Soho Square Gardens</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-10 image-content order-1 order-lg-2 p-5">
+                        <img src="assets/images/building/map_slider.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
+                        <img src="assets/images/building/map_mobile.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
+                    
+                    </div>
+                </div>
             </div>
 
+            <!-- Slide 4 -->
+            <div class="slide">
+                <div class="row">
+                </div>
+                <div class="row slide-content">
+                    <div class="col-md-2 text-content order-2 ptd5 order-lg-1 ptm2">
+                        <div class="mb-auto">
+                            <table class="map-key">
+                                <tr>
+                                    <td class="map-key-square text-orange">&#9632;</td>
+                                    <td class="map-category-title">Local occupiers</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">21</td>
+                                    <td class="map-category-text">Google</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">22</td>
+                                    <td class="map-category-text">Conde Nast</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">23</td>
+                                    <td class="map-category-text">Goldman Sachs</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">24</td>
+                                    <td class="map-category-text">McKinsey &amp; Company</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">25</td>
+                                    <td class="map-category-text">Coutts</td>
+                                </tr>
+                                <tr>
+                                    <td class="map-category-number">26</td>
+                                    <td class="map-category-text">Mishcon De Reya</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-10 image-content order-1 order-lg-2 p-5">
+                        <img src="assets/images/building/map_slider.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
+                        <img src="assets/images/building/map_mobile.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
+                    
+                    
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Add more slides as needed -->
         </div>
+
+       
+
+       <div class="arrowb">
+        <i class='fa build-prev'><img src="assets/images/btn-arrow-left.svg" alt="Left Arrow"></i>
+        <i class='fa build-next'><img src="assets/images/btn-arrow-right.svg" alt="Right Arrow"></i>
+       </div>
+
+        
     </div>
+
+
+
+
+
+  
 
 
 
@@ -1167,7 +1253,7 @@ display: block;
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         arrows: true,
         autoplay: false,
         autoplaySpeed: 3000,
