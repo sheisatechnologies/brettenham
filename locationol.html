@@ -83,7 +83,7 @@ position: relative;
 .arrowb .build-prev,
 .arrowb .build-next {
 position: absolute;
-top: 7%;
+top: 93%;
 transform: translateY(-50%);
 z-index: 1000;
 width: 30px;
@@ -92,12 +92,12 @@ cursor: pointer;
 }
 
 .arrowb .build-prev {
-margin-left: 213px; /* Position previous arrow on the right */
+margin-left: -3px; /* Position previous arrow on the right */
 left: unset; /* Ensure it's not on the left */
 }
 
 .arrowb .build-next {
-margin-left: 268px; /* Position next arrow on the right */
+margin-left: 70px; /* Position next arrow on the right */
 left: unset; /* Ensure it's not on the left */
 }
 
@@ -168,11 +168,35 @@ height: auto;
 
 
 .slider-localarea   .custom-prev-arrow {
-    right: 50px; /* Adjust this value as needed */
+    right: 120px; /* Adjust this value as needed */
 }
 
 .slider-localarea  .custom-next-arrow {
-    right: 10px; /* Position closer to the right edge */
+    right: 90px; /* Position closer to the right edge */
+}
+
+/* Remove the default black dot behind the button */
+.slider-localarea .slick-dots li button:before {
+  content: ''; /* Remove the default black dot */
+}
+
+
+.slider-localarea  .custom-prev-arrow, .custom-next-arrow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+
+
+.slider-localarea   .custom-prev-arrow {
+    right: 120px; /* Adjust this value as needed */
+}
+
+.slider-localarea  .custom-next-arrow {
+    right: 90px; /* Position closer to the right edge */
 }
 
 /* Remove the default black dot behind the button */
@@ -182,10 +206,15 @@ height: auto;
 
 
 
+
+
+
+
+
 /* Slider-SP Dots: Smaller and Simple */
 .slider-sp .slick-dots {
-  bottom: -10px;  /* Position dots at the bottom */
-  left: 10px;    /* Align dots to the bottom-left corner */
+  bottom: -3px;  /* Position dots at the bottom */
+  left: 69px;    /* Align dots to the bottom-left corner */
   text-align: right; /* Align the dots to the left */
 }
 
@@ -383,16 +412,16 @@ height: auto;
 }
 
 
-.slick-slider-contact .slick-dots {
+.slick-dots {
     position: absolute;
-    top: 48px;
-    right: 10px;
+    bottom: -41px; /* Adjust this value to control how far from the bottom */
+    right: 10px; /* Adjust this value to control how far from the right */
     display: flex;
     justify-content: flex-end;
-    right: 1150px;
+    right: -15px;
 }
 
-.slick-slider-contact .slick-dots li {
+.slick-dots li {
     margin: 0 5px; /* Adjust spacing between dots */
 }
 
@@ -536,10 +565,44 @@ display: block;
         }
 
 
-</style>
+
+        .custom-prev-arrow-connectivity, .custom-next-arrow-connectivity {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 50%; /* Center vertically within the slider */
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .custom-prev-arrow-connectivity {
+            right: 70px; /* Position left arrow close to right corner */
+        }
+        .custom-next-arrow-connectivity {
+            right: 30px; /* Position right arrow at the right corner */
+        }
+       
+        
 
 
-</style>
+
+        .custom-prev-arrow-connectivity, .custom-next-arrow-connectivity {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 250%; /* Center vertically within the slider */
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .custom-prev-arrow-connectivity {
+            right: 70px; /* Position left arrow close to right corner */
+        }
+        .custom-next-arrow-connectivity {
+            right: 30px; /* Position right arrow at the right corner */
+        }
+        </style>
+        
 </head>
 <body>
 
@@ -723,78 +786,79 @@ display: block;
 
 
 
- 
-
     <div class="container mt-5 slider-localarea">
-       <div class="row">
-        <div class="col-lg-3 ptd3 ptm2">
-            <h3>connectivity</h3>
+        <div class="row">
+         <div class="col-lg-3 ptd3 ptm2">
+             <h3>connectivity</h3>
+         </div>
         </div>
-       </div>
-        <!-- Tabs -->
-        <ul class="nav location-tab justify-content-center" id="logoTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link loc-tab active" data-bs-toggle="tab" href="#tab1" role="tab">WALK</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link loc-tab" data-bs-toggle="tab" href="#tab2" role="tab">CYCLE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link loc-tab" data-bs-toggle="tab" href="#tab3" role="tab">TUBE</a>
-            </li>
-        </ul>
+         <!-- Tabs -->
+         <ul class="nav location-tab justify-content-center" id="logoTab" role="tablist">
+             <li class="nav-item">
+                 <a class="nav-link loc-tab active" data-bs-toggle="tab" href="#tab1" role="tab">WALK</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link loc-tab" data-bs-toggle="tab" href="#tab2" role="tab">CYCLE</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link loc-tab" data-bs-toggle="tab" href="#tab3" role="tab">TUBE</a>
+             </li>
+         </ul>
+ 
+         <div class="tab-content pt-3">
+             <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                 <div class="slider">
+                     <div><img src="assets/images/location/l_logo1.svg" alt="Logo 1"></div>
+                 <div><img src="assets/images/location/l_logo2.svg" alt="Logo 2"></div>
+                 <div><img src="assets/images/location/l_logo3.svg" alt="Logo 3"></div>
+                 <div><img src="assets/images/location/l_logo4.svg" alt="Logo 4"></div>
+                 </div>
+                 <div class="slider-navigation">
+                     <button class="prev btn-arrow">
+                         <img src="assets/images/btn-arrow-left.svg" alt="Previous Slide">
+                     </button>
+                     <button class="next btn-arrow">
+                         <img src="assets/images/btn-arrow-right.svg" alt="Next Slide">
+                     </button>
+                 </div>
+             </div>
+             <div class="tab-pane fade" id="tab2" role="tabpanel">
+                 <div class="slider">
+                     <div><img src="assets/images/location/connectivity-cycling-1.svg" alt="Logo 1"></div>
+                     <div><img src="assets/images/location/connectivity-cycling-2.svg" alt="Logo 2"></div>
+                     <div><img src="assets/images/location/connectivity-cycling-3.svg" alt="Logo 3"></div>
+                     <div><img src="assets/images/location/connectivity-cycling-4.svg" alt="Logo 4"></div>
+                 </div>
+                 <div class="slider-navigation">
+                     <button class="prev btn-arrow">
+                         <img src="assets/images/btn-arrow-left.svg" alt="Previous Slide">
+                     </button>
+                     <button class="next btn-arrow">
+                         <img src="assets/images/btn-arrow-right.svg" alt="Next Slide">
+                     </button>
+                 </div>
+             </div>
+             <div class="tab-pane fade" id="tab3" role="tabpanel">
+                 <div class="slider">
+                     <div><img src="assets/images/location/connectivity-tube-1.svg" alt="Logo 1"></div>
+                     <div><img src="assets/images/location/connectivity-tube-2.svg" alt="Logo 2"></div>
+                     <div><img src="assets/images/location/connectivity-tube-3.svg" alt="Logo 3"></div>
+                     <div><img src="assets/images/location/connectivity-tube-4.svg" alt="Logo 4"></div>
+                 </div>
+                 <div class="slider-navigation">
+                     <button class="prev btn-arrow">
+                         <img src="assets/images/btn-arrow-left.svg" alt="Previous Slide">
+                     </button>
+                     <button class="next btn-arrow">
+                         <img src="assets/images/btn-arrow-right.svg" alt="Next Slide">
+                     </button>
+                 </div>
+             </div>
+         </div>
+     </div>
 
-        <div class="tab-content pt-3">
-            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
-                <div class="slider">
-                    <div><img src="assets/images/location/l_logo1.svg" alt="Logo 1"></div>
-                <div><img src="assets/images/location/l_logo2.svg" alt="Logo 2"></div>
-                <div><img src="assets/images/location/l_logo3.svg" alt="Logo 3"></div>
-                <div><img src="assets/images/location/l_logo4.svg" alt="Logo 4"></div>
-                </div>
-                <div class="slider-navigation">
-                    <button class="prev btn-arrow">
-                        <img src="assets/images/btn-arrow-left.svg" alt="Previous Slide">
-                    </button>
-                    <button class="next btn-arrow">
-                        <img src="assets/images/btn-arrow-right.svg" alt="Next Slide">
-                    </button>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="tab2" role="tabpanel">
-                <div class="slider">
-                    <div><img src="assets/images/location/connectivity-cycling-1.svg" alt="Logo 1"></div>
-                    <div><img src="assets/images/location/connectivity-cycling-2.svg" alt="Logo 2"></div>
-                    <div><img src="assets/images/location/connectivity-cycling-3.svg" alt="Logo 3"></div>
-                    <div><img src="assets/images/location/connectivity-cycling-4.svg" alt="Logo 4"></div>
-                </div>
-                <div class="slider-navigation">
-                    <button class="prev btn-arrow">
-                        <img src="assets/images/btn-arrow-left.svg" alt="Previous Slide">
-                    </button>
-                    <button class="next btn-arrow">
-                        <img src="assets/images/btn-arrow-right.svg" alt="Next Slide">
-                    </button>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="tab3" role="tabpanel">
-                <div class="slider">
-                    <div><img src="assets/images/location/connectivity-tube-1.svg" alt="Logo 1"></div>
-                    <div><img src="assets/images/location/connectivity-tube-2.svg" alt="Logo 2"></div>
-                    <div><img src="assets/images/location/connectivity-tube-3.svg" alt="Logo 3"></div>
-                    <div><img src="assets/images/location/connectivity-tube-4.svg" alt="Logo 4"></div>
-                </div>
-                <div class="slider-navigation">
-                    <button class="prev btn-arrow">
-                        <img src="assets/images/btn-arrow-left.svg" alt="Previous Slide">
-                    </button>
-                    <button class="next btn-arrow">
-                        <img src="assets/images/btn-arrow-right.svg" alt="Next Slide">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+   
+
 
 
 
@@ -872,7 +936,7 @@ display: block;
                 <div class="row">
                 </div>
                 <div class="row slide-content">
-                    <div class="col-md-3 text-content order-2 ptd5 order-lg-1 ptm2">
+                    <div class="col-md-2 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
                             <table class="map-key">
                                 <tr>
@@ -906,7 +970,7 @@ display: block;
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-9 image-content order-1 order-lg-2">
+                    <div class="col-md-10 image-content order-1 order-lg-2">
                         <img src="assets/images/building/map_slider.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
                         <img src="assets/images/building/map_mobile.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
                     
@@ -919,7 +983,7 @@ display: block;
                 <div class="row">
                 </div>
                 <div class="row slide-content">
-                    <div class="col-md-3 text-content order-2 ptd5 order-lg-1 ptm2">
+                    <div class="col-md-2 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
                             <table class="map-key">
                                 <tr>
@@ -953,7 +1017,7 @@ display: block;
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-9 image-content order-1 order-lg-2">
+                    <div class="col-md-10 image-content order-1 order-lg-2">
                         <img src="assets/images/building/map_slider.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
                         <img src="assets/images/building/map_mobile.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
                     
@@ -966,7 +1030,7 @@ display: block;
                 <div class="row">
                 </div>
                 <div class="row slide-content">
-                    <div class="col-md-3 text-content order-2 ptd5 order-lg-1 ptm2">
+                    <div class="col-md-2 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
                             <table class="map-key">
                                 <tr>
@@ -1000,7 +1064,7 @@ display: block;
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-9 image-content order-1 order-lg-2">
+                    <div class="col-md-10 image-content order-1 order-lg-2">
                         <img src="assets/images/building/map_slider.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
                         <img src="assets/images/building/map_mobile.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
                     
@@ -1025,6 +1089,12 @@ display: block;
 
 
 
+
+  
+
+
+
+
     <div class="container position-relative pmb-6 dmb-6 slider-localarea">
         <div class="row ptd4 ptm4 pbd4 pbm4">
             <div class="col-lg-12">
@@ -1035,66 +1105,66 @@ display: block;
                
 
                   <!-- Slider Section -->
-    <div class="slider-sp">
-        <!-- Slider Images with Captions -->
-        <div><img src="assets/images/location/slider/location-slider-img1.jpg" alt="Slide 1" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img2.jpg" alt="Slide 2" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img3.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img4.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img5.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img6.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img7.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img8.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img9.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img10.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img11.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img12.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img13.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img14.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img15.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img16.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-        <div><img src="assets/images/location/slider/location-slider-img17.jpg" alt="Slide 3" class="img-fluid">
-            <div class="slider-caption">The National Gallery</div>
-        </div>
-
-
-
-
-
-
-      </div>
+                  <div class="slider-sp">
+                    <!-- Slider Images with Captions -->
+                    <!-- <div><img src="assets/images/location/slider/location-slider-img1.jpg" alt="Slide 1" class="img-fluid">
+                        <div class="slider-caption">The National </div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img2.jpg" alt="Slide 2" class="img-fluid">
+                        <div class="slider-caption">The National Gallery</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img3.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">The National Gallery</div>
+                    </div> -->
+                    <div><img src="assets/images/location/slider/location-slider-img4.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">180 Studios</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img5.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">Barrafina</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img6.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">Nomad</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img7.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">The Savoy</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img8.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">National Theatre</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img9.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">Victoria Embankment Gardens</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img10.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">Somerset House</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img11.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">Bancone</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img12.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">Royal Opera House</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img13.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">St James’s Park</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img14.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">La Goccia</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img15.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">The National Gallery</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img16.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">South Bank</div>
+                    </div>
+                    <div><img src="assets/images/location/slider/location-slider-img17.jpg" alt="Slide 3" class="img-fluid">
+                        <div class="slider-caption">Covent Garden</div>
+                    </div>
+            
+            
+            
+            
+            
+            
+                  </div>
             </div>
            
         </div>
@@ -1209,57 +1279,38 @@ display: block;
 
 
 <script>
-    $(document).ready(function () {
-    // Initialize all sliders
-    $('.slider').each(function () {
-        $(this).slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: false, // Disable default Slick arrows
-            dots: true // Enable dots for navigation
+    
+    $(document).ready(function() {
+        // Initialize Slick Slider for all sliders on page load
+        $('.slider').each(function() {
+            $(this).slick({
+                dots: true,
+                // arrows: true,
+                infinite: true,
+                slidesToShow: 3, // Default for desktop
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: $(".build-prev"),  // Custom previous arrow
+                nextArrow: $(".build-next"),   // Custom next arrow
+                responsive: [
+                    {
+                        breakpoint: 768, // For screens 768px and below
+                        settings: {
+                            slidesToShow: 1, // Show only one image on mobile
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+
+        // Reset Slick when switching tabs to ensure proper display
+        $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+            $('.slider').slick('setPosition');
         });
     });
-
-    // Custom navigation for the sliders
-    $('.prev').click(function () {
-        $(this).closest('.tab-pane').find('.slider').slick('slickPrev');
-    });
-
-    $('.next').click(function () {
-        $(this).closest('.tab-pane').find('.slider').slick('slickNext');
-    });
-
-    // Ensure sliders refresh properly when tabs are switched
-    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
-        $('.slider').slick('setPosition');
-    });
-
-    // Existing Code for Slick-slider-contact
-    var $slickElement = $('.slick-slider-contact');
-
-    // Set total slide count on page load
-    var totalSlides = $slickElement.children().length; 
-    $('#total-slides').text(totalSlides);
-
-    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide) {
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $('#current-slide').text(i);
-    });
-
-    // Initialize the slick-slider-contact
-    $slickElement.slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        prevArrow: $(".build-prev"),
-        nextArrow: $(".build-next")
-    });
-});
+</script>
 
 </script>
 
@@ -1283,7 +1334,7 @@ display: block;
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         arrows: true,
         autoplay: false,
         autoplaySpeed: 3000,
@@ -1328,49 +1379,7 @@ display: block;
 
 
     </script>
-    <script>
-        $(document).ready(function(){
-            $('.slider-connectivity').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                autoplay: true,
-                prevArrow: '<button type="button" class=" custom-prev-arrow"><img src="assets/images/btn-arrow-left.svg" alt="Left Arrow"></button>',
-                nextArrow: '<button type="button" class=" custom-next-arrow"><img src="assets/images/btn-arrow-right.svg" alt="Right Arrow"></button>',
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 448,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-                ],
-                autoplaySpeed: 5000,
-                cssEase:"cubic-bezier(0.2, 0.4, 0.4, 0.9)",
-                swipeToSlide: true,
-                accessibility: true
-            });
-        });
-    </script>
+   
     <script>
         $(document).ready(function(){
             $('.slider-2').slick({
@@ -1396,7 +1405,7 @@ display: block;
     $(document).ready(function(){
     $('.slider-sp').slick({
         centerMode: true,
-        centerPadding: '360px',
+        centerPadding: '300px',
         slidesToShow: 1,
         infinite: true,
         dots: true,
