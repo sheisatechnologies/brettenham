@@ -787,6 +787,9 @@ footer a:hover {
     .mtd-17{
         margin-top: 2.5rem !important;
     }
+    .mtd-18{
+        margin-top: 7rem !important;
+    }
 
    
     .mtd-6{
@@ -956,6 +959,13 @@ footer a:hover {
 
     .mtm-6{
         margin-top: 3rem !important;
+    }
+
+    .mtm-7{
+        margin-top: 6rem !important;
+    }
+    .mtmn-3{
+        margin-top: -3rem !important;
     }
 
 }

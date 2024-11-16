@@ -7,7 +7,7 @@
     <title>Location - Brettenham House</title>
     <meta name="description" content="Brettenham House’s location embodies the spirit of the building, a seamless blend of fascinating heritage with the very best in modern culture and offering a space where great things can be achieved.">
     <meta name="author" content="Other Alias">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
     <meta name="theme-color" content="#FFFFFF"/>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/slick.css" rel="stylesheet" type="text/css" />
@@ -79,6 +79,8 @@ ul.location-tab .nav-link {
 
 position: relative;
 }
+
+
 /* Custom Arrow Styling */
 .arrowb .build-prev,
 .arrowb .build-next {
@@ -388,8 +390,8 @@ height: auto;
     top: 48px;
     right: 10px;
     display: flex;
-    justify-content: flex-end;
-    right: 1150px;
+    justify-content: flex-start;
+   
 }
 
 .slick-slider-contact .slick-dots li {
@@ -448,6 +450,25 @@ height: auto;
 
 
 @media (max-width: 991px) {
+
+    .arrowb .build-prev, .arrowb .build-next {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.slick-slider-contact .slick-dots {
+    position: absolute;
+    top: 567px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+    
     .mask-container {
         position: relative;
         width: 100%;
@@ -632,7 +653,7 @@ display: block;
    
 
 
-    <div class="container mt-5 mb-5 contact">
+    <div class="container mt-5   mb-5 contact">
 
        
 
@@ -710,6 +731,8 @@ display: block;
     </div>
 
 
+
+    
 
 
 
@@ -798,7 +821,7 @@ display: block;
 
 
 
-    <div class="container mt-5 mb-5 contact">
+    <div class="container mtd-18 mb-5 pt-5 pt-md-0 contact">
 
        
 
@@ -809,18 +832,18 @@ display: block;
                     <div class="col-md-3 text-content order-2 ptd5 order-lg-1  ptm2">
                         <div class="mb-auto">
                             <!-- <table class="map-key">
-                                <tr>
-                                    <td class="map-key-square text-mustard">&#9632;</td>
-                                    <td class="map-category-title">food & drinik</td>
-                                </tr>
+                                 <td class="mtmn-3">
+                                        <td class="map-key-square text-mustard">&#9632;</td>
+                                        <td class="map-category-title">food & drinik</td>
+                                    </td>
                             </table> -->
                             
                             <div>
-                                <table class="map-key">
-                                    <tr>
-                                        <td class="map-key-square text-mustard">&#9632;</td>
-                                        <td class="map-category-title">food & drinik</td>
-                                    </tr>
+                                <table class="map-key mtm-7">
+                                   <tr>
+                                    <td class="map-key-square text-mustard">&#9632;</td>
+                                    <td class="map-category-title">food & drinik</td>
+                                   </tr>
                                     <tr>
                                         <td class="map-category-number">1</td>
                                         <td class="map-category-text">La Goccia</td>
@@ -874,7 +897,7 @@ display: block;
                 <div class="row slide-content">
                     <div class="col-md-3 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
-                            <table class="map-key">
+                            <table class="map-key mtm-7">
                                 <tr>
                                     <td class="map-key-square text-blue">&#9632;</td>
                                     <td class="map-category-title">Hotels</td>
@@ -921,7 +944,7 @@ display: block;
                 <div class="row slide-content">
                     <div class="col-md-3 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
-                            <table class="map-key">
+                            <table class="map-key mtm-7">
                                 <tr>
                                     <td class="map-key-square text-teal">&#9632;</td>
                                     <td class="map-category-title">Green spaces and wellness</td>
@@ -968,7 +991,7 @@ display: block;
                 <div class="row slide-content">
                     <div class="col-md-3 text-content order-2 ptd5 order-lg-1 ptm2">
                         <div class="mb-auto">
-                            <table class="map-key">
+                            <table class="map-key mtm-7">
                                 <tr>
                                     <td class="map-key-square text-orange">&#9632;</td>
                                     <td class="map-category-title">Local occupiers</td>
