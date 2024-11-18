@@ -1201,14 +1201,14 @@ const t2 = gsap.timeline({
 
 // 1. Animate the updated container from a specific point using scaling
 t2.to(".image-container", {
-    duration: 1,
+    duration: 0.5,
     scaleX: 1,             // Expand the container horizontally from 0 to full width
     ease: "power3.out",    // Ease animation to make it smooth
 })
 
 // 2. Reveal the image by animating the updated reveal div
 .to(".image-reveal-mask", {
-    duration: 1,
+    duration: 9,
     scaleX: 0,             // Scale the red reveal div horizontally to 0 to reveal the image
     transformOrigin: "left",
     ease: "power2.out"

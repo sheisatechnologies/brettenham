@@ -37,35 +37,6 @@
     <!-- Google tag (gtag.js) -->
 <style>
 
-   /* Custom Arrow Styling */
-   .arrowb-loc .build-prevl,
-.arrowb-loc .build-nextl {
-    position: absolute;
-    top: 94%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.arrowb-loc .build-prevl {
-    margin-left: -3px; /* Position previous arrow on the right */
-    left: unset; /* Ensure it's not on the left */
-}
-
-.arrowb-loc .build-nextl {
-    margin-left: 70px; /* Position next arrow on the right */
-    left: unset; /* Ensure it's not on the left */
-}
-
-.arrowb-loc .build-prevl img, 
-.arrowb-loc .build-nextl img {
-    width: 60%;
-    height: auto;
-}
-
-
 
 
 
@@ -683,21 +654,17 @@ display: block;
    
 
 
-  
-
-
-
-    <div class="container mt-5 mb-16 contact">
+    <div class="container mt-5   mb-5 contact">
 
        
 
-        <div class="slick-slider-contact-lacation">
+        <div class="slick-slider-contact">
             <!-- Slide 1 -->
             <div class="slide">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h3>The Team</h3>
-                    </div>
+                    <!-- <div class="col-lg-12">
+                        <h3>Local Area</h3>
+                    </div> -->
                 </div>
                 <div class="row slide-content">
                     <div class="col-md-4 text-content order-2 order-lg-1 ptd5 ptm2">
@@ -722,7 +689,7 @@ display: block;
             <div class="slide">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3>The Team</h3>
+                        <!-- <h3>Perfectly Conected</h3> -->
                     </div>
                 </div>
                 <div class="row slide-content">
@@ -748,7 +715,7 @@ display: block;
             <!-- Add more slides as needed -->
         </div>
 
-        <div class="custom-navigation d-flex justify-content-start align-items-center mtd-6">
+        <div class="custom-navigation d-flex justify-content-start align-items-center mt-3">
             
             <div class="slide-indicator indicator-location indicator-bill mx-3">
                 <span id="current-slide">1/2</span>/<span id="total-slides">2</span>
@@ -756,13 +723,17 @@ display: block;
           
         </div>
 
-       <div class="arrowb-loc">
-        <i class='fa build-prevl'><img src="assets/images/btn-arrow-left.svg" alt="Left Arrow"></i>
-        <i class='fa build-nextl'><img src="assets/images/btn-arrow-right.svg" alt="Right Arrow"></i>
+       <div class="arrowb">
+        <i class='fa build-prev'><img src="assets/images/btn-arrow-left.svg" alt="Left Arrow"></i>
+        <i class='fa build-next'><img src="assets/images/btn-arrow-right.svg" alt="Right Arrow"></i>
        </div>
 
         
     </div>
+
+
+
+    
 
 
 
@@ -1259,39 +1230,7 @@ display: block;
 
 
 
-<script>
-    
-    $(document).ready(function() {
-    var $slickElement = $('.slick-slider-contact-lacation');
 
-    // Manually set the total slide count right after DOM is ready
-    var totalSlides = $slickElement.children().length; // Get number of slides
-    $('#total-slides').text(totalSlides); // Set total slides on page load
-
-    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide){
-        var i = (currentSlide ? currentSlide : 0) + 1;  // Calculate current slide (index + 1)
-        $('#current-slide').text(i);  // Update current slide number dynamically
-    });
-
-    // Initialize the slick slider
-    $slickElement.slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        prevArrow: $(".build-prevl"),  // Custom previous arrow
-       nextArrow: $(".build-nextl")   // Custom next arrow
-    });
-
-    // Manually trigger init event to set the first current slide on page load
-    $slickElement.trigger('init', [$slickElement.slick('getSlick')]);
-});
-
-
-</script>
 
 <script>
     $(document).ready(function () {
