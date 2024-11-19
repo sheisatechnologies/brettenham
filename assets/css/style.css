@@ -677,8 +677,9 @@ body {
     text-orientation: upleft;  /* Keep the text upright */
     font-size: 3rem;
     font-weight: bold;
-    opacity: 0;               /* Start invisible */
-    transform: translateX(100px);  /* Start off-screen to the left */
+    opacity: 0;                /* Start invisible */
+    transform: rotate(180deg) translateX(100px); /* Rotate 180 degrees */
+    transform-origin: center;  /* Ensure rotation happens around the center */
   }
 
   .text-revel{
