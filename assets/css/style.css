@@ -111,6 +111,10 @@ body {
 
 }
 
+.slider-localarea{
+    position: relative;
+}
+
 /* index  custom slide slick */
 /* .slick-dots {
     position: absolute;
