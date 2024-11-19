@@ -465,6 +465,57 @@ body {
 
 
  /* Updated class names for container styling */
+ .scroll-wrapper1 {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* margin: 100vh auto; Center the container and make sure it’s halfway down the page */
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Updated class names for the inner wrapper styling */
+.image-container1 {
+    width: 100%;
+    height: 600px;
+    background-color: var(--orange);
+    position: absolute;
+    padding: 50px;
+    box-sizing: border-box;
+    transform-origin: left;
+    transform: scaleX(0);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Updated class names for the reveal div */
+.image-reveal-mask1 {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 640px;
+    background: var(--orange);
+    transform-origin: left;
+    transform: scaleX(1);
+    z-index: 2;
+}
+
+/* Image styling */
+.image-container1 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+
+
+
+ /* Updated class names for container styling */
  .scroll-wrapper-loc {
     position: relative;
     width: 100%;

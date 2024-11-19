@@ -34,9 +34,6 @@ gsap.to(textWrapper, {
 });
 
 
-
-
-
 const revealWrapper1 = document.querySelector('.reveal-wrapper1');
 const textWrapper1 = document.querySelector('.text-wrapper1');
 

@@ -796,38 +796,37 @@ height: auto;
     </div> -->
 
 
-    
-
     <div class="container">
-        <div class="row ptd2 pbd4 pbm6">
-
-            <div class="col-lg-1 offset-lg-1">
-              
-                <!-- <h1 class="rotate trm">The Building</h1> -->
-
+        <div class="row ptm2 pbd4 pbm4">
+            <div class="col-lg-1 offset-lg-1  p-3 ptd3 ptm2 p-0">
                 <div class="reveal-wrapper">
                     <div class="text-wrapper">
                       <span class="text-revel">PANAROMIC VIEWS</span>
                     </div>
                   </div>
-
-                 
                
             </div>
-            <div class="col-lg-10 ">
-                <div class="mask-container pb-md-5">
-                    <!-- Wrapper that contains the image with padding -->
-                    <div class="wrapper-buil bg-pan p-0 p-md-5">
-                        <!-- Red reveal div that is larger than the image container -->
-                        <div class="image-reveal-buil bg-pan"></div>
-                        <img src="assets/images/ci-home-1.jpg" alt="Hero Image" class="img-fluid d-none d-lg-block">
-                        <img src="assets/images/building-image-mobile-1.jpg" alt="The Building - Brettenham House" class="img-fluid d-lg-none">
-                    </div>
-                </div>
-            </div>
-           
+
+            <div class="col-lg-10  pbm4">
+                 <!-- Mask Container that contains the Wrapper -->
+   
+                <!-- Updated container class name -->
+      <div class="scroll-wrapper bg-pan">
+        <!-- Updated wrapper class names -->
+        <div class="image-container bg-pan  p-0 p-lg-5">
+            <!-- Updated reveal div class name -->
+            <div class="image-reveal-mask bg-pan"></div>
+            <img src="assets/images/ci-home-1.jpg" alt="Hero Image" class="d-none d-lg-block">
+            <img src="assets/images/building-image-mobile-1.jpg" alt="Hero Image" class="d-lg-none p-0">
         </div>
     </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+  
 
 
 <!-- 
@@ -1030,11 +1029,11 @@ height: auto;
                  <!-- Mask Container that contains the Wrapper -->
    
                 <!-- Updated container class name -->
-      <div class="scroll-wrapper">
+      <div class="scroll-wrapper1">
         <!-- Updated wrapper class names -->
-        <div class="image-container buil-container p-0 p-lg-5">
+        <div class="image-container1 buil-container p-0 p-lg-5">
             <!-- Updated reveal div class name -->
-            <div class="image-reveal-mask buil-reveal"></div>
+            <div class="image-reveal-mask1 buil-reveal"></div>
             <img src="assets/images/building-history-image.jpg" alt="Hero Image" class="d-none d-lg-block">
             <img src="assets/images/building-image-mobile-1.jpg" alt="Hero Image" class="d-lg-none p-0">
         </div>
@@ -1245,6 +1244,37 @@ t2.to(".image-container", {
     scaleX: 0,             // Scale the red reveal div horizontally to 0 to reveal the image
     transformOrigin: "left",
     ease: "power2.out"
+});
+</script>
+
+<script>
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+// GSAP Timeline Animation for the wrapper reveal with updated class names
+const t3 = gsap.timeline({
+ scrollTrigger: {
+     trigger: ".scroll-wrapper1",  // The new element that triggers the animation
+     start: "top 90%",           // Start when the top of the container hits 80% of the viewport height
+     end: "bottom 50%",          // Optional: Animation can end when the bottom hits 20% of viewport
+     scrub: true,                // Smooth scroll-based animation
+     // markers: true               // Optional: Enable markers for debugging
+ }
+});
+
+// 1. Animate the updated container from a specific point using scaling
+t3.to(".image-container1", {
+ duration: 0.5,
+ scaleX: 1,             // Expand the container horizontally from 0 to full width
+ ease: "power3.out",    // Ease animation to make it smooth
+})
+
+// 2. Reveal the image by animating the updated reveal div
+.to(".image-reveal-mask1", {
+ duration: 9,
+ scaleX: 0,             // Scale the red reveal div horizontally to 0 to reveal the image
+ transformOrigin: "left",
+ ease: "power2.out"
 });
 </script>
     
