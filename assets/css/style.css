@@ -627,7 +627,7 @@ body {
     font-size: 3rem;
     font-weight: bold;
     opacity: 0;               /* Start invisible */
-    transform: translateX(-100px);  /* Start off-screen to the left */
+    transform: translateX(100px);  /* Start off-screen to the left */
   }
 
   .text-revel{
