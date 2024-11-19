@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Trigger Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 200vh; /* To enable scrolling */
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+
+    h2 {
+      opacity: 0; /* Initially hidden */
+      transform: translateY(50px); /* Start slightly below */
+    }
+
+    img {
+      opacity: 0; /* Initially hidden */
+      transform: translateY(50px); /* Start slightly below */
+      max-width: 80%;
+      height: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="content">
+    <h2 class="text">This is some text</h2>
+    <img class="image" src="assets/images/buil-slider-img3.jpg" alt="Image" />
+  </section>
+
+  <script>
+    // Ensure GSAP and ScrollTrigger are ready
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Scroll-triggered animation for the text
+    gsap.from(".text", {
+      scrollTrigger: {
+        trigger: ".content",
+        start: "top 80%", // Start when the section's top is 80% of the viewport height
+        end: "top 30%", // End when it hits 30% of the viewport
+        scrub: 1, // Smooth animation synced with scroll
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    // Scroll-triggered animation for the image
+    gsap.from(".image", {
+      scrollTrigger: {
+        trigger: ".content",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: 1,
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.out",
+    });
+  </script>
+
+</body>
+</html>

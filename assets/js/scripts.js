@@ -37,6 +37,24 @@ gsap.to(textWrapper, {
 
 
 
+const revealWrapper1 = document.querySelector('.reveal-wrapper1');
+const textWrapper1 = document.querySelector('.text-wrapper1');
+
+// First animate the width of the reveal-wrapper to show the text
+revealWrapper1.style.width = "auto";  // Adjust width of the wrapper based on content
+
+gsap.to(textWrapper1, {
+  duration: 1.5,          // Animation duration
+  opacity: 1,             // Fade in
+  x: 0,                   // Move to the right (from -100px to 0)
+  ease: 'power2.out',     // Ease the animation
+  delay: 0.5              // Delay before starting
+});
+
+
+
+
+
 
 // Function to start the animation
 function animateKeyFacts() {
