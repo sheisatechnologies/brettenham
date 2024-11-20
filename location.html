@@ -310,6 +310,14 @@ height: auto;
 
 @media (max-width: 768px) {
 
+
+    .slider-sp-loc {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 70%;
+}
+
     .slider-sp .slick-slide img {
         width: 100%;
         height: 212px;
@@ -1088,7 +1096,7 @@ display: block;
                
 
                   <!-- Slider Section -->
-    <div class="slider-sp">
+    <div class="slider-sp slider-sp-loc">
         <!-- Slider Images with Captions -->
         <div><img src="assets/images/location/slider/location-slider-img1.jpg" alt="Slide 1" class="img-fluid">
             <div class="slider-caption">The National Gallery</div>
@@ -1481,7 +1489,7 @@ display: block;
     $(document).ready(function(){
     $('.slider-sp').slick({
         centerMode: true,
-        centerPadding: '360px',
+        centerPadding: '300px',
         slidesToShow: 1,
         infinite: true,
         dots: true,

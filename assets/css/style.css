@@ -643,32 +643,6 @@ body {
 
 
 /* text animation revel */
-.reveal-wrapper1 {
-    overflow: hidden;       /* Hide text overflow */
-    width: 0;               /* Initially hide the text */
-    display: inline-block;
-    white-space: nowrap;
-    transition: width 1s ease;  /* Reveal effect on width */
-  }
-  .text-wrapper1 {
-    writing-mode: vertical-rl;  /* Arrange text vertically */
-    text-orientation: upleft;  /* Keep the text upright */
-    font-size: 3rem;
-    font-weight: bold;
-    opacity: 0;               /* Start invisible */
-    transform: translateX(-100px);  /* Start off-screen to the left */
-  }
-
-  .text-revel1{
-  font-size: 65px;
-  line-height: 70px;
-  color: var(--black);
-  font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  }
-
-
-
 .reveal-wrapper {
     overflow: hidden;       /* Hide text overflow */
     width: 0;               /* Initially hide the text */
@@ -681,12 +655,38 @@ body {
     text-orientation: upleft;  /* Keep the text upright */
     font-size: 3rem;
     font-weight: bold;
+    opacity: 0;               /* Start invisible */
+    transform: translateX(-100px);  /* Start off-screen to the left */
+  }
+
+  .text-revel{
+  font-size: 65px;
+  line-height: 70px;
+  color: var(--black);
+  font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  }
+
+
+
+.reveal-wrapper1 {
+    overflow: hidden;       /* Hide text overflow */
+    width: 0;               /* Initially hide the text */
+    display: inline-block;
+    white-space: nowrap;
+    transition: width 1s ease;  /* Reveal effect on width */
+  }
+  .text-wrapper1 {
+    writing-mode: vertical-rl;  /* Arrange text vertically */
+    text-orientation: upleft;  /* Keep the text upright */
+    font-size: 3rem;
+    font-weight: bold;
     opacity: 0;                /* Start invisible */
     transform: rotate(180deg) translateX(100px); /* Rotate 180 degrees */
     transform-origin: center;  /* Ensure rotation happens around the center */
   }
 
-  .text-revel{
+  .text-revel1{
   font-size: 65px;
   line-height: 70px;
   color: var(--black);
