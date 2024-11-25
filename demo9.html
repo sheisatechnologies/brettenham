@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Slider with Dots</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <style>
+    .controls-container {
+      position: absolute;
+      top: -75px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Adds spacing between arrows and dots */
+      z-index: 10;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: gray;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .dot.active {
+      background-color: red;
+    }
+    #content-section {
+      padding-top: 50px; /* Adds space between content and controls */
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5 position-relative">
+    <div class="row align-items-center">
+      <!-- Content Section -->
+      <div class="col-md-6 position-relative" id="content-section">
+        <!-- Controls (Arrows + Dots) -->
+        <div class="controls-container">
+          <!-- Arrows -->
+          <i class="bi bi-chevron-left display-6 text-secondary" id="prevIcon" style="cursor: pointer;"></i>
+          <i class="bi bi-chevron-right display-6 text-secondary" id="nextIcon" style="cursor: pointer;"></i>
+          
+          <!-- Dots -->
+          <div id="dotsContainer" class="d-flex gap-2"></div>
+        </div>
+
+        <!-- Content -->
+        <div id="content">
+          <h2 class="fw-bold mb-3">Slide 1 Title</h2>
+          <p>
+            This is the content for slide 1. You can replace it with anything you'd like.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-md-6 text-center">
+        <img 
+          id="image" 
+          src="https://via.placeholder.com/400" 
+          alt="Slide 1" 
+          class="img-fluid rounded shadow"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const slides = [
+      {
+        title: "Slide 1 Title",
+        content: "This is the content for slide 1. You can replace it with anything you'd like.",
+        image: "https://via.placeholder.com/400"
+      },
+      {
+        title: "Slide 2 Title",
+        content: "This is the content for slide 2. It's dynamic and changes with navigation.",
+        image: "https://via.placeholder.com/400/FF5733"
+      },
+      {
+        title: "Slide 3 Title",
+        content: "Here is the content for slide 3. Add as many slides as you want!",
+        image: "https://via.placeholder.com/400/33FF57"
+      }
+    ];
+
+    let currentSlide = 0;
+
+    const contentElement = document.getElementById('content');
+    const imageElement = document.getElementById('image');
+    const dotsContainer = document.getElementById('dotsContainer');
+    const prevIcon = document.getElementById('prevIcon');
+    const nextIcon = document.getElementById('nextIcon');
+
+    function updateSlide(index) {
+      const slide = slides[index];
+      contentElement.innerHTML = `
+        <h2 class="fw-bold mb-3">${slide.title}</h2>
+        <p>${slide.content}</p>
+      `;
+      imageElement.src = slide.image;
+
+      // Update dots
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === index);
+      });
+    }
+
+    function createDots() {
+      slides.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        if (idx === currentSlide) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          currentSlide = idx;
+          updateSlide(currentSlide);
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    prevIcon.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide(currentSlide);
+    });
+
+    nextIcon.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide(currentSlide);
+    });
+
+    // Initialize
+    createDots();
+    updateSlide(currentSlide);
+  </script>
+</body>
+</html>
