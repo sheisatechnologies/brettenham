@@ -44,7 +44,7 @@
    .arrowb-loc .build-prevl,
 .arrowb-loc .build-nextl {
     position: absolute;
-    top: 94%;
+    top: 92.5%;
     transform: translateY(-50%);
     z-index: 1000;
     width: 30px;
@@ -778,7 +778,7 @@ display: block;
                     </div>
                     <div class="col-md-8 image-content order-1 order-lg-2 p-md-5">
                         <img src="assets/images/location-image-desktop-2.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
-                        <img src="assets/images/building-image-mobile-3.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
+                        <img src="assets/images/location-image-desktop-2.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
                     </div>
 
                    
@@ -803,7 +803,7 @@ display: block;
                     </div>
                     <div class="col-md-8 image-content order-1 order-lg-2 p-md-5">
                         <img src="assets/images/location-slider2_img.jpg" alt="Terraces - Brettenham House" class="img-fluid img-fluid d-none d-lg-block">
-                        <img src="assets/images/building-image-mobile-3.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
+                        <img src="assets/images/location-slider2_img.jpg" alt="Terraces - Brettenham House" class="img-fluid d-lg-none">
                     </div>
                 </div>
             </div>
@@ -814,7 +814,7 @@ display: block;
         <div class="custom-navigation d-flex justify-content-start align-items-center mtd-6">
             
             <div class="slide-indicator indicator-location indicator-bill mx-3">
-                <span id="current-slide">1/2</span>/<span id="total-slides">2</span>
+                <span id="current-slide">1/2</span>/<span id="total-slides-location">2</span>
             </div>
           
         </div>
@@ -1295,7 +1295,7 @@ display: block;
 
     // Manually set the total slide count right after DOM is ready
     var totalSlides = $slickElement.children().length; // Get number of slides
-    $('#total-slides').text(totalSlides); // Set total slides on page load
+    $('#total-slides-location').text(totalSlides); // Set total slides on page load
 
     $slickElement.on('init reInit afterChange', function(event, slick, currentSlide){
         var i = (currentSlide ? currentSlide : 0) + 1;  // Calculate current slide (index + 1)
