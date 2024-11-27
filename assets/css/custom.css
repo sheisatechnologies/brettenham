@@ -866,6 +866,10 @@ footer a:hover {
         margin-bottom: 6rem !important;
     }
 
+    .ml-b{
+         margin-left: 2rem !important;
+    }
+
    
 
 }
@@ -974,6 +978,10 @@ footer a:hover {
     .mt-15{
         margin-top: 2rem !important;
     }
+
+    .ml-b{
+        margin-left: 2.5rem !important;
+   }
 
 }
 
