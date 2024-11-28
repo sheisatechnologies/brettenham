@@ -3,7 +3,7 @@
     .mask-container {
         position: relative;
         width: 100%;
-        height: 70vh;
+        height: auto;
         overflow: hidden;
         background-color: transparent;
         display: flex;

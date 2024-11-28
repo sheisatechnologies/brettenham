@@ -952,10 +952,10 @@ footer a:hover {
     .trm {
         text-align: right;
     }
-    .container {
+    /* .container {
         padding-left: 35px;
         padding-right: 35px;
-    }
+    } */
 
     .pmb-6 {
         margin-bottom: 6rem !important;
