@@ -420,12 +420,31 @@ margin-top: -101px;
     opacity: 1 !important;
     transform: none !important;
 }
+
+
 }
 
 /* ----------------------------------
 Building Css */
 /* ---------------------------------- */
 
+@media (max-width: 768px) {
+.arrowb-building .build-prev img, 
+.arrowb-building .build-next img {
+width: 60%;
+height: auto;
+margin-top: -14px;
+}
+
+h3 {
+    font-size: 33px;
+    line-height: 39px;
+    color: var(--black);
+    margin: 1px 0px 30px -10px;
+}
+
+
+}
 
 
 
@@ -590,6 +609,7 @@ left: unset; /* Ensure it's not on the left */
 .arrowb-building .build-next img {
 width: 60%;
 height: auto;
+
 }
 
 
@@ -782,6 +802,7 @@ height: auto;
     .arrowb-building .build-next {
     margin-left: 54px;
     left: unset;
+    
 }
 
 .arrowb-building .build-prev {
