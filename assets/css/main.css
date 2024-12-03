@@ -17,6 +17,13 @@ img, video {
     overflow: hidden;   /* Contain animated content */
 }
 
+.slider-localarea h3 {
+    font-size: 33px;
+    line-height: 39px;
+    color: var(--black);
+    margin: 1px 0px 30px 4px;
+}
+
 /* Force Arrow Size for slider-home to Match slider-sp */
 .nav-spacer-home {
 padding-bottom: 80px;
@@ -325,7 +332,7 @@ width: 15px !important;  /* Force arrow width to 30px */
 height: 15px !important; /* Force arrow height to 30px */
 position: absolute;
 top: 50%;
-/* left:20%; */
+left:12% !important;
 transform: translateY(-50%);
 cursor: pointer;
 z-index: 1000;
@@ -649,7 +656,8 @@ height: auto;
     border: none; /* Remove border */
     cursor: pointer; /* Change cursor to pointer */
     position: absolute; /* Position them absolutely */
-    top: 10px; /* Position from the top */
+    top: -5px; /* Position from the top */
+    right: 3px;
 }
 
 .slider-buil-sus .custom-prev-arrow {
@@ -1105,8 +1113,8 @@ height: auto;
 
 .container {
 width: 100% !important;
-padding-left: 30px !important;
-padding-right: 30px !important;
+/* padding-left: 30px !important;
+padding-right: 30px !important; */
 margin: 0 !important;
 padding-bottom: 20px;
 }
