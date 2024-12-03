@@ -458,6 +458,19 @@ h3 {
 }
 
 
+
+/* Adjust Previous and Next Buttons */
+.slider-building .slick-prev, .slider-building .slick-next {
+    width: 15px !important;  /* Force arrow width to 30px */
+    height: 15px !important; /* Force arrow height to 30px */
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1000;
+  }
+
 }
 
 
@@ -468,7 +481,7 @@ h3 {
   height: 15px !important; /* Force arrow height to 30px */
   position: absolute;
   top: 50%;
-  left: 17%;
+  left: 97%;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 1000;
