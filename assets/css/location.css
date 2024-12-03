@@ -8,7 +8,7 @@
 .arrowb-loc .build-nextl {
     position: absolute;
     top: 92.5%;
-    top: 89.5%;
+    
     transform: translateY(-50%);
     z-index: 1000;
     width: 30px;
