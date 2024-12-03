@@ -465,7 +465,7 @@ h3 {
     height: 15px !important; /* Force arrow height to 30px */
     position: absolute;
     top: 50%;
-    left: 17%;
+    left: 17% !important;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1000;
