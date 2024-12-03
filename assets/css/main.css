@@ -21,7 +21,7 @@ img, video {
     font-size: 33px;
     line-height: 39px;
     color: var(--black);
-    margin: 1px 0px 30px 4px;
+    margin: 1px 0px 30px 30px;
 }
 
 /* Force Arrow Size for slider-home to Match slider-sp */
