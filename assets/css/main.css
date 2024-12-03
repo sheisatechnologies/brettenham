@@ -447,7 +447,14 @@ h3 {
     font-size: 33px;
     line-height: 39px;
     color: var(--black);
-    margin: 1px 0px 30px -10px;
+    margin: 1px 0px 30px 10px;
+}
+
+.dual h3 {
+    font-size: 33px;
+    line-height: 39px;
+    color: var(--black);
+    margin: 1px 0px 30px 0px;
 }
 
 
@@ -461,6 +468,7 @@ h3 {
   height: 15px !important; /* Force arrow height to 30px */
   position: absolute;
   top: 50%;
+  left: 17%;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 1000;
@@ -661,11 +669,11 @@ height: auto;
 }
 
 .slider-buil-sus .custom-prev-arrow {
-    right: 50px; /* Adjust as needed */
+    right: 11px; /* Adjust as needed */
 }
 
 .slider-buil-sus .custom-next-arrow {
-    right: 10px; /* Position this closer to the right edge */
+    right: -14px; /* Position this closer to the right edge */
 }
 
 
