@@ -156,6 +156,14 @@ body {
 /* hope page last slider  */
 
 
+.centered-paragraph {
+    text-align: center; /* Aligns text horizontally */
+    margin-top: 2rem; /* Adds space from the previous section */
+    margin-left: 230px;
+}
+
+
+
 
 
 
@@ -524,6 +532,58 @@ body {
 
 
 
+/* Updated class names for container styling */
+.scroll-wrapper-location {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* margin: 100vh auto; Center the container and make sure it’s halfway down the page */
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Updated class names for the inner wrapper styling */
+.image-container-location {
+    width: 100%;
+    height: 600px;
+    background-color: var(--blue);
+    position: absolute;
+    padding: 50px;
+    box-sizing: border-box;
+    transform-origin: left;
+    transform: scaleX(0);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Updated class names for the reveal div */
+.image-reveal-mask-location {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 640px;
+    background: var(--mustard);
+    transform-origin: left;
+    transform: scaleX(1);
+    z-index: 2;
+}
+
+/* Image styling */
+.image-container-location img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+
+
+
+
 
 
 /* 2nd home animation */
@@ -767,5 +827,24 @@ text-transform: uppercase;
         padding-left: 0;
         padding-right: 0;
         width: 100%;
+    }
+
+    .centered-paragraph {
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: 0px;
+    }
+}
+
+.btn-same-width {
+    width: 250px; /* Set a fixed width for both buttons */
+    text-align: center; /* Ensure the text stays centered */
+}
+
+
+/* Custom CSS for mobile view */
+@media (max-width: 768px) {
+    .row .col-auto + .col-auto {
+        margin-left: 5px !important; /* Reduce the gap between buttons for mobile devices */
     }
 }

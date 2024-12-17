@@ -111,213 +111,222 @@
 
     <section class="bg-light-grey py-5">
         <div class="container py-lg-5">
-            <p class="text-left" style="margin-left: 140px;">Select different office floors to calculate total SQ FT</p>
+            <div class="row p-md-2">
+                <div class="col-md-7 ps-md-5">
+                    <p class="text-left" style="margin-left: 80px;">Select different office floors to calculate total SQ FT</p>
         
-        <table id="dataTable">
-            <thead>
-                <tr>
-                    <th class="level-head table-head">LEVEL</th>
-                    <th class="level-head table-head">OFFICE (SQ FT)</th>
-                    <th class="level-head table-head">TERRACE (SQ FT)</th>
-                    <th class="level-head table-head">9 SAVOY STREET (SQ FT)</th>
-                   
-                    
-                    
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Add rows similar to the image with clickable cells for sum calculation -->
-
-
-
-
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">9</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,283</td>
-                    <td class="level-column data" onclick="event.stopPropagation();">3,305</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    
-                    
-                </tr>
-                
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">8</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">7,858</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    
-                </tr>
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">7</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">9,623</td>
-                    <td class="level-column data" onclick="event.stopPropagation();">538</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                   
-                   
-                    
-                </tr>
-
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">6</td>
-                    <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,088</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    
-                </tr>
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">5</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,271</td>
-                    <td class="level-column" onclick="event.stopPropagation();">893</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    
-                    
-                </tr>
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">4</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,669</td>
-                    <td class="level-column data" onclick="event.stopPropagation();">883</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                   
-                    
-                </tr>
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">3</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,778</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                   
-                </tr>
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">2</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,993</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    
-                </tr>
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">1</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,552</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    
-                </tr>
-
-
-               
-
-
-    
-                <tr class="clickable-row">
-                    <td class="level-column">G</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,068</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-
-                    
-                   
-
-                </tr>
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">LG</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">5,769*</td>
-                    <td class="level-column" onclick="event.stopPropagation();">323</td>
-                    <td class="level-column" onclick="event.stopPropagation();">5,769</td>
-                   
-                    
-                    
-                   
-                </tr>
-
-               
-
-
-                <!-- <tr class="clickable-row" onclick="location.href='#level-B1';">
-                    <td class="level-column" onclick="activateTab('level-B1'); event.stopPropagation();"><a href="#table-tab">B1</a></td>
-                    <td class="level-column data" onclick="toggleValue(this); event.stopPropagation();">4,015*</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();">5,769</td>
-                    <td class="level-column" onclick="event.stopPropagation();">5,769</td>
-                    <td class="level-column" onclick="event.stopPropagation();">5,769</td>
-                    <td class="level-column"><a href="#level-9" onclick="event.stopPropagation();">4,015</a></td>
-                    <td class="level-column"><a href="#level-9" onclick="event.stopPropagation();"></a></td>
-                    <td class="level-column data"><a href="#level-9" onclick="event.stopPropagation();"></a></td>
-                </tr> -->
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">B1</td>
-                    <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();">4,015*</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();">4,015</td>
-                   
-                   
-                </tr>
-
-
-
-
-
-
-                <tr class="clickable-row">
-                    <td class="level-column">B2*</td>
-                    <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,778</td>
-                    <td class="level-column" onclick="event.stopPropagation();"></td>
-                    <td class="level-column" onclick="event.stopPropagation();">3,778</td>
-                    
-                </tr>
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th class="level-head table-head">LEVEL</th>
+                                <th class="level-head table-head">OFFICE (SQ FT)</th>
+                                <th class="level-head table-head">TERRACE (SQ FT)</th>
+                                <th class="level-head table-head">9 SAVOY STREET (SQ FT)</th>
+                               
+                                
+                                
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Add rows similar to the image with clickable cells for sum calculation -->
             
-
-               
-
-                <!-- <tr class="clickable-row" onclick="location.href='#level-B2';">
-                <td class="level-column" onclick="activateTab('level-B2')"><a href="#table-tab">B2</a></td>
-                    <td class="level-column data" onclick="toggleValue(this)">3,778*</td>
-                    <td class="level-column"></td>
-                    <td class="level-column data">3,778</td>
-                    <td class="level-column"></td>
-                    <td class="level-column"></td>
-                </tr> -->
-
-             
-                <!-- Add more rows as per the image -->
-            </tbody>
-            <tfoot>
-                <tr class="sum-row">
-                    <td class="level-column total-column table-head" colspan="1" style="text-align: right"> <strong>TOTAL</strong></td>
-                    <td class="level-column total-column table-head" colspan="1" id="sumCell" style="background-color: #BDE2DF; border: 3px solid black;"></td>
-                    <td class="level-column total-column table-head" colspan="1" id="sumCell">5,942</td>
+            
+            
+            
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">9</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,283</td>
+                                <td class="level-column data" onclick="event.stopPropagation();">3,305</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                
+                                
+                            </tr>
+                            
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">8</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">7,858</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                
+                            </tr>
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">7</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">9,623</td>
+                                <td class="level-column data" onclick="event.stopPropagation();">538</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                               
+                               
+                                
+                            </tr>
+            
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">6</td>
+                                <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,088</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                
+                            </tr>
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">5</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,271</td>
+                                <td class="level-column" onclick="event.stopPropagation();">893</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                
+                                
+                            </tr>
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">4</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,669</td>
+                                <td class="level-column data" onclick="event.stopPropagation();">883</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                               
+                                
+                            </tr>
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">3</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,778</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                               
+                            </tr>
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">2</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,993</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                
+                            </tr>
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">1</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,552</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                
+                            </tr>
+            
+            
+                           
+            
+            
+                
+                            <tr class="clickable-row">
+                                <td class="level-column">G</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,068</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+            
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+            
+                                
+                               
+            
+                            </tr>
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">LG</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">5,769*</td>
+                                <td class="level-column" onclick="event.stopPropagation();">323</td>
+                                <td class="level-column" onclick="event.stopPropagation();">5,769</td>
+                               
+                                
+                                
+                               
+                            </tr>
+            
+                           
+            
+            
+                            <!-- <tr class="clickable-row" onclick="location.href='#level-B1';">
+                                <td class="level-column" onclick="activateTab('level-B1'); event.stopPropagation();"><a href="#table-tab">B1</a></td>
+                                <td class="level-column data" onclick="toggleValue(this); event.stopPropagation();">4,015*</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();">5,769</td>
+                                <td class="level-column" onclick="event.stopPropagation();">5,769</td>
+                                <td class="level-column" onclick="event.stopPropagation();">5,769</td>
+                                <td class="level-column"><a href="#level-9" onclick="event.stopPropagation();">4,015</a></td>
+                                <td class="level-column"><a href="#level-9" onclick="event.stopPropagation();"></a></td>
+                                <td class="level-column data"><a href="#level-9" onclick="event.stopPropagation();"></a></td>
+                            </tr> -->
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">B1</td>
+                                <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();">4,015*</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();">4,015</td>
+                               
+                               
+                            </tr>
+            
+            
+            
+            
+            
+            
+                            <tr class="clickable-row">
+                                <td class="level-column">B2*</td>
+                                <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,778</td>
+                                <td class="level-column" onclick="event.stopPropagation();"></td>
+                                <td class="level-column" onclick="event.stopPropagation();">3,778</td>
+                                
+                            </tr>
+                        
+            
+                           
+            
+                            <!-- <tr class="clickable-row" onclick="location.href='#level-B2';">
+                            <td class="level-column" onclick="activateTab('level-B2')"><a href="#table-tab">B2</a></td>
+                                <td class="level-column data" onclick="toggleValue(this)">3,778*</td>
+                                <td class="level-column"></td>
+                                <td class="level-column data">3,778</td>
+                                <td class="level-column"></td>
+                                <td class="level-column"></td>
+                            </tr> -->
+            
+                         
+                            <!-- Add more rows as per the image -->
+                        </tbody>
+                        <tfoot>
+                            <tr class="sum-row">
+                                <td class="level-column total-column table-head" colspan="1" style="text-align: right"> <strong>TOTAL</strong></td>
+                                <td class="level-column total-column table-head" colspan="1" id="sumCell" style="background-color: #BDE2DF; border: 3px solid black;"></td>
+                                <td class="level-column total-column table-head" colspan="1" id="sumCell">5,942</td>
+                                
+                                <td class="level-column total-column table-head" colspan="1" id="sumCell">13,563</td>
+                               
+                                
+                                
+                                
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <p class="text-left" style="margin-left: 80px;">*9 Savoy Street offices</p>
                     
-                    <td class="level-column total-column table-head" colspan="1" id="sumCell">13,563</td>
-                   
-                    
-                    
-                    
-                </tr>
-            </tfoot>
-        </table>
-        <p class="text-left" style="margin-left: 140px;">*9 Savoy Street offices</p>
+                </div>
+                <div class="col-md-5 d-flex align-items-center">
+                    <img src="assets/images/floorplans/floorplan-img.png" class="img-fluid pe-md-5">
+                </div>
+            </div>
+            
         </div>
     </section>
 
