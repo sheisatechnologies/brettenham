@@ -112,7 +112,7 @@
     <section class="bg-light-grey py-5">
         <div class="container py-lg-5">
             <div class="row p-md-2">
-                <div class="col-md-7 ps-md-5">
+                <div class="col-md-8 ps-md-5">
                     <p class="text-left" style="margin-left: 80px;">Select different office floors to calculate total SQ FT</p>
         
                     <table id="dataTable">
@@ -229,7 +229,7 @@
             
                 
                             <tr class="clickable-row">
-                                <td class="level-column">G</td>
+                                <td class="level-column">Ground</td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,068</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
             
@@ -242,7 +242,7 @@
             
             
                             <tr class="clickable-row">
-                                <td class="level-column">LG</td>
+                                <td class="level-column">Savoy 2</td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">5,769*</td>
                                 <td class="level-column" onclick="event.stopPropagation();">323</td>
                                 <td class="level-column" onclick="event.stopPropagation();">5,769</td>
@@ -269,7 +269,7 @@
             
             
                             <tr class="clickable-row">
-                                <td class="level-column">B1</td>
+                                <td class="level-column">Savoy 1</td>
                                 <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();">4,015*</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">4,015</td>
@@ -283,7 +283,7 @@
             
             
                             <tr class="clickable-row">
-                                <td class="level-column">B2*</td>
+                                <td class="level-column">Savoy Ground</td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,778</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">3,778</td>
@@ -322,7 +322,7 @@
                     <p class="text-left" style="margin-left: 80px;">*9 Savoy Street offices</p>
                     
                 </div>
-                <div class="col-md-5 d-flex align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
                     <img src="assets/images/floorplans/floorplan-img.png" class="img-fluid pe-md-5">
                 </div>
             </div>
@@ -337,16 +337,16 @@
         <div class="col-12">
              <ul class="nav nav-tabs mt-15 justify-content-center  d-none d-md-flex" id="floorplanTabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-B2-tab" data-toggle="tab" href="#level-B2" role="tab" aria-controls="level-B2" aria-selected="false">B2</a>
+                    <a class="nav-link floorplan-tab" id="level-B2-tab" data-toggle="tab" href="#level-B2" role="tab" aria-controls="level-B2" aria-selected="false">Savoy Ground</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-B1-tab" data-toggle="tab" href="#level-B1" role="tab" aria-controls="level-B1" aria-selected="false">B1</a>
+                    <a class="nav-link floorplan-tab" id="level-B1-tab" data-toggle="tab" href="#level-B1" role="tab" aria-controls="level-B1" aria-selected="false">Savoy 1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-LG-tab" data-toggle="tab" href="#level-LG" role="tab" aria-controls="level-LG" aria-selected="false">LG</a>
+                    <a class="nav-link floorplan-tab" id="level-LG-tab" data-toggle="tab" href="#level-LG" role="tab" aria-controls="level-LG" aria-selected="false">Savoy 2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link floorplan-tab active" id="level-G-tab" data-toggle="tab" href="#level-G" role="tab" aria-controls="level-G" aria-selected="false">G</a>
+                    <a class="nav-link floorplan-tab active" id="level-G-tab" data-toggle="tab" href="#level-G" role="tab" aria-controls="level-G" aria-selected="false">Ground</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link floorplan-tab" id="level-1-tab" data-toggle="tab" href="#level-1" role="tab" aria-controls="level-1" aria-selected="false">1</a>
@@ -381,10 +381,10 @@
             <div class="d-md-none mt-3">
                 <select id="floorplanDropdown" class="form-select">
                     <option value="" disabled selected>SELECT FLOOR</option>
-                    <option value="#level-B2">B2</option>
-                    <option value="#level-B1">B1</option>
-                    <option value="#level-LG">LG</option>
-                    <option value="#level-G">G</option>
+                    <option value="#level-B2">Savoy Ground</option>
+                    <option value="#level-B1">Savoy 1</option>
+                    <option value="#level-LG">Savoy 2</option>
+                    <option value="#level-G">Ground</option>
                     <option value="#level-1">1</option>
                     <option value="#level-2">2</option>
                     <option value="#level-3">3</option>
@@ -400,7 +400,7 @@
 
             <div class="tab-content mt-15" id="floorplanTabsContent">
                 <div class="tab-pane fade" id="level-B2" role="tabpanel" aria-labelledby="level-B2-tab">
-                    <h2>LEVEL B2</h2>
+                    <h2>SAVOY GROUND</h2>
                     <p>Office: 3,778 sq ft</p>
                     
                     <div class="mtm-6">
@@ -408,7 +408,7 @@
                         <span style="color: #cce9e6;">■</span> Core
                     </div>
                    
-                    <img src="assets/images/floorplans/basement-2.gif" alt="Floorplan Level 8" id="image-B1" class=" mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/Savoy-Ground.png" alt="Floorplan Level 8" id="image-B1" class=" mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/basement-2-indicator.gif" alt="Floorplan Indicator"  class="img-fluid image-floor">
@@ -426,7 +426,7 @@
 
                 <div class="tab-pane fade" id="level-B1" role="tabpanel" aria-labelledby="level-B1-tab">
                    <div id="modalDescription" class="mtm-6">
-                    <h2>LEVEL B1</h2>
+                    <h2>SAVOY 1</h2>
                     <p>Office: 4,015 sq ft</p>
                     <div class="mtm-6">
                         <span style="color: #8ec5c1;">■</span> Office <br>
@@ -435,7 +435,7 @@
                     
                    </div>
                    
-                    <img src="assets/images/floorplans/basement-1.gif" alt="Floorplan Level 7" class=" mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/Savoy-1.png" alt="Floorplan Level 7" class=" mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/basement-1-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -448,7 +448,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="level-LG" role="tabpanel" aria-labelledby="level-LG-tab">
-                    <h2>LEVEL LG</h2>
+                    <h2>SAVOY 2</h2>
                     <p>Office: 5,769 sq ft</p>
                     <div>
                         <span style="color: #8ec5c1;">■</span> Office <br>
@@ -456,7 +456,7 @@
                    <span style="color: #168771;">■</span> Terrace
                     </div>
                    
-                    <img src="assets/images/floorplans/lower-ground-floor.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/Savoy-2.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/lower-ground-floor-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -469,7 +469,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade show active" id="level-G" role="tabpanel" aria-labelledby="level-G-tab">
-                    <h2>LEVEL G</h2>
+                    <h2>GROUND</h2>
                     <p>Office: 3,068 sq ft</p>
 
                     <div>
@@ -477,7 +477,7 @@
                         <span style="color: #cce9e6;">■</span> Core
                     </div>
                     
-                    <img src="assets/images/floorplans/ground-floor.gif" alt="Floorplan Level 6" class=" mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/Brettenham-House-Ground.png" alt="Floorplan Level 6" class=" mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/ground-floor-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -498,7 +498,7 @@
                         <span style="color: #cce9e6;">■</span> Core
                     </div>
                    
-                    <img src="assets/images/floorplans/level-1.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-1.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-1-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -519,7 +519,7 @@
                     <span style="color: #cce9e6;">■</span> Core
                     </div>
                     
-                    <img src="assets/images/floorplans/level-2.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-2.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-2-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -541,7 +541,7 @@
                         <!-- <span style="color: #168771;">■</span> Terrace  -->
                     </div>
                     
-                    <img src="assets/images/floorplans/level-3.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-3.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-3-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -563,7 +563,7 @@
                         <span style="color: #168771;">■</span> Terrace 
                     </div>
 
-                    <img src="assets/images/floorplans/level-4.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-4.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-4-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -585,7 +585,7 @@
                         <span style="color: #168771;">■</span> Terrace 
                     </div>
 
-                    <img src="assets/images/floorplans/level-5.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-5.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-5-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -605,7 +605,7 @@
                         <span style="color: #8ec5c1;">■</span> Office <br>
                         <span style="color: #cce9e6;">■</span> Core
                     </div>
-                    <img src="assets/images/floorplans/level-6.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-6.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-6-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -625,7 +625,7 @@
                         <span style="color: #cce9e6;">■</span> Core<br>
                         <span style="color: #168771;">■</span> Terrace 
                     </div>
-                    <img src="assets/images/floorplans/level-7.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-7.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-7-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -646,7 +646,7 @@
                         <!-- <span style="color: #168771;">■</span> Terrace <br> -->
                     </div>
 
-                    <img src="assets/images/floorplans/level-8.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-8.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-8-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -667,7 +667,7 @@
                         <span style="color: #168771;">■</span> Terrace 
                     </div>
 
-                    <img src="assets/images/floorplans/level-9.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <img src="assets/images/floorplans/FLOOR-9.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
                     <div class="row mtm-6">
                         <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
                             <img src="assets/images/floorplans/level-9-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
@@ -854,7 +854,7 @@
     </div>
 
  
-    <footer>
+    <!-- <footer>
         <div class="container">
             <div class="row ptd4 ptm3 pbd3 pbm4">
                 <div class="col-xl-3 col-lg-12 pbd3 ptm2 pbm2">
@@ -930,8 +930,96 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
+
+    <footer>
+        <div class="container">
+            <div class="row ptd4 ptm3 pbm4">
+                <div class="col-xl-3 col-lg-12 pbd3 ptm2 pbm2">
+                    <p class="text-white">A development by</p>
+                    <a href="https://www.helical.co.uk/" target="_blank">
+                        <img src="assets/images/ftr-logo-helical.svg" alt="Helical" width="277">
+                    </a>
+                </div>
+            </div>
+
+            <div class="row pb-md-5 pt-md-2">
+                <div class="col-md-1 ptm3 pbm3">
+                    <a href="https://www.savills.co.uk/" target="_blank">
+                        <img src="assets/images/ftr-logo-savills.svg" alt="Savills" width="70">
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        Peter Thursfield<br>
+                        <a href="mailto:pthursfield@savills.com">pthursfield@savills.com</a><br>
+                        <a href="tel:07870555732">07870 555732</a>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        Hunter Booth<br>
+                        <a href="mailto:hunter.booth@savills.com">hunter.booth@savills.com</a><br>
+                        <a href="tel:07710965693">07710 965693</a>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        Freddie Corlett<br>
+                        <a href="mailto:fcorlett@savills.com">fcorlett@savills.com</a><br>
+                        <a href="tel:07870555842">07870 555842</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row pb-md-5">
+                <div class="col-md-1 ptm4 pbm3">
+                    <a href="https://rx.london/" target="_blank">
+                        <img src="assets/images/ftr-logo-rx.svg" alt="RX London" width="70">
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        Dan Burn<br>
+                        <a href="mailto:dan.burn@rx.london">dan.burn@rx.london</a><br>
+                        <a href="tel:07515607011">07515 607011</a>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        Sophie Bartlett<br>
+                        <a href="mailto:sophie.bartlett@rx.london">sophie.bartlett@rx.london</a><br>
+                        <a href="tel:07802338295">07802 338295</a>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>Alfie John<br>
+                        <a href="mailto:alfie.john@rx.london">alfie.john@rx.london</a><br>
+                        <a href="tel:07377885814">07377 885814</a>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>Ed Betts<br>
+                        <a href="mailto:ed.betts@rx.london">ed.betts@rx.london</a><br>
+                        <a href="tel:07771513169">0777 1513169</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row pbd2 pbm4 pt-md-5">
+                <div class="col-xl-12">
+                    <hr>
+                </div>
+                <div class="col-xl-10 ptd1 ptm2">
+                    <p>2-19 Lancaster Pl<br>London WC2</p>
+                </div>
+                <div class="col-xl-2 ptd1 ptm2">
+                    <p><a href="cookies.html">Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
      <!-- GSAP CDN -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
