@@ -24,7 +24,7 @@ tbody, td, tfoot, th, thead, tr {
 .level-head {
     border-bottom: 1px solid black; /* Only show bottom border */
     padding: 8px;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth background transition */
 }
