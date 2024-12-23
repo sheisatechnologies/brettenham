@@ -848,3 +848,19 @@ text-transform: uppercase;
         margin-left: 5px !important; /* Reduce the gap between buttons for mobile devices */
     }
 }
+
+
+.prev-arrow{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    right: 23px;
+}
+
+.next-arrow{
+    cursor: pointer;
+     width: 20px; 
+     height: 20px;
+}
