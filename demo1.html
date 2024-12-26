@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slick Slider</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick-theme.css">
+  <style>
+    .slick-slider {
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .slider-item {
+      padding: 20px;
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    .slider-item h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .slider-item p {
+      font-size: 1em;
+      color: #666;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    .slick-dots li {
+      list-style: none;
+      width: 500px;
+      height: 5px;
+      background: #ccc;
+      transition: width 0.3s ease, background 0.3s ease;
+    }
+    .slick-dots li.slick-active {
+      width: 500px;
+      background: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="slick-slider">
+    <div class="slider-item">
+      <h3>Title 1</h3>
+      <p>Paragraph for column 1.</p>
+    </div>
+    <div class="slider-item">
+      <h3>Title 2</h3>
+      <p>Paragraph for column 2.</p>
+    </div>
+    <div class="slider-item">
+      <h3>Title 3</h3>
+      <p>Paragraph for column 3.</p>
+    </div>
+    <div class="slider-item">
+      <h3>Title 4</h3>
+      <p>Paragraph for column 4.</p>
+    </div>
+    <div class="slider-item">
+      <h3>Title 5</h3>
+      <p>Paragraph for column 5.</p>
+    </div>
+    <div class="slider-item">
+      <h3>Title 6</h3>
+      <p>Paragraph for column 6.</p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.slick-slider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,  // Disables Next/Previous buttons
+        customPaging: function () {
+          return '<div></div>'; // Removes buttons and numbers, just a plain dot
+        },
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+</html>
