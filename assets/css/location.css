@@ -624,7 +624,7 @@ display: block;
       left: 26px;
       display: flex;
       align-items: center;
-      gap: 225px; /* Adds spacing between arrows and dots */
+      gap: 170px; /* Adds spacing between arrows and dots */
       z-index: 10;
     }
     .dot {
