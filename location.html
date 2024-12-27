@@ -55,7 +55,7 @@
     left: 0;
     right: 0;
     height: 30px; /* Height of the blur */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Adjust colors */
+   
     pointer-events: none; /* Allow scrolling through the blur */
 }
 
@@ -74,7 +74,7 @@
     left: 0; /* Stretch to the left edge */
     right: 0; /* Stretch to the right edge */
     height: 30px; /* Height of the blur area */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradient for blur effect */
+    
     pointer-events: none; /* Allow scrolling through the blur */
     z-index: 1; /* Ensure the blur stays above the content */
 }
@@ -105,6 +105,17 @@
 #content-slides .slide.active,
 #image-slides .slide.active {
     display: block;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
 
 
