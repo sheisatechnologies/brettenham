@@ -26,17 +26,20 @@
         .scrollable-list::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
+  overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 .scrollable-list::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, .5);
   box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  overflow-x: hidden; /* Hide horizontal overflow */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .scrollable-list::-webkit-scrollbar {
     display: none; /* Hides the scrollbar */
+    overflow-x: hidden; /* Hide horizontal overflow */
   }
 }
     </style>
@@ -125,7 +128,7 @@
     z-index: 0; /* Keep content below the blur effect */
 }
 
-@media (max-width: 768px) { /* Target screens smaller than 768px */
+@media (max-width: 991px) { /* Target screens smaller than 768px */
     .scrollable-list {
         all: unset; /* Remove all applied styles */
     }

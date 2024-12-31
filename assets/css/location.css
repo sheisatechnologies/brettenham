@@ -33,7 +33,7 @@
 }
 
 .scrollable-list {
-    overflow-x: auto;
+    overflow-x: hidden;
     max-width: 100%;
 }
 
