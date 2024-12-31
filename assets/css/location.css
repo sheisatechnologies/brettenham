@@ -32,6 +32,10 @@
     height: auto;
 }
 
+.scrollable-list {
+    overflow-x: auto;
+    max-width: 100%;
+}
 
 
 

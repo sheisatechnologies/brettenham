@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+    <head>
+    <style>
+        /* Fix for white scrollbar gap */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .slick-slider {
+            overflow: hidden; /* Prevent overflow from Slick sliders */
+        }
+    </style>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +76,7 @@
     left: 0;
     right: 0;
     height: 30px; /* Height of the blur */
-   
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Adjust colors */
     pointer-events: none; /* Allow scrolling through the blur */
 }
 
@@ -74,7 +95,7 @@
     left: 0; /* Stretch to the left edge */
     right: 0; /* Stretch to the right edge */
     height: 30px; /* Height of the blur area */
-    
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradient for blur effect */
     pointer-events: none; /* Allow scrolling through the blur */
     z-index: 1; /* Ensure the blur stays above the content */
 }
@@ -94,32 +115,6 @@
         display: none; /* Ensure pseudo-element is also hidden */
     }
 }
-
-/* Hide all slides by default */
-#content-slides .slide,
-#image-slides .slide {
-    display: none;
-}
-
-/* Show only the active slide */
-#content-slides .slide.active,
-#image-slides .slide.active {
-    display: block;
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, .5);
-  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
-
-
-
 
 
 </style>
@@ -418,28 +413,6 @@
                         <td class="map-category-number">14</td>
                         <td class="map-category-text">Henrietta Hotel</td>
                     </tr>
-                    <tr>
-                        <td class="map-category-number">13</td>
-                        <td class="map-category-text">Nomad London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">14</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr><tr>
-                        <td class="map-category-number">13</td>
-                        <td class="map-category-text">Nomad London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">14</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr><tr>
-                        <td class="map-category-number">13</td>
-                        <td class="map-category-text">Nomad London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">14</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr>
                 </table>
               </div>
               <div class="slide scrollable-list">
@@ -465,35 +438,6 @@
                         <td class="map-category-text">Victoria Embankment Gardens</td>
                     </tr>
                     <tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr><tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr><tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr><tr>
                         <td class="map-category-number">19</td>
                         <td class="map-category-text">St James’s Park</td>
                     </tr>
@@ -629,7 +573,7 @@
             <!-- Updated reveal div class name -->
             <div class="image-reveal-mask1 bg-pan buil-reveal"></div>
             <img src="assets/images/location/location_image2.jpg" alt="Hero Image" class="d-none d-lg-block">
-            <img src="assets/images/location/perfect-position-mob.jpg" alt="Hero Image" class="d-lg-none p-0">
+            <img src="assets/images/location/location_image2.jpg" alt="Hero Image" class="d-lg-none p-0">
         </div>
     </div>
                 
@@ -685,7 +629,7 @@
                      </button>
                  </div>
              </div>
-             <div class="tab-pane fade connectivity-np" id="tab2" role="tabpanel">
+             <div class="tab-pane fade" id="tab2" role="tabpanel">
                  <div class="slider">
                      <div><img src="assets/images/location/connectivity-cycling-1.svg" alt="Logo 1"></div>
                      <div><img src="assets/images/location/connectivity-cycling-2.svg" alt="Logo 2"></div>
@@ -701,7 +645,7 @@
                      </button>
                  </div>
              </div>
-             <div class="tab-pane fade connectivity-np" id="tab3" role="tabpanel">
+             <div class="tab-pane fade" id="tab3" role="tabpanel">
                  <div class="slider">
                      <div><img src="assets/images/location/connectivity-tube-1.svg" alt="Logo 1"></div>
                      <div><img src="assets/images/location/connectivity-tube-2.svg" alt="Logo 2"></div>
@@ -1268,63 +1212,58 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Bootstrap JS and Popper.js -->
   <script>
-   document.addEventListener('DOMContentLoaded', () => {
     const contentSlides = document.querySelectorAll('#content-slides .slide');
     const imageSlides = document.querySelectorAll('#image-slides .slide');
+    const dotsContainer = document.getElementById('dotsContainer');
     const prevIcon = document.getElementById('prevIcon');
     const nextIcon = document.getElementById('nextIcon');
-    const dotsContainer = document.getElementById('dotsContainer');
+
     let currentSlide = 0;
 
-    // Update Slide Function
     function updateSlide(index) {
-        // Update content slides
-        contentSlides.forEach((slide, idx) => {
-            slide.classList.toggle('active', idx === index);
-        });
+      // Update content slides
+      contentSlides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === index);
+      });
 
-        // Update image slides
-        imageSlides.forEach((slide, idx) => {
-            slide.classList.toggle('active', idx === index);
-        });
+      // Update image slides
+      imageSlides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === index);
+      });
 
-        // Update dots
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, idx) => {
-            dot.classList.toggle('active', idx === index);
-        });
+      // Update dots
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === index);
+      });
     }
 
-    // Create Dots for Indicators
     function createDots() {
-        contentSlides.forEach((_, idx) => {
-            const dot = document.createElement('span');
-            dot.className = 'dot';
-            if (idx === currentSlide) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                currentSlide = idx;
-                updateSlide(currentSlide);
-            });
-            dotsContainer.appendChild(dot);
+      contentSlides.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        if (idx === currentSlide) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          currentSlide = idx;
+          updateSlide(currentSlide);
         });
+        dotsContainer.appendChild(dot);
+      });
     }
 
-    // Navigation Button Handlers
     prevIcon.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + contentSlides.length) % contentSlides.length;
-        updateSlide(currentSlide);
+      currentSlide = (currentSlide - 1 + contentSlides.length) % contentSlides.length;
+      updateSlide(currentSlide);
     });
 
     nextIcon.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % contentSlides.length;
-        updateSlide(currentSlide);
+      currentSlide = (currentSlide + 1) % contentSlides.length;
+      updateSlide(currentSlide);
     });
 
     // Initialize
     createDots();
     updateSlide(currentSlide);
-});
-
   </script>
 
 <script>
