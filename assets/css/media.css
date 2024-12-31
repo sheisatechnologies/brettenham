@@ -80,9 +80,11 @@
 
 
 .slider-sp .slick-dots {
-    bottom: -3px !important;
-    left: -53px !important;
+    bottom: -40px !important;
+    left: -14px !important;
     text-align: right;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .slider-localarea .custom-next-arrow {
