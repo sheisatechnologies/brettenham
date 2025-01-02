@@ -1,49 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-    <style>
-        /* Fix for white scrollbar gap */
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            width: 100%;
-        }
-        * {
-            box-sizing: border-box;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .slick-slider {
-            overflow: hidden; /* Prevent overflow from Slick sliders */
-        }
-    </style>
-
-    <style>
-        .scrollable-list::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
-  overflow-x: hidden; /* Hide horizontal overflow */
-}
-
-.scrollable-list::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, .5);
-  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-  overflow-x: hidden; /* Hide horizontal overflow */
-}
-
-@media (max-width: 991px) {
-    .scrollable-list::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
-    overflow-x: hidden; /* Hide horizontal overflow */
-  }
-}
-    </style>
-    
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,7 +55,7 @@
     left: 0;
     right: 0;
     height: 30px; /* Height of the blur */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Adjust colors */
+   
     pointer-events: none; /* Allow scrolling through the blur */
 }
 
@@ -117,7 +74,7 @@
     left: 0; /* Stretch to the left edge */
     right: 0; /* Stretch to the right edge */
     height: 30px; /* Height of the blur area */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradient for blur effect */
+    
     pointer-events: none; /* Allow scrolling through the blur */
     z-index: 1; /* Ensure the blur stays above the content */
 }
@@ -128,7 +85,7 @@
     z-index: 0; /* Keep content below the blur effect */
 }
 
-@media (max-width: 991px) { /* Target screens smaller than 768px */
+@media (max-width: 768px) { /* Target screens smaller than 768px */
     .scrollable-list {
         all: unset; /* Remove all applied styles */
     }
@@ -136,6 +93,38 @@
     .scrollable-list::after {
         display: none; /* Ensure pseudo-element is also hidden */
     }
+}
+
+/* Hide all slides by default */
+#content-slides .slide,
+#image-slides .slide {
+    display: none;
+}
+
+/* Show only the active slide */
+#content-slides .slide.active,
+#image-slides .slide.active {
+    display: block;
+}
+
+.scrollable-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+
+.content-slider-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 
@@ -346,13 +335,17 @@
     
             <!-- Content -->
             <div id="content-slides">
-              <div class="slide active scrollable-list">
-              
+              <div class="slide active">
                 <table class="map-key mtm-7">
                     <tr>
                      <td class="map-key-square text-mustard">&#9632;</td>
                      <td class="map-category-title">food & drink</td>
                     </tr>
+                </table>
+
+            <div class="scrollable-list">
+                <table class="map-key mtm-7">
+                    
                      <tr>
                          <td class="map-category-number">1</td>
                          <td class="map-category-text">La Goccia</td>
@@ -405,143 +398,168 @@
                         <td class="map-category-text">Barrafina</td>
                     </tr>
                  </table>
+            </div>
+                
               </div>
-              <div class="slide scrollable-list">
+
+
+
+              <div class="slide">
+
                 <table class="map-key mtm-7">
                     <tr>
                         <td class="map-key-square text-blue">&#9632;</td>
                         <td class="map-category-title">Hotels</td>
                     </tr>
-                    <tr>
-                        <td class="map-category-number">9</td>
-                        <td class="map-category-text">The Savoy</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">10</td>
-                        <td class="map-category-text">ME London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">11</td>
-                        <td class="map-category-text">One Aldwych</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">12</td>
-                        <td class="map-category-text">The Walforf</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">13</td>
-                        <td class="map-category-text">Nomad London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">14</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">13</td>
-                        <td class="map-category-text">Nomad London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">14</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr><tr>
-                        <td class="map-category-number">13</td>
-                        <td class="map-category-text">Nomad London</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">14</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr><tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr><tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr><tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr><tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Henrietta Hotel</td>
-                    </tr>
+                    
                 </table>
+
+                    <div class="scrollable-list">
+
+                        <table class="map-key mtm-7">
+                   
+                            <tr>
+                                <td class="map-category-number">9</td>
+                                <td class="map-category-text">The Savoy</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">10</td>
+                                <td class="map-category-text">ME London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">11</td>
+                                <td class="map-category-text">One Aldwych</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">12</td>
+                                <td class="map-category-text">The Walforf</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">13</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">14</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">13</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">14</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr><tr>
+                                <td class="map-category-number">13</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">14</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">13</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">14</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">13</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">14</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr><tr>
+                                <td class="map-category-number">13</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">14</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr><tr>
+                                <td class="map-category-number">13</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">14</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr>
+                        </table>
+                    </div>
+               
               </div>
-              <div class="slide scrollable-list">
+              <div class="slide">
+
                 <table class="map-key mtm-7">
                     <tr>
                         <td class="map-key-square text-teal">&#9632;</td>
                         <td class="map-category-title">Green spaces and wellness</td>
                     </tr>
-                    <tr>
-                        <td class="map-category-number">15</td>
-                        <td class="map-category-text">The River (running path)</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">16</td>
-                        <td class="map-category-text">Lincoln’s Inn Fields</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">17</td>
-                        <td class="map-category-text">The Southbank</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">18</td>
-                        <td class="map-category-text">Victoria Embankment Gardens</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr><tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr><tr>
-                        <td class="map-category-number">19</td>
-                        <td class="map-category-text">St James’s Park</td>
-                    </tr>
-                    <tr>
-                        <td class="map-category-number">20</td>
-                        <td class="map-category-text">Soho Square Gardens</td>
-                    </tr>
                 </table>
+
+                <div class="scrollable-list">
+                    <table class="map-key mtm-7">
+                       
+                        <tr>
+                            <td class="map-category-number">15</td>
+                            <td class="map-category-text">The River (running path)</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">16</td>
+                            <td class="map-category-text">Lincoln’s Inn Fields</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">17</td>
+                            <td class="map-category-text">The Southbank</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">18</td>
+                            <td class="map-category-text">Victoria Embankment Gardens</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">19</td>
+                            <td class="map-category-text">St James’s Park</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">20</td>
+                            <td class="map-category-text">Soho Square Gardens</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">19</td>
+                            <td class="map-category-text">St James’s Park</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">20</td>
+                            <td class="map-category-text">Soho Square Gardens</td>
+                        </tr><tr>
+                            <td class="map-category-number">19</td>
+                            <td class="map-category-text">St James’s Park</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">20</td>
+                            <td class="map-category-text">Soho Square Gardens</td>
+                        </tr><tr>
+                            <td class="map-category-number">19</td>
+                            <td class="map-category-text">St James’s Park</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">20</td>
+                            <td class="map-category-text">Soho Square Gardens</td>
+                        </tr><tr>
+                            <td class="map-category-number">19</td>
+                            <td class="map-category-text">St James’s Park</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">20</td>
+                            <td class="map-category-text">Soho Square Gardens</td>
+                        </tr>
+                    </table>
+
+                </div>
+              
               </div>
               <div class="slide scrollable-list">
                 <table class="map-key mtm-7">
@@ -669,7 +687,7 @@
             <!-- Updated reveal div class name -->
             <div class="image-reveal-mask1 bg-pan buil-reveal"></div>
             <img src="assets/images/location/location_image2.jpg" alt="Hero Image" class="d-none d-lg-block">
-            <img src="assets/images/location/location_image2.jpg" alt="Hero Image" class="d-lg-none p-0">
+            <img src="assets/images/location/perfect-position-mob.jpg" alt="Hero Image" class="d-lg-none p-0">
         </div>
     </div>
                 
@@ -725,7 +743,7 @@
                      </button>
                  </div>
              </div>
-             <div class="tab-pane fade" id="tab2" role="tabpanel">
+             <div class="tab-pane fade connectivity-np" id="tab2" role="tabpanel">
                  <div class="slider">
                      <div><img src="assets/images/location/connectivity-cycling-1.svg" alt="Logo 1"></div>
                      <div><img src="assets/images/location/connectivity-cycling-2.svg" alt="Logo 2"></div>
@@ -741,7 +759,7 @@
                      </button>
                  </div>
              </div>
-             <div class="tab-pane fade" id="tab3" role="tabpanel">
+             <div class="tab-pane fade connectivity-np" id="tab3" role="tabpanel">
                  <div class="slider">
                      <div><img src="assets/images/location/connectivity-tube-1.svg" alt="Logo 1"></div>
                      <div><img src="assets/images/location/connectivity-tube-2.svg" alt="Logo 2"></div>
@@ -1308,58 +1326,63 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Bootstrap JS and Popper.js -->
   <script>
+   document.addEventListener('DOMContentLoaded', () => {
     const contentSlides = document.querySelectorAll('#content-slides .slide');
     const imageSlides = document.querySelectorAll('#image-slides .slide');
-    const dotsContainer = document.getElementById('dotsContainer');
     const prevIcon = document.getElementById('prevIcon');
     const nextIcon = document.getElementById('nextIcon');
-
+    const dotsContainer = document.getElementById('dotsContainer');
     let currentSlide = 0;
 
+    // Update Slide Function
     function updateSlide(index) {
-      // Update content slides
-      contentSlides.forEach((slide, idx) => {
-        slide.classList.toggle('active', idx === index);
-      });
-
-      // Update image slides
-      imageSlides.forEach((slide, idx) => {
-        slide.classList.toggle('active', idx === index);
-      });
-
-      // Update dots
-      const dots = document.querySelectorAll('.dot');
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === index);
-      });
-    }
-
-    function createDots() {
-      contentSlides.forEach((_, idx) => {
-        const dot = document.createElement('span');
-        dot.className = 'dot';
-        if (idx === currentSlide) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-          currentSlide = idx;
-          updateSlide(currentSlide);
+        // Update content slides
+        contentSlides.forEach((slide, idx) => {
+            slide.classList.toggle('active', idx === index);
         });
-        dotsContainer.appendChild(dot);
-      });
+
+        // Update image slides
+        imageSlides.forEach((slide, idx) => {
+            slide.classList.toggle('active', idx === index);
+        });
+
+        // Update dots
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === index);
+        });
     }
 
+    // Create Dots for Indicators
+    function createDots() {
+        contentSlides.forEach((_, idx) => {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            if (idx === currentSlide) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                currentSlide = idx;
+                updateSlide(currentSlide);
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    // Navigation Button Handlers
     prevIcon.addEventListener('click', () => {
-      currentSlide = (currentSlide - 1 + contentSlides.length) % contentSlides.length;
-      updateSlide(currentSlide);
+        currentSlide = (currentSlide - 1 + contentSlides.length) % contentSlides.length;
+        updateSlide(currentSlide);
     });
 
     nextIcon.addEventListener('click', () => {
-      currentSlide = (currentSlide + 1) % contentSlides.length;
-      updateSlide(currentSlide);
+        currentSlide = (currentSlide + 1) % contentSlides.length;
+        updateSlide(currentSlide);
     });
 
     // Initialize
     createDots();
     updateSlide(currentSlide);
+});
+
   </script>
 
 <script>

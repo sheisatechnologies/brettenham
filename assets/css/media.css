@@ -80,7 +80,15 @@
 
 
 .slider-sp .slick-dots {
-    bottom: -40px !important;
+    bottom: -5px !important;
+    left: -14px !important;
+    text-align: right;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.slider-sp-loc .slick-dots {
+    bottom: -35px !important;
     left: -14px !important;
     text-align: right;
     padding-left: 40px;
