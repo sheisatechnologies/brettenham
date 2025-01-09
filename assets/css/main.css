@@ -261,7 +261,7 @@ background-color: rgba(255, 0, 0, 0.5); /* Slight hover effect */
     }
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
 .scroll-wrapper {
     width: 100%;
     min-height: 300px; /* Set a minimum height */
@@ -304,7 +304,7 @@ display: block;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
 .slider-sp-home {
 width: 100%;
@@ -421,7 +421,7 @@ margin-top: -101px;
 }
 
 /* GSAP adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 /* Disable or adjust animations for mobile */
 .gsap-animate {
     opacity: 1 !important;
@@ -435,7 +435,7 @@ margin-top: -101px;
 Building Css */
 /* ---------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 .arrowb-building .build-prev img, 
 .arrowb-building .build-next img {
 width: 60%;
@@ -764,7 +764,7 @@ height: auto;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
 
     .slider-sp .slick-slide img {
@@ -845,7 +845,7 @@ height: auto;
 
 
 /* GSAP adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     /* Disable or adjust animations for mobile */
     .gsap-animate {
         opacity: 1 !important;
@@ -855,7 +855,7 @@ height: auto;
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .mask-container, .wrapper-buil {
         position: relative;
         margin-bottom: 20px; /* Add margin to push content down */
@@ -866,7 +866,7 @@ height: auto;
 
 
 /* Additional adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
 
     .wrapper-buil {
@@ -899,7 +899,7 @@ height: auto;
 
 
 /* Additional adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
 
     .wrapper-buil {
@@ -978,7 +978,7 @@ height: auto;
 
 
 /* GSAP adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     /* Disable or adjust animations for mobile */
     .gsap-animate {
         opacity: 1 !important;
@@ -1048,7 +1048,7 @@ height: auto;
  
 
 /* index  custom slide slick */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
    
     .custom-next-arrow {
         /* Adjust positioning for smaller screens */
@@ -1130,7 +1130,7 @@ height: auto;
         background-position: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
 
 .container {
 width: 100% !important;

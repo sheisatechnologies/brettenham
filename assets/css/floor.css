@@ -67,7 +67,7 @@ th {
         
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .container, .row {
         padding-left: 15px;
         padding-right: 15px;
@@ -242,7 +242,7 @@ ul .nav-link {
     font-family: 'Altform-Bold', Helvetica, Arial, sans-serif; /* Use the custom font */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .mask-container, .wrapper-buil {
         position: relative;
         margin-bottom: 20px; /* Add margin to push content down */
@@ -253,7 +253,7 @@ ul .nav-link {
 
 
 /* Additional adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
 
     .wrapper-buil {
@@ -588,7 +588,7 @@ ul .nav-link {
 
 /* Mobile responsiveness */
 /* General mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .container {
         width: 100% !important;
         padding-left: 15px !important;
@@ -636,15 +636,20 @@ ul .nav-link {
 @media (min-width: 991px) {
 
     .nav-tabs {
-    border-bottom: none; 
-   
-    position: absolute;
-    margin-left: 26rem;
+        border-bottom: none;
+        position: absolute;
+        margin-left: 17rem;
 }
 
 }
 
-
+@media (max-width: 991px) {
+    .nav-tabs {
+        border-bottom: none;
+        position: absolute;
+        margin-left: 38rem;
+    }
+}
 
 
 /* tab responsive code  */
@@ -652,7 +657,7 @@ ul .nav-link {
 
 /* Make the tab navigation responsive */
 /* Make the tab navigation responsive */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     #floorplanTabs {
         display: flex;
         flex-wrap: nowrap; /* Keep tabs horizontal */
@@ -829,7 +834,7 @@ ul .nav-link {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
             .nav-tabs {
                 display: none; /* Hide tabs on mobile */
             }
