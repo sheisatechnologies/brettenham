@@ -187,7 +187,7 @@ right: 90px; /* Position closer to the right edge */
 
 /* Slider-SP Dots: Smaller and Simple */
 .slider-sp .slick-dots {
-bottom: 17px;  /* Position dots at the bottom */
+bottom: 29px;  /* Position dots at the bottom */
 left: 69px;    /* Align dots to the bottom-left corner */
 text-align: right; /* Align the dots to the left */
 z-index: 10; /* Ensures dots appear above other elements */
@@ -195,7 +195,7 @@ position: relative; /* Works with z-index */
 }
 
 
-@media (min-width: 991px) {
+@media (max-width: 991px) {
 .slider-sp .slick-dots {
     bottom: -3px;
     left: 69px;
