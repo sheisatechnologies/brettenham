@@ -180,12 +180,14 @@ height: auto;
 
 
 
-/* Slider-SP Dots: Smaller and Simple */
-.slider-sp-loc  .slick-dots {
-  bottom: -10px;  /* Position dots at the bottom */
-  left: 69px;    /* Align dots to the bottom-left corner */
-  text-align: right; /* Align the dots to the left */
+.slider-sp-loc .slick-dots {
+    bottom: -7px; /* Adjust as needed */
+    left: 69px;
+    text-align: right;
+    z-index: 10; /* Ensures dots appear above other elements */
+    position: relative; /* Works with z-index */
 }
+
 
 .slider-sp-loc .slick-dots li {
   margin: 0 3px; /* Reduce space between dots */
