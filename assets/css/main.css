@@ -825,10 +825,10 @@ height: auto;
     }
 
     /* If needed, you can force all content within a specific width */
-    .row {
+    /* .row {
         max-width: 100% !important;
         margin: 0 !important;
-    }
+    } */
 
     .arrowb-building .build-next {
     margin-left: 54px;

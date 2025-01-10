@@ -88,7 +88,7 @@
 }
 
 .slider-sp-loc .slick-dots {
-    bottom: -35px !important;
+    bottom: 11px !important;
     left: -14px !important;
     text-align: right;
     padding-left: 40px;
@@ -120,6 +120,8 @@
 
 
 
+
+
 }
 
 
@@ -130,3 +132,28 @@
     }
     
 }
+
+
+@media (max-width: 992px) {
+    .slick-slider-contact .slide-content {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .slick-slider-contact .image-content {
+        order: 1; /* Image appears first */
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+
+    .slick-slider-contact .text-content {
+        order: 2; /* Text appears below the image */
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+
+    .slick-slider-contact img {
+        max-width: 100%;
+        height: auto; /* Ensure images are responsive */
+    }
+
+  
+}
+
