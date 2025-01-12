@@ -484,7 +484,7 @@ body {
  .scroll-wrapper-loc {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: auto;
     /* margin: 100vh auto; Center the container and make sure it’s halfway down the page */
     overflow: hidden;
     background-color: transparent;
@@ -496,9 +496,9 @@ body {
 /* Updated class names for the inner wrapper styling */
 .image-container-loc {
     width: 100%;
-    height: 600px;
+    height: auto;
     background-color: var(--mustard);
-    position: absolute;
+    position: relative;
     padding: 50px;
     box-sizing: border-box;
     transform-origin: left;
@@ -513,7 +513,7 @@ body {
     top: -20px;
     left: -20px;
     width: 100%;
-    height: 640px;
+    height: auto;
     background: var(--mustard);
     transform-origin: left;
     transform: scaleX(1);
@@ -536,7 +536,7 @@ body {
 .scroll-wrapper-location {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: auto;
     /* margin: 100vh auto; Center the container and make sure it’s halfway down the page */
     overflow: hidden;
     background-color: transparent;
@@ -548,7 +548,7 @@ body {
 /* Updated class names for the inner wrapper styling */
 .image-container-location {
     width: 100%;
-    height: 600px;
+    height: auto;
     background-color: var(--blue);
     position: absolute;
     padding: 50px;
@@ -565,7 +565,7 @@ body {
     top: -20px;
     left: -20px;
     width: 100%;
-    height: 640px;
+    height: auto;
     background: var(--mustard);
     transform-origin: left;
     transform: scaleX(1);
