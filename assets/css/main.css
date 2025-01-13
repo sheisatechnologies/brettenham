@@ -195,7 +195,8 @@ position: relative; /* Works with z-index */
 }
 
 
-@media (max-width: 991px) {
+
+@media (max-width: 1200px) {
 .slider-sp .slick-dots {
     bottom: -3px;
     left: 69px;
