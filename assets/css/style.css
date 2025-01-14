@@ -222,7 +222,13 @@ body {
 /* image revel css for all hero section*/
 
 
-
+.level_text{
+    border: none;
+    background: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+}
 
 
 

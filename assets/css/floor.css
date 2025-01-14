@@ -633,17 +633,17 @@ ul .nav-link {
 
 
 
-@media (min-width: 991px) {
+@media (min-width: 1401px) {
 
     .nav-tabs {
         border-bottom: none;
         position: absolute;
-        margin-left: 37rem;
+        margin-left: 40rem;
 }
 
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1400px) {
     .nav-tabs {
         border-bottom: none;
         position: absolute;
