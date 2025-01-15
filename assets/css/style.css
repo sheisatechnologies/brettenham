@@ -228,7 +228,10 @@ body {
     color: black;
     font-size: 17px;
     font-weight: 700;
+    font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
 }
+
 
 
 
