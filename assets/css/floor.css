@@ -639,6 +639,7 @@ ul .nav-link {
         border-bottom: none;
         position: absolute;
         margin-left: 40rem;
+        margin-top: 115px;
 }
 
 }
@@ -648,6 +649,7 @@ ul .nav-link {
         border-bottom: none;
         position: absolute;
         margin-left: 13rem;
+        margin-top: 100px;
     }
 }
 
