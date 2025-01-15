@@ -48,7 +48,19 @@ gsap.to(textWrapper1, {
   delay: 0.5              // Delay before starting
 });
 
+const revealWrapper5 = document.querySelector('.reveal-wrapper4');
+const textWrapper5 = document.querySelector('.text-wrapper4');
 
+// First animate the width of the reveal-wrapper to show the text
+revealWrapper5.style.width = "auto";  // Adjust width of the wrapper based on content
+
+gsap.to(textWrapper5, {
+  duration: 1.5,          // Animation duration
+  opacity: 1,             // Fade in
+  x: 0,                   // Move to the right (from -100px to 0)
+  ease: 'power2.out',     // Ease the animation
+  delay: 0.5              // Delay before starting
+});
 
 
 

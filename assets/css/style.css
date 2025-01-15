@@ -491,6 +491,58 @@ body {
 
 
 
+
+ /* Updated class names for container styling */
+ .scroll-wrapper4 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* margin: 100vh auto; Center the container and make sure it’s halfway down the page */
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Updated class names for the inner wrapper styling */
+.image-container4 {
+    width: 100%;
+    height: auto;
+    background-color: var(--orange);
+    position: relative;
+    padding: 50px;
+    box-sizing: border-box;
+    transform-origin: left;
+    transform: scaleX(0);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Updated class names for the reveal div */
+.image-reveal-mask4 {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 740px;
+    background: var(--orange);
+    transform-origin: left;
+    transform: scaleX(1);
+    z-index: 2;
+}
+
+/* Image styling */
+.image-container4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
  /* Updated class names for container styling */
  .scroll-wrapper-loc {
     position: relative;
@@ -524,7 +576,7 @@ body {
     top: -20px;
     left: -20px;
     width: 100%;
-    height: auto;
+    height: 100%;
     background: var(--mustard);
     transform-origin: left;
     transform: scaleX(1);
@@ -717,6 +769,39 @@ body {
   font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   }
+
+
+
+
+
+  .reveal-wrapper4 {
+    overflow: hidden;       /* Hide text overflow */
+    width: 0;               /* Initially hide the text */
+    display: inline-block;
+    white-space: nowrap;
+    transition: width 1s ease;  /* Reveal effect on width */
+   
+  }
+  .text-wrapper4 {
+    writing-mode: vertical-rl;  /* Arrange text vertically */
+    text-orientation: upleft;  /* Keep the text upright */
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;                /* Start invisible */
+    transform: rotate(180deg) translateX(100px); /* Rotate 180 degrees */
+    transform-origin: center;  /* Ensure rotation happens around the center */
+  }
+
+  .text-revel4{
+  font-size: 65px;
+  line-height: 70px;
+  color: var(--black);
+  font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  }
+
+
+
 
 
   .reveal-wrapper-key {
