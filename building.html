@@ -411,6 +411,11 @@
 
 
 
+     
+
+
+
+
 
 
   
@@ -495,16 +500,11 @@
 
 
     
-
-
-    
-
-
     <div class="container mt-5 mb-5 contact">
 
        
 
-        <div class="slick-slider-contact">
+        <div class="slick-slider-contact2">
             <!-- Slide 1 -->
             <div class="slide">
                 <div class="row slide-content">
@@ -512,8 +512,12 @@
                         <div class="mb-auto">
                            <h3>LANCASTER PLACE ENTRANCE</h3>
                             <div>
-                                <p>The main entrance of the building is located on Lancaster Place, a busy and thriving route from The Strand to Waterloo Bridge.</p>
-                                <p>Facing the majestic western elevation of Somerset House, the Lancaster Place reception is a welcoming and expansive space with multiple zones for collaboration and casual working. The retained, marble art deco staircases offer a visually stunning connection to the upper floors of the building. </p>
+                                <p>The main entrance of the building is located on Lancaster Place,
+                                     a busy and thriving route from The Strand to Waterloo Bridge.</p>
+                                <p>Facing the majestic western elevation of Somerset House, the Lancaster Place reception is a welcoming and 
+                                    expansive space with multiple zones for collaboration and casual working. The retained,
+                                     marble art deco staircases offer
+                                     a visually stunning connection to the upper floors of the building. </p>
                                
                             </div>
                         </div>  
@@ -536,9 +540,8 @@
                         <div class="mb-auto">
                            <h3>SAVOY STREET ENTRANCE</h3>
                             <div>
-                                <p>A second entrance is situated on the opposite side of the building, on the quiet and charming Savoy Street. 
-                                    Overlooking the tranquil Savoy Chapel gardens, this entrance is intended for building occupiers or VIP visitors 
-                                    who require a more discrete entrance.</p>
+                                <p>A second entrance is situated on the opposite side of the building, on the quiet and charming Savoy Street. Overlooking the tranquil Savoy Chapel gardens, this entrance is intended for building occupiers or 
+                                    VIP visitors who require a more discrete entrance.</p>
                                 
                             </div>
                         </div>
@@ -559,7 +562,7 @@
                         <div class="mb-auto">
                            <h3>SAVOY STREET ENTRANCE</h3>
                             <div>
-                                <p>Acting as a gateway to the amenity areas, this impressive, triple height space provides an opportunity to touch down and gather thoughts before embarking on a busy day ahead. A bespoke staircase connects this area both visually and physically to the main Lancaster Place reception. </p>
+                               <p>Acting as a gateway to the amenity areas, this impressive, triple height space provides an opportunity to touch down and gather thoughts before embarking on a busy day ahead. A bespoke staircase connects this area both visually and physically to the main Lancaster Place reception.</p>
                                 
                             </div>
                         </div>
@@ -571,27 +574,32 @@
                 </div>
             </div>
 
-            <!-- Slide 4 -->
-        
+            
     
             <!-- Add more slides as needed -->
         </div>
 
-        <div class="custom-navigation d-flex justify-content-start align-items-center mtd-10n">
-            
-            <div class="slide-indicator indicator-location indicator-bill mx-3">
-                <span id="current-slide">1/</span><span id="total-slides">2</span>
-            </div>
-          
-        </div>
+      
 
-       <div class="arrowb-building">
-        <i class='fa build-prev'><img src="assets/images/btn-arrow-left.svg" alt="Left Arrow"></i>
-        <i class='fa build-next'><img src="assets/images/btn-arrow-right.svg" alt="Right Arrow"></i>
-       </div>
+
+
+        <div class="custom-navigation">
+            <div class="slide-indicator2 mx-3">
+                <span id="current-slide2">1</span>/<span id="total-slides2">0</span>
+            </div>
+        </div>
+        <div class="arrowb-building2">
+            <i class="build-prev2"><img src="assets/images/btn-arrow-left.svg" alt="Left Arrow"></i>
+            <i class="build-next2"><img src="assets/images/btn-arrow-right.svg" alt="Right Arrow"></i>
+        </div>
 
         
     </div>
+
+    
+
+
+   
 
 
 
@@ -1120,38 +1128,53 @@ $(window).on('scroll', function() {
     });
 </script>
 
+
 <script>
-    
     $(document).ready(function() {
-    var $slickElement = $('.slick-slider-contact');
+        // First Slider
+        var $slickElement1 = $('.slick-slider-contact');
+        var totalSlides1 = $slickElement1.children().length;
+        $('#total-slides').text(totalSlides1);
 
-    // Manually set the total slide count right after DOM is ready
-    var totalSlides = $slickElement.children().length; // Get number of slides
-    $('#total-slides').text(totalSlides); // Set total slides on page load
+        $slickElement1.on('init reInit afterChange', function(event, slick, currentSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $('#current-slide').text(i);
+        });
 
-    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide){
-        var i = (currentSlide ? currentSlide : 0) + 1;  // Calculate current slide (index + 1)
-        $('#current-slide').text(i);  // Update current slide number dynamically
+        $slickElement1.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            prevArrow: $(".build-prev"),
+            nextArrow: $(".build-next"),
+        });
+
+        // Second Slider
+        var $slickElement2 = $('.slick-slider-contact2');
+        var totalSlides2 = $slickElement2.children().length;
+        $('#total-slides2').text(totalSlides2);
+
+        $slickElement2.on('init reInit afterChange', function(event, slick, currentSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $('#current-slide2').text(i);
+        });
+
+        $slickElement2.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            prevArrow: $(".build-prev2"),
+            nextArrow: $(".build-next2"),
+        });
     });
-
-    // Initialize the slick slider
-    $slickElement.slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        prevArrow: $(".build-prev"),  // Custom previous arrow
-       nextArrow: $(".build-next")   // Custom next arrow
-    });
-
-    // Manually trigger init event to set the first current slide on page load
-    $slickElement.trigger('init', [$slickElement.slick('getSlick')]);
-});
-
-
 </script>
 
 

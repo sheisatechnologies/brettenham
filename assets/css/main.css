@@ -663,6 +663,72 @@ height: auto;
 
 
 
+/* Custom Arrow Styling */
+.arrowb-building .build-prev,
+.arrowb-building .build-next {
+position: absolute;
+top: 99%;
+transform: translateY(-50%);
+z-index: 1000;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+
+.arrowb-building .build-prev {
+margin-left: -3px; /* Position previous arrow on the right */
+left: unset; /* Ensure it's not on the left */
+}
+
+.arrowb-building .build-next {
+margin-left: 70px; /* Position next arrow on the right */
+left: unset; /* Ensure it's not on the left */
+}
+
+.arrowb-building .build-prev img, 
+.arrowb-building .build-next img {
+width: 60%;
+height: auto;
+
+}
+
+
+
+
+/* Custom Arrow Styling */
+.arrowb-building2 .build-prev2,
+.arrowb-building2 .build-next2 {
+position: absolute;
+top: 99%;
+transform: translateY(-50%);
+z-index: 1000;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+
+.arrowb-building2 .build-prev2 {
+margin-left: -3px; /* Position previous arrow on the right */
+left: unset; /* Ensure it's not on the left */
+}
+
+
+.arrowb-building2 .build-next2 {
+margin-left: 40px; /* Position next arrow on the right */
+left: unset; /* Ensure it's not on the left */
+}
+
+.arrowb-building2 .build-prev2 img, 
+.arrowb-building2 .build-next2 img {
+width: 60%;
+height: auto;
+
+}
+
+
+
+
+
 
     
 
