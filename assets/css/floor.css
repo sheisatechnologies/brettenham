@@ -638,7 +638,7 @@ ul .nav-link {
     .nav-tabs {
         border-bottom: none;
         position: absolute;
-        margin-left: 40rem;
+        margin-left: 25rem;
         margin-top: 115px;
 }
 
@@ -648,7 +648,7 @@ ul .nav-link {
     .nav-tabs {
         border-bottom: none;
         position: absolute;
-        margin-left: 13rem;
+        margin-left: 5rem;
         margin-top: 100px;
     }
 }
