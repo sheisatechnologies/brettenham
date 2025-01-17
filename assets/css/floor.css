@@ -631,27 +631,27 @@ ul .nav-link {
 }
 
 
-
-
-@media (min-width: 1401px) {
-
+@media (max-width: 1450px) {
     .nav-tabs {
         border-bottom: none;
         position: absolute;
         margin-left: 25rem;
+        margin-top: 117px;
+    }
+}
+
+@media (min-width: 1451px) {
+
+    .nav-tabs {
+        border-bottom: none;
+        position: absolute;
+        margin-left: 33rem;
         margin-top: 115px;
 }
 
 }
 
-@media (max-width: 1400px) {
-    .nav-tabs {
-        border-bottom: none;
-        position: absolute;
-        margin-left: 5rem;
-        margin-top: 100px;
-    }
-}
+
 
 
 /* tab responsive code  */
