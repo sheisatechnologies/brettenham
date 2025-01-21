@@ -758,7 +758,7 @@ ul .nav-link {
         .gsap-img-animation {
     position: relative; /* Ensure the parent is positioned */
     width: 100%; /* Set the desired width for the container */
-    height: 700px; /* Set a fixed height for the container */
+    height: 881px; /* Set a fixed height for the container */
     overflow: hidden; /* Prevent overflow */
 }
 
