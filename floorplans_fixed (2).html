@@ -37,7 +37,7 @@
         .overlay {
             position: absolute;
             border: 2px solid transparent;
-            background-color: rgba(255, 255, 0, 0.3); /* Transparent yellow */
+            background-color: #BDE2DF; /* Transparent yellow */
             pointer-events: none; /* Make overlays non-clickable */
             display: none; /* Hidden by default */
         }
@@ -45,7 +45,7 @@
         /* Highlighted overlay */
         .overlay.active {
             display: block;
-            border-color: red;
+            
         }
         </style>
 </head>
@@ -149,10 +149,15 @@
             
             
             
+                           
+
             
-            
-                            <tr data-level="level-9" class="clickable-row" onclick="location.href='#level-9';">
-                                <td class="level-column floor-button" onclick="activateTab('level-9'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">9</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-9');">
+                                <td class="level-column floor-button" data-level="#level-9" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">9</a>
+                                </td>
+                                
+                                
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,315</td>
                                 <td class="level-column data" onclick="event.stopPropagation();">3305</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -162,8 +167,11 @@
                             
             
             
-                            <tr data-level="level-8" class="clickable-row" onclick="location.href='#level-8';">
-                                <td class="level-column floor-button" onclick="activateTab('level-8'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">8</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-8');">
+                                <td class="level-column floor-button" data-level="#level-8" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">8</a>
+                                </td>
+                                
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">8,105</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -171,8 +179,11 @@
                             </tr>
             
             
-                            <tr data-level="level-7" class="clickable-row" onclick="location.href='#level-7';">
-                                <td class="level-column floor-button" onclick="activateTab('level-7'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">7</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-7');">
+                                <td class="level-column floor-button" data-level="#level-7" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">7</a>
+                                </td>
+                                
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">9,989</td>
                                 <td class="level-column data" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -183,8 +194,10 @@
             
             
             
-                            <tr data-level="level-6" class="clickable-row" onclick="location.href='#level-6';">
-                                <td class="level-column floor-button" onclick="activateTab('level-6'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">6</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-6');">
+                                <td class="level-column floor-button" data-level="#level-6" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">6</a>
+                                </td>
                                 <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,443</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -192,8 +205,10 @@
                             </tr>
             
             
-                            <tr data-level="level-5" class="clickable-row" onclick="location.href='#level-5';">
-                                <td class="level-column floor-button" onclick="activateTab('level-5'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">5</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-5');">
+                                <td class="level-column floor-button" data-level="#level-5" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">5</a>
+                                </td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,723</td>
                                 <td class="level-column" onclick="event.stopPropagation();">893</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -202,8 +217,10 @@
                             </tr>
             
             
-                            <tr data-level="level-4" class="clickable-row" onclick="location.href='#level-4';">
-                                <td class="level-column floor-button" onclick="activateTab('level-4'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">4</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-4');">
+                                <td class="level-column floor-button" data-level="#level-4" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">4</a>
+                                </td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,250</td>
                                 <td class="level-column data" onclick="event.stopPropagation();">883</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -212,8 +229,10 @@
                             </tr>
             
             
-                            <tr data-level="level-3" class="clickable-row" onclick="location.href='#level-3';">
-                                <td class="level-column floor-button" onclick="activateTab('level-3'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">3</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-3');">
+                                <td class="level-column floor-button" data-level="#level-3" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">3</a>
+                                </td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">14,294</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -221,8 +240,10 @@
                             </tr>
             
             
-                            <tr data-level="level-2" class="clickable-row" onclick="location.href='#level-2';">
-                                <td class="level-column floor-button" onclick="activateTab('level-2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">2</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-2');">
+                                <td class="level-column floor-button" data-level="#level-2" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">2</a>
+                                </td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">14,553</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -230,8 +251,10 @@
                             </tr>
             
             
-                            <tr data-level="level-1" class="clickable-row" onclick="location.href='#level-1';">
-                                <td class="level-column floor-button" onclick="activateTab('level-1'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">1</a></td>
+                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-1');">
+                                <td class="level-column floor-button" data-level="#level-1" onclick="toggleLevelColumn(this);">
+                                    <a href="#table-tab" class="floor-bclick">1</a>
+                                </td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,993</td>
                                 <td class="level-column" onclick="event.stopPropagation();"> 527</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -244,7 +267,7 @@
             
                 
                             <tr class="clickable-row" onclick="location.href='#level-G';">
-                                <td class="level-column floor-button" onclick="activateTab('level-G'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Ground</a></td>
+                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-G'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Ground</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,218</td>
                                 <td class="level-column" onclick="event.stopPropagation();">732</td>
             
@@ -257,7 +280,7 @@
             
             
                             <tr class="clickable-row" onclick="location.href='#level-LG';">
-                                <td class="level-column floor-button" onclick="activateTab('level-LG'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 2</a></td>
+                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-LG'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 2</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">323</td>
                                 <td class="level-column" onclick="event.stopPropagation();">5952</td>
@@ -284,7 +307,7 @@
             
             
                             <tr class="clickable-row" onclick="location.href='#level-B1';">
-                                <td class="level-column floor-button" onclick="activateTab('level-B1'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 1</a></td>
+                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-B1'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 1</a></td>
                                 <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">4155</td>
@@ -298,7 +321,7 @@
             
             
                             <tr class="clickable-row" onclick="location.href='#level-B2';">
-                                <td class="level-column floor-button" onclick="activateTab('level-B2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy Ground</a></td>
+                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-B2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy Ground</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">3509</td>
@@ -340,17 +363,18 @@
 
                 <div class="col-md-6 d-flex align-items-center order-lg-2 order-1 position-relative">
                     <img src="assets/images/floorplans/floorplan-image.png" class="img-fluid ps-md-5 d-none d-lg-block">
-                    <div id="level-1" class="overlay" style="top: 2%; left: 20%; width: 90%; height: 40px;"></div>
-                    <div id="level-2" class="overlay" style="top: 40%; left: 20%; width: 90%; height: 40px;"></div>
-                    <div id="level-3" class="overlay" style="top: 70%; left: 20%; width: 90%; height: 40px;"></div>
-                    <div id="level-4" class="overlay" style="top: 10%; left: 20%; width: 90%; height: 40px"></div>
-                    <div id="level-5" class="overlay" style="top: 40%; left: 20%; width: 90%; height: 40px"></div>
-                    <div id="level-6" class="overlay" style="top: 70%; left: 20%; width: 90%; height: 40px"></div>
-                    <div id="level-7" class="overlay" style="top: 70%; left: 20%; width: 90%; height: 40px"></div>
-                    <div id="level-8" class="overlay" style="top: 70%; left: 20%; width: 90%; height: 40px"></div>
-                    <div id="level-9" class="overlay" style="top: 70%; left: 20%; width: 90%; height: 40px"></div>
+                
+                <div id="level-1" class="overlay" style="top: 360px;left: 72px;width: calc(100% - 131px);height: 30px;"></div>
+                <div id="level-2" class="overlay" style="top: 330px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                <div id="level-3" class="overlay" style="top: 300px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                <div id="level-4" class="overlay" style="top: 270px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                <div id="level-5" class="overlay" style="top: 240px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                <div id="level-6" class="overlay" style="top: 210px;left: 90px;width: calc(100% - 158px);height: 30px;"></div>
+                <div id="level-7" class="overlay" style="top: 190px; left: 85px; width: calc(100% - 95px); height: 35px;"></div>
+                <div id="level-8" class="overlay" style="top: 160px; left: 96px;width: calc(100% - 101px);height: 35px;"></div>
+                <div id="level-9" class="overlay" style="top: 130px;left: 220px; width: calc(100% - 231px);height: 30px;"></div>
+ 
                 </div>
-
                 <!-- <div class="col-md-6 d-flex align-items-center order-lg-2 order-1">
                     <img src="assets/images/floorplans/floorplan-image.png" class="img-fluid ps-md-5 d-none d-lg-block">
                     <img src="assets/images/floorplans/floorplan-img.png" class="img-fluid ps-md-5 d-lg-none">
@@ -1645,5 +1669,55 @@ document.querySelectorAll('#floorTable tbody tr').forEach(row => {
     });
 });
 </script>
-</body>
+
+    <script>
+       function handleRowClick(levelId) {
+    event.stopPropagation(); // Prevent unintended propagation
+
+    // Ensure the carousel remains visible
+    const carousel = document.querySelector('.carousel-class'); // Update with the actual class or ID
+    if (carousel) {
+        carousel.style.visibility = 'visible';
+        carousel.style.display = 'block';
+    }
+
+    // Highlight the corresponding image
+    activateTab(levelId);
+
+    // Navigate to the target section
+    if (levelId) {
+        location.href = levelId;
+    }
+}
+
+function toggleLevelColumn(element) {
+    event.stopPropagation(); // Stop propagation for the level column
+
+    // Ensure the carousel remains visible
+    const carousel = document.querySelector('.carousel-class'); // Update with the actual class or ID
+    if (carousel) {
+        carousel.style.visibility = 'visible';
+        carousel.style.display = 'block';
+    }
+
+    // Highlight the corresponding image
+    const levelId = element.getAttribute('data-level');
+    if (levelId) {
+        activateTab(levelId);
+    }
+}
+
+// Function to highlight the image
+function activateTab(levelId) {
+    const overlays = document.querySelectorAll('.overlay');
+    overlays.forEach((overlay) => overlay.classList.remove('active'));
+    const targetOverlay = document.querySelector(levelId);
+    if (targetOverlay) {
+        targetOverlay.classList.add('active');
+    }
+}
+
+    </script>
+    </body>
+    
 </html>

@@ -151,7 +151,7 @@
             
             
             
-                            <tr data-level="level-9" class="clickable-row" onclick="location.href='#level-9';">
+                            <tr data-level="level-9" class="clickable-row" onclick="handleRowClick('#level-9');">
                                 <td class="level-column floor-button" onclick="activateTab('level-9'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">9</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,315</td>
                                 <td class="level-column data" onclick="event.stopPropagation();">3305</td>
@@ -162,7 +162,7 @@
                             
             
             
-                            <tr data-level="level-8" class="clickable-row" onclick="location.href='#level-8';">
+                            <tr data-level="level-8" class="clickable-row" onclick="handleRowClick('#level-8');">
                                 <td class="level-column floor-button" onclick="activateTab('level-8'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">8</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">8,105</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -171,7 +171,7 @@
                             </tr>
             
             
-                            <tr data-level="level-7" class="clickable-row" onclick="location.href='#level-7';">
+                            <tr data-level="level-7" class="clickable-row" onclick="handleRowClick('#level-7');">
                                 <td class="level-column floor-button" onclick="activateTab('level-7'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">7</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">9,989</td>
                                 <td class="level-column data" onclick="event.stopPropagation();"></td>
@@ -1645,5 +1645,19 @@ document.querySelectorAll('#floorTable tbody tr').forEach(row => {
     });
 });
 </script>
-</body>
+
+    <script>
+        // JavaScript function to handle table row clicks without hiding the carousel
+        function handleRowClick(levelId) {
+            event.stopPropagation(); // Prevent unintended propagation
+            const carousel = document.querySelector('.carousel-class'); // Replace with your carousel's actual class or ID
+            if (carousel) {
+                carousel.style.visibility = 'visible';
+                carousel.style.display = 'block';
+            }
+            location.href = levelId; // Navigate to the desired section
+        }
+    </script>
+    </body>
+    
 </html>
