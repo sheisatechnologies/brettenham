@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Map Pro Example</title>
+</head>
+<body>
+    <div id="image-map-pro"></div>
+
+    <!-- Ensure the correct path to the script -->
+
+    <script src="image-map-pro.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            ImageMapPro.init('#image-map-pro', {
+                "id": "e8c9562b-d1a0-4470-92ca-9ab7b37f5fb6",
+                "general": { "name": "bh" },
+                "artboards": [{
+                    "title": "brettenham-house",
+                    "background_type": "image",
+                    "image_url": "https://sheisatechnologies.github.io/brettenham/assets/images/floorplans/floorplan-image.png",
+                    "width": 1218,
+                    "height": 1017,
+                    "use_image_size": true,
+                    "children": [
+                        // Add child elements as needed
+                    ]
+                }],
+                "version": "6.0.20"
+            });
+        });
+    </script>
+</body>
+</html>
