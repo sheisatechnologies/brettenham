@@ -37,7 +37,7 @@
         .overlay {
             position: absolute;
             border: 2px solid transparent;
-            background-color: #BDE2DF; /* Transparent yellow */
+            background-color: rgba(255, 255, 0, 0.3); /* Transparent yellow */
             pointer-events: none; /* Make overlays non-clickable */
             display: none; /* Hidden by default */
         }
@@ -45,83 +45,13 @@
         /* Highlighted overlay */
         .overlay.active {
             display: block;
-            
+            border-color: red;
         }
         </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/images/brettenham-house-symbol-black.svg" alt="Normal Logo" class="fixed-top-image normal-image" id="normalLogo">
-        <img src="assets/images/brettenham-house-symbol-black.svg" alt="Fixed Logo" class="fixed-top-image fixed-image" id="fixedLogo">
-            </a>
-            <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="toggler-icon top-bar"></span>
-                <span class="toggler-icon middle-bar"></span>
-                <span class="toggler-icon bottom-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link tcm" href="building.html">Building</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tcm" href="location.html">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tcm active" href="floorplans.html">Floorplans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tcm" href="downloads.html">Downloads</a>
-                    </li>
-                    <li class="nav-item tcm cta-contact">
-                        <a class=" btn btn-primary" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="nav-spacer"></div>
-
-    <div class="container">
-        <div class="row ptd2 pbd6 pbm6">
-            <div class="col-lg-10 offset-lg-1">
-                <div class="mask-container">
-                    <!-- Wrapper that contains the image with padding -->
-                    <div class="wrapper-buil bg-floorplan p-0 p-md-5">
-                        <!-- Red reveal div that is larger than the image container -->
-                        <div class="image-reveal-buil bg-floorplan"></div>
-                        <img src="assets/images/floorpan_first.jpg" alt="Hero Image" class="img-fluid d-none d-lg-block">
-                        <img src="assets/images/floorplans-image-mobile-1.png" alt="Location - Brettenham House" class="img-fluid d-lg-none">
-                    </div>
-                </div>
-                <!-- <img src="assets/images/floorplans-image-desktop-1.png" alt="Location - Brettenham House" class="img-fluid img-fluid d-none d-lg-block"> -->
-               
-            </div>
-            <div class="col-lg-1">
-                <!-- <h1 class="reveal">The Plans</h1> -->
-
-
-                <div class="reveal-wrapper">
-                    <div class="text-wrapper">
-                      <span class="text-revel">The Plans</span>
-                    </div>
-                  </div>
-
-                 
-
-
-                 
-
-               
-
-            </div>
-        </div>
-    </div>
-
+   
 
 
     <section class="bg-light-grey py-5">
@@ -149,15 +79,10 @@
             
             
             
-                           
-
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-9');">
-                                <td class="level-column floor-button" data-level="#level-9" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">9</a>
-                                </td>
-                                
-                                
+                          
+                            <tr data-level="level-9" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor9" onclick="location.href='#level-9';">
+                                <td class="level-column floor-button" onclick="activateTab('level-9'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">9</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,315</td>
                                 <td class="level-column data" onclick="event.stopPropagation();">3305</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -167,11 +92,8 @@
                             
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-8');">
-                                <td class="level-column floor-button" data-level="#level-8" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">8</a>
-                                </td>
-                                
+                            <tr data-level="level-8" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor8" onclick="location.href='#level-8';">
+                                <td class="level-column floor-button" onclick="activateTab('level-8'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">8</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">8,105</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -179,11 +101,8 @@
                             </tr>
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-7');">
-                                <td class="level-column floor-button" data-level="#level-7" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">7</a>
-                                </td>
-                                
+                            <tr data-level="level-7" class="clickable-row td-n"  data-imp-trigger-object-on-mouseover="floor7" onclick="location.href='#level-7';">
+                                <td class="level-column floor-button" onclick="activateTab('level-7'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">7</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">9,989</td>
                                 <td class="level-column data" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -194,10 +113,8 @@
             
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-6');">
-                                <td class="level-column floor-button" data-level="#level-6" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">6</a>
-                                </td>
+                            <tr data-level="level-6" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor6" onclick="location.href='#level-6';">
+                                <td class="level-column floor-button" onclick="activateTab('level-6'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">6</a></td>
                                 <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,443</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -205,10 +122,8 @@
                             </tr>
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-5');">
-                                <td class="level-column floor-button" data-level="#level-5" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">5</a>
-                                </td>
+                            <tr data-level="level-5" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor5" onclick="location.href='#level-5';">
+                                <td class="level-column floor-button" onclick="activateTab('level-5'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">5</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">12,723</td>
                                 <td class="level-column" onclick="event.stopPropagation();">893</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -217,10 +132,8 @@
                             </tr>
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-4');">
-                                <td class="level-column floor-button" data-level="#level-4" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">4</a>
-                                </td>
+                            <tr data-level="level-4" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor4" onclick="location.href='#level-4';">
+                                <td class="level-column floor-button" onclick="activateTab('level-4'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">4</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,250</td>
                                 <td class="level-column data" onclick="event.stopPropagation();">883</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -229,10 +142,8 @@
                             </tr>
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-3');">
-                                <td class="level-column floor-button" data-level="#level-3" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">3</a>
-                                </td>
+                            <tr data-level="level-3" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor3" onclick="location.href='#level-3';">
+                                <td class="level-column floor-button" onclick="activateTab('level-3'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">3</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">14,294</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -240,10 +151,8 @@
                             </tr>
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-2');">
-                                <td class="level-column floor-button" data-level="#level-2" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">2</a>
-                                </td>
+                            <tr data-level="level-2" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor2" onclick="location.href='#level-2';">
+                                <td class="level-column floor-button" onclick="activateTab('level-2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">2</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">14,553</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -251,10 +160,8 @@
                             </tr>
             
             
-                            <tr data-level="#level-9" class="clickable-row" onclick="handleRowClick('#level-1');">
-                                <td class="level-column floor-button" data-level="#level-1" onclick="toggleLevelColumn(this);">
-                                    <a href="#table-tab" class="floor-bclick">1</a>
-                                </td>
+                            <tr data-level="level-1" class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor1" onclick="location.href='#level-1';">
+                                <td class="level-column floor-button" onclick="activateTab('level-1'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">1</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">13,993</td>
                                 <td class="level-column" onclick="event.stopPropagation();"> 527</td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
@@ -266,8 +173,8 @@
             
             
                 
-                            <tr class="clickable-row" onclick="location.href='#level-G';">
-                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-G'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Ground</a></td>
+                            <tr class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor0" onclick="location.href='#level-G';">
+                                <td class="level-column floor-button" onclick="activateTab('level-G'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Ground</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();">3,218</td>
                                 <td class="level-column" onclick="event.stopPropagation();">732</td>
             
@@ -279,8 +186,8 @@
                             </tr>
             
             
-                            <tr class="clickable-row" onclick="location.href='#level-LG';">
-                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-LG'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 2</a></td>
+                            <tr class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor-1" onclick="location.href='#level-LG';">
+                                <td class="level-column floor-button" onclick="activateTab('level-LG'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 2</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">323</td>
                                 <td class="level-column" onclick="event.stopPropagation();">5952</td>
@@ -306,8 +213,8 @@
                             </tr> -->
             
             
-                            <tr class="clickable-row" onclick="location.href='#level-B1';">
-                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-B1'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 1</a></td>
+                            <tr class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor-2" onclick="location.href='#level-B1';">
+                                <td class="level-column floor-button" onclick="activateTab('level-B1'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy 1</a></td>
                                 <td class="level-column  floor-button data" onclick="toggleValue(this); event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">4155</td>
@@ -320,8 +227,8 @@
             
             
             
-                            <tr class="clickable-row" onclick="location.href='#level-B2';">
-                                <td class="level-column floor-button" onclick="toggleLevelColumn('level-B2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy Ground</a></td>
+                            <tr class="clickable-row td-n" data-imp-trigger-object-on-mouseover="floor-3" onclick="location.href='#level-B2';">
+                                <td class="level-column floor-button" onclick="activateTab('level-B2'); event.stopPropagation();"><a href="#table-tab" class="floor-bclick">Savoy Ground</a></td>
                                 <td class="level-column floor-button data" onclick="toggleValue(this); event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();"></td>
                                 <td class="level-column" onclick="event.stopPropagation();">3509</td>
@@ -361,25 +268,17 @@
                     
                 </div>
 
-                <div class="col-md-6 d-flex align-items-center order-lg-2 order-1 position-relative">
-                    <img src="assets/images/floorplans/floorplan-image.png" class="img-fluid ps-md-5 d-none d-lg-block">
-                
-                <div id="level-1" class="overlay" style="top: 360px;left: 72px;width: calc(100% - 131px);height: 30px;"></div>
-                <div id="level-2" class="overlay" style="top: 330px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
-                <div id="level-3" class="overlay" style="top: 300px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
-                <div id="level-4" class="overlay" style="top: 270px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
-                <div id="level-5" class="overlay" style="top: 240px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
-                <div id="level-6" class="overlay" style="top: 230px;left: 90px;width: calc(100% - 158px);height: 30px;"></div>
-                <div id="level-7" class="overlay" style="top: 190px; left: 85px; width: calc(100% - 95px); height: 35px;"></div>
-                <div id="level-8" class="overlay" style="top: 160px; left: 96px;width: calc(100% - 101px);height: 35px;"></div>
-                <div id="level-9" class="overlay" style="top: 130px;left: 220px; width: calc(100% - 231px);height: 30px;"></div>
- 
+                <div class="col-md-6 d-flex align-items-center order-lg-2 order-1">
+                    <div id="image-map-pro"></div>
+                    <img src="assets/images/floorplans/floorplan-img.png" class="img-fluid ps-md-5 d-lg-none">
                 </div>
+
                 <!-- <div class="col-md-6 d-flex align-items-center order-lg-2 order-1">
                     <img src="assets/images/floorplans/floorplan-image.png" class="img-fluid ps-md-5 d-none d-lg-block">
                     <img src="assets/images/floorplans/floorplan-img.png" class="img-fluid ps-md-5 d-lg-none">
                 </div> -->
-            
+               
+
             </div>
             
           
@@ -390,994 +289,16 @@
 
     
   
-   <div class="container" id="table-tab">
-    <div class="row">
-        <div class="col-12">
-             <ul class="nav nav-tabs mt-15 justify-content-right  d-none d-lg-flex" id="floorplanTabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-B2-tab" data-toggle="tab" href="#level-B2" role="tab" aria-controls="level-B2" aria-selected="false">Savoy Ground</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-B1-tab" data-toggle="tab" href="#level-B1" role="tab" aria-controls="level-B1" aria-selected="false">Savoy 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-LG-tab" data-toggle="tab" href="#level-LG" role="tab" aria-controls="level-LG" aria-selected="false">Savoy 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab active" id="level-G-tab" data-toggle="tab" href="#level-G" role="tab" aria-controls="level-G" aria-selected="false">Ground</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-1-tab" data-toggle="tab" href="#level-1" role="tab" aria-controls="level-1" aria-selected="false">1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-2-tab" data-toggle="tab" href="#level-2" role="tab" aria-controls="level-2" aria-selected="false">2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-3-tab" data-toggle="tab" href="#level-3" role="tab" aria-controls="level-3" aria-selected="false">3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-4-tab" data-toggle="tab" href="#level-4" role="tab" aria-controls="level-4" aria-selected="false">4</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-5-tab" data-toggle="tab" href="#level-5" role="tab" aria-controls="level-5" aria-selected="false">5</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-6-tab" data-toggle="tab" href="#level-6" role="tab" aria-controls="level-6" aria-selected="false">6</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-7-tab" data-toggle="tab" href="#level-7" role="tab" aria-controls="level-7" aria-selected="false">7</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-8-tab" data-toggle="tab" href="#level-8" role="tab" aria-controls="level-8" aria-selected="true">8</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link floorplan-tab" id="level-9-tab" data-toggle="tab" href="#level-9" role="tab" aria-controls="level-9" aria-selected="false">9</a>
-                </li>
-             
-            </ul>
-
-            <div class="d-lg-none mt-3">
-                <select id="floorplanDropdown" class="form-select">
-                    <option value="" disabled selected>SELECT FLOOR</option>
-                    <option value="#level-B2">Savoy Ground</option>
-                    <option value="#level-B1">Savoy 1</option>
-                    <option value="#level-LG">Savoy 2</option>
-                    <option value="#level-G">Ground</option>
-                    <option value="#level-1">1</option>
-                    <option value="#level-2">2</option>
-                    <option value="#level-3">3</option>
-                    <option value="#level-4">4</option>
-                    <option value="#level-5">5</option>
-                    <option value="#level-6">6</option>
-                    <option value="#level-7">7</option>
-                    <option value="#level-8">8</option>
-                    <option value="#level-9">9</option>
-                  
-                </select>
-            </div>
-
-            <div class="tab-content mt-15" id="floorplanTabsContent">
-                <div class="tab-pane fade" id="level-B2" role="tabpanel" aria-labelledby="level-B2-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>SAVOY GROUND</h2>
-                    <!-- <p>Office: 3,778 sq ft</p> -->
-                    
-                    <div class="mtm-6">
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core
-                    </div>
-                   
-                    <img src="assets/images/floorplans/Savoy-Ground.png" alt="Floorplan Level 8" id="image-B1" class=" mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/b2-indicator.png" alt="Floorplan Indicator"  class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-B2')">Expand</a>
-
-                           &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div class="tab-pane fade" id="level-B1" role="tabpanel" aria-labelledby="level-B1-tab">
-                   <div id="modalDescription" class="mtm-6">
-                    <div class="level_text">LEVEL</div>
-                    <h2>SAVOY 1</h2>
-                    <!-- <p>Office: 4,015 sq ft</p> -->
-                    <div class="mtm-6">
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                    <span style="color: #cce9e6;">■</span> Core
-                    </div>
-                    
-                   </div>
-                   
-                    <img src="assets/images/floorplans/Savoy-1.png" alt="Floorplan Level 7" class=" mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/basement-1-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-B1')">Expand</a>
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-LG" role="tabpanel" aria-labelledby="level-LG-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>SAVOY 2</h2>
-                    <!-- <p>Office: 5,769 sq ft</p> -->
-                    <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                   <span style="color: #cce9e6;">■</span> Core<br>
-                   <span style="color: #168771;">■</span> Terrace
-                    </div>
-                   
-                    <img src="assets/images/floorplans/Savoy-2.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/lower-ground-floor-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-LG')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade show active" id="level-G" role="tabpanel" aria-labelledby="level-G-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>GROUND</h2>
-                    <p>Office: 3,218 sq ft</p>
-
-                    <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core
-                    </div>
-                    
-                    <img src="assets/images/floorplans/Brettenham-House-Ground.png" alt="Floorplan Level 6" class=" mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/ground-floor-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-G')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-1" role="tabpanel" aria-labelledby="level-1-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 1</h2>
-                    <p>Office: 13,993 sq ft</p>
-
-                    <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core
-                    </div>
-                   
-                    <img src="assets/images/floorplans/FLOOR-1.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-1-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-1')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-2" role="tabpanel" aria-labelledby="level-2-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 2</h2>
-                    <p>Office: 14,553 sq ft</p>
-
-                    <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                    <span style="color: #cce9e6;">■</span> Core
-                    </div>
-                    
-                    <img src="assets/images/floorplans/FLOOR-2.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-2-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-2')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-3" role="tabpanel" aria-labelledby="level-3-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 3</h2>
-                    <p>Office: 14,294 sq ft</p>
-
-                    <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core<br>
-                        <!-- <span style="color: #168771;">■</span> Terrace  -->
-                    </div>
-                    
-                    <img src="assets/images/floorplans/FLOOR-3.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-3-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-3')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-4" role="tabpanel" aria-labelledby="level-4-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 4</h2>
-                    <p>Office: 13,250 sq ft</p>
-
-                     <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core<br>
-                        <span style="color: #168771;">■</span> Terrace 
-                    </div>
-
-                    <img src="assets/images/floorplans/FLOOR-4.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-4-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-4')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-5" role="tabpanel" aria-labelledby="level-5-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 5</h2>
-                    <p>Office: 12,723 sq ft</p>
-
-                      <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core<br>
-                        <span style="color: #168771;">■</span> Terrace 
-                    </div>
-
-                    <img src="assets/images/floorplans/FLOOR-5.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-5-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-5')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-6" role="tabpanel" aria-labelledby="level-6-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 6</h2>
-                    <p>Office: 12,443 sq ft</p>
-
-                     <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core
-                    </div>
-                    <img src="assets/images/floorplans/FLOOR-6.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-6-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-6')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-7" role="tabpanel" aria-labelledby="level-7-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 7</h2>
-                    <p>Office: 9,989 sq ft</p>
-                     <div>
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core<br>
-                        <span style="color: #168771;">■</span> Terrace 
-                    </div>
-                    <img src="assets/images/floorplans/FLOOR-7.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-7-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-7')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-8" role="tabpanel" aria-labelledby="level-8-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 8</h2>
-                    <p>Office: 8,105 sq ft</p>
-                    <div>
-                        <span style="color: #8ec5c1;">■</span> Office<br>
-                        <span style="color: #cce9e6;">■</span> Core<br>
-                        <!-- <span style="color: #168771;">■</span> Terrace <br> -->
-                    </div>
-
-                    <img src="assets/images/floorplans/FLOOR-8.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-8-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm mtm-6">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-8')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="level-9" role="tabpanel" aria-labelledby="level-9-tab">
-                    <div class="level_text">LEVEL</div>
-                    <h2>LEVEL 9</h2>
-                    <p>Office: 3,315 sq ft</p>
-                     <div class="mtm-6">
-                        <span style="color: #8ec5c1;">■</span> Office <br>
-                        <span style="color: #cce9e6;">■</span> Core<br>
-                        <span style="color: #168771;">■</span> Terrace 
-                    </div>
-
-                    <img src="assets/images/floorplans/FLOOR-9.png" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
-                    <div class="row mtm-6">
-                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
-                            <img src="assets/images/floorplans/level-9-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
-                        </div>
-            
-                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
-                            <a class="btn btn-secondary" onclick="expandTabContent('#level-9')">Expand</a> &nbsp;
-                            <a href="#" class="btn btn-secondary">Download</a>
-                    </div>
-                    </div>
-                </div>
-                
-            </div>
-             
-           
-           
-    </div>
-</div>
-   </div>
-        
-   
-      <!-- The Modal -->
-<div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()"><img src="assets/images/close_btn.svg"></span>
-    <div id="modalContent" class="modal-content">
-        <!-- Entire tab content will go here -->
-    </div>
-</div>
-
-
-<div class="container gsap-img-animation">
-    <div class="row">
-        <div class="wrapper left"></div>
-    <div class="wrapper right"></div>
     
-    <img src="assets/images/floorplans/floorplans-img.jpg" alt="Your Image" class="image-fluid ani-img d-none d-lg-block">
-    <img src="assets/images/floorplans/floorplans-mob-img.jpg" alt="Your Image" class="image-fluid ani-img d-block d-lg-none p-0">
-
-    <div class="spacer"></div> <!-- Spacer for scrolling -->
-
-  
-    </div>
-</div>
-
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-lg-12 ">
-            <div class="floorplan text-center">
-                <img src="assets/images/ci-home-3.jpg" alt="Animated Image" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-   
-
-<div class="container">
-    <div class="row ptd6 ptm6 pbd6 pbm6">
-
-
-        <div class="col-lg-10 offset-lg-1 pbd2 pbm4">
-
-
-            <h3 class="pbd1 pbm2">SPECIFICATION</h3>
-
-
-            <!-- START ACCORDION -->
-            <div class="accordion" id="accordionExample">
-
-
-                <div class="accordion-item accordion-top">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            THE BUILDING
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-
-
-                        <div class="row pbd1 pbm2">
-                            <div class="col-lg-10">
-                               <p class="specific-p"> — STRUCTURE <br>
-                           
-                                Brettenham House was originally constructed in 1932. The building is steel framed with steel beams and columns. The floors are typically RC ribbed slabs formed with clay hollow pots. The steelwork is concrete encased.
-                                The archive information suggests that the steel frames of Brettenham House were designed as ‘sway frames’. This means that the structural steel work is providing both horizontal and vertical stability to the building.
-                                The building is founded on London Clay. Towards the northern end of the building the foundations are typically pads, transitioning to RC piles towards the River Thames where the top of the London Clay deepens.<br><br>
-
-
-The structural philosophy is to generally maintain the existing load paths through the building and to not increase loads at foundation level. The majority of the existing sway frames will be retained. Where the frames are to be altered, the proposal is to introduce new sway frames or enhance the existing connections so that the overall stability strategy of the building will not change. Where foundations need to be modified to allow new lift pits, the principle will be to locally modify the foundation above the level of the bearing to maintain the existing bearing pressure. In areas where loads are locally increased, existing steels will be strengthened or supplemented with new structure. All new structure will be steel framed, to best suit the existing structural system.
-
-
-
-
-                                </p>
-                               
-
-
-                                <p class="specific-p">— DRAINAGE<br>
-                                    The existing building drainage is a combined system which discharges to the public sewer beneath Savoy Street via two connections. Most of the existing building drainage discharges by gravity, with limited areas at Basement level 2 directed to pumps. The proposed drainage strategy is to utilise the existing sewer connections where possible. A combined rainwater and greywater harvesting tank is proposed, with a smart active system which also provides attenuation during a storm event. Any new drainage at basement level will be pumped to minimise the potential risk of flooding from surcharge of the public sewer.
-                                </p>
-
-
-                                <p class="specific-p">— SERVICES<br>
-                                    LTHW heating and chilled water will be generated via a high efficiency air source heat pump system located at Basement 1 plantroom level.<br><br>
-                                    The offices will be air conditioned by 4-pipe (CHW & LTHW fed) conditioned air module (CAM) units located within risers with each CAM unit serving up to ~250m2 of office area. Conditioned air is distributed into the office space via slimline AET floor fan tiles.<br><br>
-
-
-Fresh air will be provided by 2 no. central air handling units (AHUs) located at Basement 2 level. One AHU will serve the north offices and the other AHU will serve the south offices. The office AHUs will be of variable speed types and include energy reclaim in the form of thermal wheels.
-
-
-
-
-                                   
-                                </p>
-
-
-                                <p class="specific-p">— FIRE STRATEGY<br>
-                                    Sprinklers will be installed throughout the building with a simultaneous evacuation strategy being adopted. Smoke clearance will be provided to the basement levels; natural smoke clearance will be adopted for the Lower
-                                     Ground Floor and mechanical smoke clearance used for Basement levels 1 and 2.<br><br>
-                                     The structural fire resistance for the basement levels, ground floor and the void compartment is to achieve 120 mins resistance. Based on an initial calculation, it appears that structural fire resistance of the remaining upper floors can be reduced to 90 mins however this is subject to confirmation by a full time-equivalence assessment.<br><br>
-
-
-Internal wall and ceiling finishes are designed in accordance with prescriptive requirements of the BS 9999. The external wall material of the building is specified to meet minimum B-s3, d2 fire classification and any insulation material to meet minimum A2-s1, d0 classification.<br><br>
-
-
-The building is to be provided with rising mains in the firefighting shafts (Stair B and C) and Stair D.
-
-
-                                   
-                               
-                                </p>
-                               
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            OFFICE FLOORS
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-
-
-                        <div class="row pbd1 pbm2">
-                            <div class="col-lg-10">
-                               <p class="specific-p">— DENSITY<br>
-                                The office floors have been designed in line with BCO recommendations at a workplace density of 1 person per 10m2 of office floor space at 100% occupancy.
-                                Escape capacity calculations are based on 1 person per 6 m2.
-                                Lift operation is based on 1:10m2 with 80% utilisation.
-                                WC quantum is based on 1:10m2 with 80% utilisation.
-                                </p>
-
-
-                                <p class="specific-p">— OFFICE FLOOR CONFIGURATION<br>
-                                    On levels 1 to 8 the new lift cores have been strategically located towards the west side of the plan to allow for a clear 10m wide office floor along the east façade facing Somerset House.
-                               <br><br>
-                               On floors 1-5, the floors in Brettenham House will be connected to the adjacent floors in 1 Lancaster Place by the removal of the wall that currently separates both buildings. Internal stairs will be provided to allow circulation between both sides of the plan as the levels are not consistent on most floors. Disabled users will be able to access each element of the floor via a new dual entry lift serving each half level.<br><br>
-
-
-The office space available in levels B2 to GF at the south side of the building will form a separate office address across 4 levels, named 9 Savoy Street. The Duchy of Lancaster offices will be located in this element of the building at levels G and 1.
-
-
-                                </p>
-
-
-                                <p class="specific-p">— FLOORS<br>
-                                    Raised metal floor tiles will be installed to all office areas with a services void beneath. The floors will incorporate floor mounted fan tiles at regular intervals for air distribution.
-                                    </p>
-
-
-                                <p class="specific-p">— CEILINGS<br>
-                                    Ceilings throughout the office areas will be in plasterboard, finished in white upon which will be mounted sprinkler pipes and slim format lighting fittings, to deliver lighting levels of around 400-500 lux average at the working plane.
-                                    </p>
-
-
-                                <p class="specific-p">— WINDOWS<br>
-                                    All windows are being replaced with modern like for like versions that are thermally broken and comply with current performance demands. The framing will be of a bronze finish in line with the original finishes of the building. The windows will incorporate an opening vent in the central portion of each window for the optimisation of occupier wellbeing and reduction of mechanical cooling load.
-                                    </p>
-
-
-                                <p class="specific-p">— HEATING and COOLING<br>
-                                    An underfloor air distribution system will be installed to provide cooling and heating to the office areas via floor mounted fan tiles. Air filtration systems will be in place to ensure optimal air quality to the working areas.
-                                </p>
-
-
-                                <p class="specific-p">— POWER<br>
-                                    Electricity supply will be provided to all main areas with an allowance for floor boxes/grommets to the office ares to be provided for install as part of the tenant fit out.
-                                   
-                                </p>
-
-
-                                <p class="specific-p">— DRAINAGE<br>
-                                    Drainage points for the installation of tenant tea points/kitchenettes will be provided to each floor
-                                   
-                                   
-                                </p>
-
-
-                                <p class="specific-p">— TOILETS<br>
-                                    Superloos are to be provided to each floor. These will be finished to a high standard and include all sanitary fittings.
-                                    </p>
-
-
-                                <p class="specific-p">— WALLS<br>
-                                    The internal perimeter walls will be lined with insulation (exact type TBC) to improve the building’s thermal performance and reduce mechanical heating load. All internal walls to be finished in white painted plasterboard.
-                                   
-                                </p>
-
-
-                                <p class="specific-p">— RISERS<br>
-                                    Risers are present throughout the building for services distribution and drainage. These are accessed via locked riser cupboards to each floor.
-                                </p>
-
-
-                                <p class="specific-p">— LIFE SAFETY<br>
-                                    A landlord fire alarm and sprinkler system will be installed with emergency call points on each floor. In the event of the alarm being activated, all doors and security barriers will automatically go to free flow mode.
-                                   
-                                </p>
-
-
-                                <p class="specific-p">— LIGHTING<br>
-                                    Slim format light fittings will be provided to each floor to deliver lighting levels of around 400-500 lux average at the working plane.
-                                   
-                                   
-                                </p>
-
-
-                                <p class="specific-p">— CONNECTIVITY<br>
-                                    The building will have a containment room into which pre-selected telephone and internet providers will install their service prior to any occupation. Tenants can connect into these supplies for the provision of digital connectivity at day one.
-                                   
-                                   
-                                   
-                                </p>
-
-
-                               
-                                   
-                               
-
-
-                               
-
-
-                            </div>
-                           
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            COMMON PARTS
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-
-
-                        <div class="row pbd1 pbm2">
-                            <div class="col-lg-10">
-                                <p class="specific-p">— ENTRANCES<br>
-                                    The main entrance to the building will remain at the ground floor of Lancaster Place with street access via the existing ornate stone arched portals leading to a large reception and amenity space. A second entrance is proposed from Savoy Street at Basement 1 level (two levels below the main entrance but at grade on this side of the building).
-                                   
-                               <br><br>
-                               A new triple height space is proposed to spatially connect both entrances which will house a feature stair serving levels GF, LG and Basement level 1. The passenger lifts on the main core will reach both entrance levels.
-
-
-                                </p>
-
-
-                                <p class="specific-p">— RECEPTION<br>
-                                    Two high quality receptions, one to the Lancaster Place entrance and one to Savoy Street, will be incorporated including reception desks, touch down working, the potential for in building F&B provision and including a variety of seating types. All finishes and FF&E will be included at base build.
-                                   
-                                        </p>
-
-
-                                <p class="specific-p">— SECURITY<br>
-                                    Security barriers will be present at each reception requiring either a physical or digital access card for operation. The access card will also be required to operate the lifts and to gain access to a specific demise. Each demise will have access points pre installed to all entrance and exit doors with card readers. Card readers will also be installed to all amenity areas and secondary entrance and exit points.
-                                   
-                                           
-                                </p>
-
-
-                                <p class="specific-p">— LIFTS<br>
-                                    A new lift core will be provided adjacent to the retained north staircase with 5 no. 17 people passenger lifts positioned on a single lift bank at this location. The lift nearest to the stair will be dual entry to double up as a fire-fighting lift with a side door leading to a fire-fighting lobby. The fire-fighting lift will serve all levels (from B2 to 9) with three other lifts serving levels B1 to 8 and the remaining one serving B2 to 8.<br><br>In order to comply with current regulations a second fire-fighting core is proposed adjacent to the retained south staircase with the lift opening into a new fire-fighting lobby. This lift will serve floors B2-8.<br><br>An additional dual entry 17 people passenger lift will be located in the south lightwell between Brettenham House and 1 Lancaster Place. This lift will serve each level in both Brettenham House and 1 Lancaster Place, allowing DDA access between the differing floor levels.
-                                   
-                                </p>
-                                <p class="specific-p">— PLANT<br>
-                                    All necessary plant to run the building including Air Sourced Heat Pumps and Air Handling Units will generally be located at Basement level with some limited extraction plant at roof level.
-                                   
-                                   
-                                </p>
-
-
-                                <p class="specific-p">— BASEMENT<br>
-                                    A vehicular access ramp will be required for loading and delivery purposes. 3 no. car parking spaces are to be provided at basement level, one for the use of the Duchy of Lancaster, one disabled parking space and one space for deliveries/servicing.
-                                     
-                                   
-                                   
-                                </p>
-
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-               
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            AMENITIES
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-
-
-                        <div class="row pbd1 pbm2">
-                            <div class="col-lg-10">
-                                <p class="specific-p">— CYCLE STORAGE<br>
-                                    A new cyclists’ access is proposed through the triple height space at Basement level 1 from Savoy Street, with a ramp leading to Basement level 2 where the bicycle store will be located. This will house 320 cycle storage spaces as well as a cycle surgery point, bike washdown, water fountains and lockers for folding bike storage.
-                                    </p>
-<p class="specific-p">— CHANGING ROOMS<br>
-Changing rooms equipped with circa 32 showers and 320 lockers (quantum to be confirmed at a later design stage) will be located immediately above at Basement level 1. These will be of a high quality and will incorporate hairdryers, hair straighteners, irons, shoe cleaning machines and USB phone charging lockers.
-</p>
-
-
-                            </div>
-
-
-                           
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-
-
-
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            TECHNOLOGY
-                        </button>
-                    </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-
-
-                        <div class="row pbd1 pbm2">
-                            <div class="col-lg-10">
-                                <p class="specific-p">— SMART ENABLED BUILDING<br>
-                                    The technological systems within the building shall be designed to provide a smart enabled building on day 1 with the ability to easily enhance the building with the adoption of a STP (smart technology platform) at a later date whether on site or cloud based. As a smart enabled building, the building management systems will be able to provide comprehensive management reporting via HLIs (high level interfaces) and deliver fully integrated services without the need for an STP.
-                                   
-                                    </p>
-<p class="specific-p">— BESPOKE BUILDING APP<br>
-Should an STP be adopted, a dedicated app will be developed for the building with a variety of functionality. This will include each individual user’s access card which will be stored on their smart phone, with the option to invite visitors via a QR code. Occupiers will be able to select the level of control they wish to confer to their staff, however the app can enable control of each individual light fitting and CAM unit via a smart phone. The app will contain a library of internal and external information, including transport, weather, information on local amenities, a building information directory and a direct interface with building management to enable swift reporting of any issues.
-
-</p>
-
-
-<p class="specific-p">— OBJECTIVES<br>
-    The base build Smart Building objectives will be to support systems including but not limited to:
-   
-    <ul>
-    <li>Access Control</li>
-    <li>BMS</li>
-    <li>EMS</li> 
-    <li>PMS</li>
-    <li>Sensors (hard wired, bluetooth and wireless connected)</li>
-    <li>CCTV</li>
-    <li>Data</li>
-    <li>Digital signage</li>
-    <li>Email services</li>
-    <li>Domain authentication services</li>
-    <li>Cyber security and intrusion detection & prevention services</li>
-    <li>Applications</li>
-    <li>Lighting control and management systems</li>
-    <li>Vehicle charging</li>
-    <li>Management Suite – Landlord and service provider voice and data services</li>
-    <li>Visitor management</li>
-    <li>Audio visual services including conference and meeting rooms</li>
-    <li>Power and energy management</li>
-    <li>Internet and web services via Wide Area Connectivity</li>
-    <li>Lift & escalator management systems</li>
-    <li>Video intercom</li>
-    <li>Private Mobile Radio</li>
-    <li>Incoming telecom and data services</li>
-    <li>Estate telephony to landlord and tenant areas</li>
-    <li>Wi-Fi within landlord areas and plantrooms</li>
-   
-</ul>
-    </p>
-
-
-                            </div>
-
-
-                           
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingsix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            SUSTAINABILITY, ENVIRONMENTAL AND WELLNESS
-                        </button>
-                    </h2>
-                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-
-
-                        <div class="row pbd1 pbm2">
-                            <div class="col-lg-10">
-                                <p class="specific-p">— CERTIFICATION<br>
-                                    The following accreditations are targeted: BREEAM Outstanding, EPC A, NABERS 5*, WELL Platinum.
-
-                                   
-                                   
-                                    </p>
-<p class="specific-p">— MATERIALS<br>
-The aim is to design for a circular economy, reducing over-specification and unnecessary material use by producing designs requiring fewer materials and encouraging reuse of existing materials and the use of materials with a high recycled content.
-
-
-</p>
-
-
-<p class="specific-p">— ENERGY MONITORING<br>
-    All energy consumption in the building will be monitored to enable fuel consumption to be measured and minimised where possible.
    
    
-   
-    </p>
 
 
-   
-
-
-        <p class="specific-p">— CARBON<br>
-            The design of the building and its systems will seek to minimise carbon output both in construction and in use via both active and passive design measures and systems.<br>The target is to achieve an embodied carbon intensity of 600kg c02e/m2 and operational energy use of 55kWh/m2/year
-           
-           
-           
-           
-            </p>
-
-
-
-
-            <p class="specific-p">— AIR QUALITY SENSORS<br>
-                Air Quality Sensors (AQS) will be provided within all office areas. The AQS will measure the air quality of the office floor and control the fresh air delivered to each CAM unit based on CO2 and VOC. Other parameters will be monitored such as temperature, humidity, particulate matter, ozone, sound, and barometric pressure. The air quality sensors will be linked back to the BMS to control the office Variable Air Volumes.
-               
-               
-               
-               
-               
-                </p>
-
-
-                <p class="specific-p">— STAIRCASES<br>
-                    The two original Art Deco staircases will be retained and refurbished to provide attractive alternative to the lifts, encouraging occupier mobility throughout the building.
-                   
-                   
-                   
-                   
-                   
-                   
-                    </p>
-
-
-                    <p class="specific-p">— TERRACES<br>
-                        Two terraces will be provided at 9th floor level; one for all occupiers of the building and one dedicated to the occupiers of the 9th floor. Further terracing is provided at levels 5, 4 and levels LG, G and 1 at the southern end of the building. There is potentially further exterior space available on the western elevation of floor 7 TBC.
-                       
-                       
-                       
-                       
-                       
-                       
-                        </p>
-
-
-                            </div>
-
-
-                            <div class="col-lg-6"></div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- END ACCORDION -->
-
-
-        </div>
-
-
-    </div>
-</div>
 
 
  
 
 
-  
-<footer>
-    <div class="container py-5">
-        <!-- Development Attribution -->
-       
-
-        <div class="row ptd4 ptm3 pbm4">
-            <div class="col-xl-3 col-lg-12 pbd3 ptm2 pbm2">
-                <p class="text-white">A development by</p>
-                <a href="https://www.helical.co.uk/" target="_blank">
-                    <img src="assets/images/ftr-logo-helical.svg" alt="Helical" width="277">
-                </a>
-            </div>
-        </div>
-
-        <!-- Contact Information for Savills -->
-        <div class="row py-4">
-            <div class="col-12 d-flex flex-column flex-md-row align-items-start">
-                <!-- Savills Logo -->
-                <div class="me-4 pb-5">
-                    <a href="https://www.savills.co.uk/" target="_blank">
-                        <img src="assets/images/ftr-logo-savills.svg" alt="Savills" class="img-fluid" width="70">
-                    </a>
-                </div>
-                <!-- Contact Information -->
-                <div class="row w-100">
-                    <!-- Contact 1 -->
-                    <div class="col-12 col-sm-6 col-lg-3 contact-info mb-4">
-                        <p>
-                            Peter Thursfield<br>
-                            <a href="mailto:pthursfield@savills.com">pthursfield@savills.com</a><br>
-                            <a href="tel:07870555732">07870 555732</a>
-                        </p>
-                    </div>
-                    <!-- Contact 2 -->
-                    <div class="col-12 col-sm-6 col-lg-3 contact-info mb-4">
-                        <p>
-                            Hunter Booth<br>
-                            <a href="mailto:hunter.booth@savills.com">hunter.booth@savills.com</a><br>
-                            <a href="tel:07710965693">07710 965693</a>
-                        </p>
-                    </div>
-                    <!-- Contact 3 -->
-                    <div class="col-12 col-sm-6 col-lg-3 contact-info mb-4">
-                        <p>
-                            Freddie Corlett<br>
-                            <a href="mailto:fcorlett@savills.com">fcorlett@savills.com</a><br>
-                            <a href="tel:07870555842">07870 555842</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Information for RX London -->
-        <div class="row py-4">
-            <div class="col-12 d-flex flex-column flex-md-row align-items-start">
-                <!-- RX Logo -->
-                <div class="me-4 pb-5">
-                    <a href="https://rx.london/" target="_blank">
-                        <img src="assets/images/ftr-logo-rx.svg" alt="RX London" class="img-fluid" width="70">
-                    </a>
-                </div>
-                <!-- Contact Information -->
-                <div class="row w-100">
-                    <!-- Contact 4 -->
-                    <div class="col-12 col-sm-6 col-lg-3 contact-info mb-4">
-                        <p>
-                            Dan Burn<br>
-                            <a href="mailto:dan.burn@rx.london">dan.burn@rx.london</a><br>
-                            <a href="tel:07515607011">07515 607011</a>
-                        </p>
-                    </div>
-                    <!-- Contact 5 -->
-                    <div class="col-12 col-sm-6 col-lg-3 contact-info mb-4">
-
-                        <p>
-                            Ed Betts<br>
-                            <a href="mailto:ed.betts@rx.london">ed.betts@rx.london</a><br>
-                            <a href="tel:07771513169">07771 513169</a>
-                        </p>
-
-                        
-                    </div>
-                    <!-- Contact 6 -->
-                    <div class="col-12 col-sm-6 col-lg-3 contact-info mb-4">
-                        <p>
-                            Alfie John<br>
-                            <a href="mailto:alfie.john@rx.london">alfie.john@rx.london</a><br>
-                            <a href="tel:07377885814">07377 885814</a>
-                        </p>
-                    </div>
-                    <!-- Contact 7 -->
-                    <div class="col-12 col-sm-6 col-lg-3 contact-info mb-4">
-                        <p>
-                            Sophie Bartlett<br>
-                            <a href="mailto:sophie.bartlett@rx.london">sophie.bartlett@rx.london</a><br>
-                            <a href="tel:07802338295">07802 338295</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Address and Links -->
-        <div class="row pbd2 pbm4 pt-md-5">
-            <div class="col-xl-12">
-                <hr>
-            </div>
-            <div class="col-xl-10 ptd1 ptm2">
-                <p>2-19 Lancaster Place<br>London WC2</p>
-            </div>
-            <div class="col-xl-2 ptd1 ptm2">
-                <p><a href="cookies.html">Cookies</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
 
      <!-- GSAP CDN -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -1414,43 +335,6 @@ The aim is to design for a circular economy, reducing over-specification and unn
     </script>
 
 
-
-  <script>
-// Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
-
-const leftWrapper = document.querySelector('.left');
-const rightWrapper = document.querySelector('.right');
-const image = document.querySelector('.image');
-
-// Create a ScrollTrigger to slide the wrappers and reveal the image
-gsap.to(leftWrapper, {
-    x: '-100%', // Move the left wrapper to the left
-    duration: 0.5, // Shortened duration
-    ease: 'power2.inOut',
-    scrollTrigger: {
-        trigger: '.spacer', // Use spacer as the trigger
-        start: 'top bottom', // Start when the top of the spacer hits the top of the viewport
-        end: 'bottom bottom', // When the spacer leaves the top of the viewport
-        scrub: true, // Smoothly scrub through the animation
-       
-    }
-});
-
-gsap.to(rightWrapper, {
-    x: '100%', // Move the right wrapper to the right
-    duration: 0.5, // Shortened duration
-    ease: 'power2.inOut',
-    scrollTrigger: {
-        trigger: '.spacer', // Use spacer as the trigger
-        start: 'top bottom', // Start when the top of the spacer hits the top of the viewport
-        end: 'bottom bottom', // When the spacer leaves the top of the viewport
-        scrub: true, // Smoothly scrub through the animation
-       
-    }
-});
-
-</script>
 
 
  <script>
@@ -1549,68 +433,7 @@ gsap.to(rightWrapper, {
 
 </script>
 
-    <script>
-        $(document).ready(function(){
-            $('.slider-connectivity').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                autoplay: true,
-                arrows: true,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                responsive: [
-                    {
-                        breakpoint: 1280,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    },
-                ],
-                autoplaySpeed: 5000,
-                cssEase:"cubic-bezier(0.2, 0.4, 0.4, 0.9)",
-                swipeToSlide: true,
-                accessibility: true
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('.slider-2').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                autoplay: true,
-                arrows: true,
-                autoplaySpeed: 5000,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                initialSlide: 1,
-                cssEase:"cubic-bezier(0.2, 0.4, 0.4, 0.9)",
-                swipeToSlide: true,
-                accessibility: true
-            });
-        });
-    </script>
-
+ 
 
 <script>
 function activateTab(levelId) {
@@ -1670,54 +493,8 @@ document.querySelectorAll('#floorTable tbody tr').forEach(row => {
 });
 </script>
 
-    <script>
-       function handleRowClick(levelId) {
-    event.stopPropagation(); // Prevent unintended propagation
+<script src="assets/js/image-map-pro.min.js"></script>
+<script>ImageMapPro.init('#image-map-pro', {"id":"e8c9562b-d1a0-4470-92ca-9ab7b37f5fb6","general":{"name":"bh"},"artboards":[{"title":"brettenham-house","background_type":"image","image_url":"https://sheisatechnologies.github.io/brettenham/assets/images/floorplans/floorplan-image.png","width":1218,"height":1017,"use_image_size":true,"children":[{"id":"df1935ec-1638-4935-a4c5-0fd5a4ef9da3","title":"floor-4","type":"rect","y":91.24877089478859,"width":101,"height":8.554572271386434,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.24630541871921183,"y_image_background":91.64208456243854},{"id":"6e0e5b54-2387-471c-9bf5-4eb781d6d233","title":"floor-3","type":"rect","y":84.66076696165192,"width":101,"height":6.686332350049165,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.41050903119868637,"y_image_background":84.95575221238938},{"id":"a394fde3-7278-44c9-b426-d7c7ed273e74","title":"floor-2","type":"rect","y":77.97443461160276,"width":101,"height":6.686332350049155,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.3284072249589491,"y_image_background":78.17109144542773},{"id":"3a7cfe5d-5931-4da2-a608-ffa86fde6d88","title":"floor-1","type":"rect","y":68.43657817109144,"width":101,"height":9.636184857423792,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":3.3661740558292284,"y_image_background":84.16912487708947},{"id":"09070dc4-8efb-41fd-86d8-5e853602ece3","title":"floor0","type":"rect","y":60.7669616519174,"width":101,"height":7.767944936086536,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":1.3136288998357963,"y_image_background":69.32153392330383},{"id":"6d56ab6e-b47b-4977-893a-ba7fed9781ce","title":"floor1","type":"rect","y":53,"width":101,"height":7.803343166175025,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.49261083743842365,"y_image_background":53.58898721730581},{"id":"a78699ce-60aa-4f38-b7f7-27b11c6324d6","title":"floor2","type":"rect","y":46.41002949852508,"width":101,"height":6.688298918387415,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.5747126436781609,"y_image_background":46.80432645034415},{"id":"4440d88f-d4ce-4ebd-b0d3-70b8a38b604e","title":"floor3","type":"rect","y":39.70501474926254,"width":101,"height":6.705014749262537,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.49261083743842365,"y_image_background":40.41297935103245},{"id":"d10d141b-a6d9-4888-80ff-2a2db5080f74","title":"floor4","type":"rect","y":33,"width":101,"height":6.803343166175025,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.3284072249589491,"y_image_background":33.03834808259587},{"id":"bbec7690-db28-470c-82c9-55ff52815a1d","title":"floor5","type":"rect","y":26.410029498525073,"width":101,"height":6.688298918387415,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.3284072249589491,"y_image_background":26.843657817109147},{"id":"23416ec1-ac19-407c-9cb8-fb0a71ece5b4","title":"floor6","type":"rect","y":19.803343166175026,"width":101,"height":6.606686332350049,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":0.16420361247947454,"y_image_background":19.76401179941003},{"id":"ebaf3c43-7ebd-4711-aaee-ad83327dea49","title":"floor7","type":"rect","x":4.246305418719212,"y":13,"width":96.75369458128078,"height":6.803343166175025,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":4.269293924466338,"y_image_background":12.782694198623402},{"id":"14066ca9-f12e-4a27-86ca-039e63076afb","title":"floor8","type":"rect","x":6.149425287356322,"y":6.294985250737463,"width":94.85057471264368,"height":6.999999999999998,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"x_image_background":6.239737274220033,"y_image_background":6.489675516224189},{"id":"1caeb3d2-3b7c-4274-8a86-dfeace6f3535","title":"floor9","type":"rect","x":37.49261083743842,"width":63.50738916256158,"height":6.589970501474927,"default_style":{"background_color":"#bde2df","background_opacity":0,"border_radius":0,"border_width":2,"border_color":"#000000","border_opacity":0},"mouseover_style":{"background_color":"#bde2df","background_opacity":1,"border_radius":0,"border_width":4,"border_color":"#000000"},"tooltip":{"enable_tooltip":false},"x_image_background":37.60262725779967,"y_image_background":0.09832841691248771}]}],"version":"6.0.20"})</script>
 
-    // Ensure the carousel remains visible
-    const carousel = document.querySelector('.carousel-class'); // Update with the actual class or ID
-    if (carousel) {
-        carousel.style.visibility = 'visible';
-        carousel.style.display = 'block';
-    }
-
-    // Highlight the corresponding image
-    activateTab(levelId);
-
-    // Navigate to the target section
-    if (levelId) {
-        location.href = levelId;
-    }
-}
-
-function toggleLevelColumn(element) {
-    event.stopPropagation(); // Stop propagation for the level column
-
-    // Ensure the carousel remains visible
-    const carousel = document.querySelector('.carousel-class'); // Update with the actual class or ID
-    if (carousel) {
-        carousel.style.visibility = 'visible';
-        carousel.style.display = 'block';
-    }
-
-    // Highlight the corresponding image
-    const levelId = element.getAttribute('data-level');
-    if (levelId) {
-        activateTab(levelId);
-    }
-}
-
-// Function to highlight the image
-function activateTab(levelId) {
-    const overlays = document.querySelectorAll('.overlay');
-    overlays.forEach((overlay) => overlay.classList.remove('active'));
-    const targetOverlay = document.querySelector(levelId);
-    if (targetOverlay) {
-        targetOverlay.classList.add('active');
-    }
-}
-
-    </script>
-    </body>
-    
+</body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Plan Table</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+        table {
+            border-collapse: collapse;
+            border: 2px solid white;
+        }
+        td {
+            width: 150px;
+            height: 50px; /* Adjust based on desired row height */
+            border: 1px solid white;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+        tr:first-child td {
+            background-color: #333;
+        }
+        tr:nth-child(odd) {
+            background-color: #222;
+        }
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr><td>Floor 9</td></tr>
+    <tr><td>Floor 8</td></tr>
+    <tr><td>Floor 7</td></tr>
+    <tr><td>Floor 6</td></tr>
+    <tr><td>Floor 5</td></tr>
+    <tr><td>Floor 4</td></tr>
+    <tr><td>Floor 3</td></tr>
+    <tr><td>Floor 2</td></tr>
+    <tr><td>Floor 1</td></tr>
+    <tr><td>Ground Floor</td></tr>
+</table>
+
+</body>
+</html>
