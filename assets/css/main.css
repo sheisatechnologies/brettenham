@@ -365,6 +365,7 @@ z-index: 1000;
 position: relative;
 overflow: hidden;
 margin-top: -101px;
+max-width: 100%;
 }
 
 
